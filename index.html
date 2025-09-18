@@ -201,7 +201,7 @@
         var routes = {}
 
         map.spin(true);
-        fetch('https://api-proxy.auckland-cer.cloud.edu.au/AT/gtfs/v3/routes', {
+        fetch('https://api.at.govt.nz/gtfs/v3/routes[?filter[route_type]][&filter[route_short_name]]', {
             method: 'GET',
             // Request headers
             headers: {
