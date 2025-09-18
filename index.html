@@ -201,7 +201,7 @@
         var routes = {}
 
         map.spin(true);
-        fetch('https://api.at.govt.nz/gtfs/v3/routes[?filter[route_type]][&filter[route_short_name]]', {
+        fetch('https://api.at.govt.nz/gtfs/v3/routes', {
             method: 'GET',
             // Request headers
             headers: {
@@ -233,7 +233,7 @@
             }
             hasLoaded = true;
             //map.spin(true);
-            fetch('https://api-proxy.auckland-cer.cloud.edu.au/AT/realtime/legacy/vehiclelocations', {
+            fetch('https://api.at.govt.nz/gtfs/v3/vehiclelocations', {
                 method: 'GET',
                 // Request headers
                 headers: {
@@ -259,7 +259,7 @@
                             marker.on("tooltipopen", function(e) {
                                 //console.log(e)
                                 if (e.target.trip) {
-                                    fetch('https://api-proxy.auckland-cer.cloud.edu.au/AT/gtfs/v3/trips/' + e.target.trip.trip_id, {
+                                    fetch('https://api.at.govt.nz/gtfs/v3/trips/' + e.target.trip.trip_id, {
                                         method: 'GET',
                                         // Request headers
                                         headers: {
