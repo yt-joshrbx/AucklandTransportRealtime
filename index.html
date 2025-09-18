@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Auckland Transport Realtime Map TEST</title>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- CSP without unsafe-eval -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://unpkg.com https://cdnjs.cloudflare.com https://www.googletagmanager.com;">
     <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
-
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
         crossorigin="" />
@@ -24,63 +22,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.0.3/chroma.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet-search@2.9.8/src/leaflet-search.css" />
     <style>
-        body,
-        html,
-        #map {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
+        body, html { width: 100%; height: 100%; margin: 0; padding: 0; }
+        #map { position: absolute; width: 100%; height: 100%; left: 0; top: 0; }
         #title {
             position: absolute;
             top: 10px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            z-index: 1000;
-            width: 500px;
-            text-align: center;
-            color: white;
-            border-radius: 5px;
-            padding: 10px;
+            left: 0; right: 0; margin: auto;
+            z-index: 1000; width: 500px;
+            text-align: center; color: white; border-radius: 5px; padding: 10px;
             background-color: rgba(0, 0, 0, 0.8);
-            font-size: 1rem;
-            font-family: Arial, Helvetica, sans-serif;
-            text-shadow: 2px 2px #000000;
-            font-weight: normal;
+            font-size: 1rem; font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 2px 2px #000000; font-weight: normal;
         }
-
         .info {
-            background-color: white;
-            padding: 15px;
-            color: black;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
+            background-color: white; padding: 15px; color: black;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); border-radius: 5px;
         }
     </style>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77710107-12"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-77710107-12');
     </script>
-
-
 </head>
-
 <body>
-
-
     <h1 id="title">This is a test of the code</h1>
     <div id="map"></div>
     <script>
-
         var map = L.map('map', {
             center: [-36.8862, 174.7651],
             zoom: 12,
@@ -95,12 +65,8 @@
             "CartoDB Positron": positron,
             "CartoDB Dark Matter": L.tileLayer.provider("CartoDB.DarkMatter"),
             "ESRI WorldImagery": L.tileLayer.provider("Esri.WorldImagery"),
-            "Google Hybrid": L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
-                maxZoom: 20,
-                subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-            }),
             "Wikimedia": L.tileLayer.provider("Wikimedia")
-        }
+        };
 
         map.attributionControl.addAttribution("© <a href='https://dev-portal.at.govt.nz/'>AT</a>");
 
@@ -109,55 +75,58 @@
             3: L.layerGroup().addTo(map),
             4: L.layerGroup().addTo(map),
             null: L.layerGroup().addTo(map)
-        }
+        };
 
         var search = L.control.search({
             layer: L.layerGroup([layers[2], layers[3], layers[4], layers[null]]),
             initial: false,
             propertyName: 'desc'
-        })
-        map.addControl(search)
-        map.removeLayer(layers[null])
+        });
+        map.addControl(search);
+        map.removeLayer(layers[null]);
 
-        $(".search-input").keyup(function () {
-            console.log(this.value);
+        // Use event delegation for .search-input which is dynamically inserted by Leaflet Search
+        $(document).on("keyup", ".search-input", function () {
+            var searchVal = this.value.toLowerCase();
             for (var i in markers) {
                 var marker = markers[i];
-                if (!this.value || marker.options.desc.toLowerCase().includes(this.value.toLowerCase())) {
+                if (!searchVal || marker.options.desc.toLowerCase().includes(searchVal)) {
                     marker.setStyle({ opacity: 1, fillOpacity: .2 });
                 } else {
                     marker.setStyle({ opacity: 0, fillOpacity: 0 });
                 }
             }
-        })
+        });
 
         var overlayMaps = {
             "Buses": layers[3],
             "Trains": layers[2],
             "Ferries": layers[4],
             "NIS/OOS": layers[null]
-        }
+        };
 
         L.control.layers(baseMaps, overlayMaps).addTo(map);
 
         var legend = L.control({ position: 'bottomright' });
         legend.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'info legend');
-            div.innerHTML = 'Colour by: <select id="colourscheme"><option>Route</option><option>Occupancy</option><option>Speed</select><div id="status"></div>';
+            div.innerHTML = 'Colour by: <select id="colourscheme"><option>Route</option><option>Occupancy</option><option>Speed</option></select><div id="status"></div>';
             return div;
         };
         legend.addTo(map);
-        $("#colourscheme").change(function () {
+
+        $(document).on("change", "#colourscheme", function () {
             window.colourscheme = this.value;
             location.hash = this.value;
             for (var i in markers) {
                 updateMarkerColour(markers[i]);
             }
         });
+
         window.colourscheme = "Route";
         if (location.hash) {
             window.colourscheme = location.hash.slice(1);
-            $("#colourscheme").val(window.colourscheme)
+            $("#colourscheme").val(window.colourscheme);
         }
 
         function stringToColour(str) {
@@ -181,7 +150,7 @@
                 } else if (marker.route_long_name) {
                     color = stringToColour(marker.route_long_name);
                 }
-            } else if (window.colourscheme == "Occupancy" && marker.occupancy_status != undefined) {
+            } else if (window.colourscheme == "Occupancy" && marker.occupancy_status !== undefined) {
                 color = occupancyColors[marker.occupancy_status];
             } else if (window.colourscheme == "Speed") {
                 color = speedColors(marker.speed);
@@ -189,41 +158,41 @@
             marker.setStyle({ color: color });
         }
 
-        var markers = {}
-        var occupancy = ["empty", "many seats available", "few seats available", "standing room only", "limited standing room", "full", "not accepting passengers"]
-        var occupancyColors = ["#4575b4", "#91bfdb", "#e0f3f8", "#fee090", "#fc8d59", "#d73027", "black"]
-
+        var markers = {};
+        var occupancy = ["empty", "many seats available", "few seats available", "standing room only", "limited standing room", "full", "not accepting passengers"];
+        var occupancyColors = ["#4575b4", "#91bfdb", "#e0f3f8", "#fee090", "#fc8d59", "#d73027", "black"];
         var speedColors = chroma.scale([chroma.hsv(270, 1, 1), chroma.hsv(180, 1, 1), chroma.hsv(90, 1, 1), chroma.hsv(0, 1, 1)]).mode("hsv").domain([0, 100]);
 
         var hasLoaded = false;
-
-        var routes = {}
+        var routes = {};
 
         map.spin(true);
         fetch('https://api.at.govt.nz/gtfs/v3/routes', {
             method: 'GET',
-            // Request headers
             headers: {
                 'Cache-Control': 'no-cache',
                 'Ocp-Apim-Subscription-Key': 'b122c467e7e145b7bfcd6d854d09b01b',
             }
         })
-            .then(response => response.json())
-            .then(response => {
-                map.spin(false);
-                if (response.message) {
-                    console.error(response)
-                    $("#status").text(`Error getting routes: ${response.message}`)
-                } else {
-                    console.log(response);
-                    for (var r of response.data) {
-                        if (r.attributes.route_type == 712) r.attributes.route_type = 3
-                        routes[r.id] = r.attributes
-                    }
+        .then(response => response.json())
+        .then(response => {
+            map.spin(false);
+            if (response.message) {
+                console.error(response);
+                $("#status").text(`Error getting routes: ${response.message}`);
+            } else {
+                for (var r of response.data) {
+                    if (r.attributes.route_type == 712) r.attributes.route_type = 3;
+                    routes[r.id] = r.attributes;
                 }
-                loop()
-            })
-
+            }
+            loop();
+        })
+        .catch(err => {
+            map.spin(false);
+            console.error(err);
+            $("#status").text("Error loading routes.");
+        });
 
         function loop() {
             if (hasLoaded && !document.hasFocus()) {
@@ -231,94 +200,85 @@
                 return;
             }
             hasLoaded = true;
-            //map.spin(true);
+
             fetch('https://api.at.govt.nz/gtfs/v3/vehiclelocations', {
                 method: 'GET',
-                // Request headers
                 headers: {
                     'Cache-Control': 'no-cache',
                     'Ocp-Apim-Subscription-Key': '763b2ff00d474b29bc64acd6811517bb',
                 }
             })
-                .then(response => response.json())
-                .then(data => {
-                    map.spin(false);
-                    console.log(data);
-                    for (var i in data.response.entity) {
-                        var id = data.response.entity[i].id;
-                        var v = data.response.entity[i].vehicle;
-                        var desc = `<b>${v.vehicle.label}</b><br>`;
-                        var layer = layers[null];
-                        if (markers[id]) {
-                            var marker = markers[id];
-                            marker.setLatLng([v.position.latitude, v.position.longitude]);
-                        } else {
-                            var marker = L.circle([v.position.latitude, v.position.longitude], { radius: 20, desc: desc });
-                            markers[id] = marker
-                            marker.on("tooltipopen", function(e) {
-                                //console.log(e)
-                                if (e.target.trip) {
-                                    fetch('https://api.at.govt.nz/gtfs/v3/trips/' + e.target.trip.trip_id, {
-                                        method: 'GET',
-                                        // Request headers
-                                        headers: {
-                                            'Cache-Control': 'no-cache',
-                                            'Ocp-Apim-Subscription-Key': '7ddfd9ea87aa41dc9fe4efb9a5318dd5',}
-                                    })
-                                    .then(response => response.json())
-                                    .then(response => {
-                                        if (response.message) {
-                                            console.error(response.message)
-                                            $("#status").text(`Error getting trip: ${response.message}`)
-                                        } else {
-                                            console.log(response);
-                                            $("#headsign").text(response.data.attributes.trip_headsign)
-                                        }
-                                    })
-                                    .catch(err => console.error(err));
-                                }
-                            })
-                        }
-                        if (v.trip) {
-                            var r = routes[v.trip.route_id];
-                            marker.trip = v.trip
-                            if (r) {
-                                desc += `Agency: ${r.agency_id}<br>
-                                Route: ${r.route_long_name}<br>
-                                Headsign: <div id="headsign"></div>`
-                                marker.options.desc = desc;
-                                marker.route_long_name = r.route_long_name;
-                                marker.route_type = r.route_type;
-                                layer = layers[r.route_type];
-                                if (!layer) {
-                                    console.error(r)
-                                    layer = layers[null]
-                                }
-                            } else {
-                                //console.error(v)
-                                layer = layers[null]
+            .then(response => response.json())
+            .then(data => {
+                map.spin(false);
+                for (var i in data.response.entity) {
+                    var id = data.response.entity[i].id;
+                    var v = data.response.entity[i].vehicle;
+                    var desc = `<b>${v.vehicle.label}</b><br>`;
+                    var layer = layers[null];
+                    var marker = markers[id];
+                    if (marker) {
+                        marker.setLatLng([v.position.latitude, v.position.longitude]);
+                    } else {
+                        marker = L.circle([v.position.latitude, v.position.longitude], { radius: 20, desc: desc });
+                        markers[id] = marker;
+                        marker.on("tooltipopen", function (e) {
+                            if (e.target.trip) {
+                                fetch('https://api.at.govt.nz/gtfs/v3/trips/' + e.target.trip.trip_id, {
+                                    method: 'GET',
+                                    headers: {
+                                        'Cache-Control': 'no-cache',
+                                        'Ocp-Apim-Subscription-Key': '7ddfd9ea87aa41dc9fe4efb9a5318dd5',
+                                    }
+                                })
+                                .then(response => response.json())
+                                .then(response => {
+                                    if (response.message) {
+                                        console.error(response.message);
+                                        $("#status").text(`Error getting trip: ${response.message}`);
+                                    } else {
+                                        $("#headsign").text(response.data.attributes.trip_headsign);
+                                    }
+                                })
+                                .catch(err => console.error(err));
                             }
-                        }
-                        marker.addTo(layer);
-                        marker.speed = Math.round(v.position.speed)
-                        // Convert m/s to km/h
-                        //marker.speed = Math.round(v.position.speed * 3.6)
-                        marker.bindTooltip(`${desc}
-                            Speed: ${marker.speed} km/h<br>
-                            Occupancy: ${occupancy[v.occupancy_status]}<br>
-                            License plate: ${v.vehicle.license_plate}
-                        `)
-                        marker.occupancy_status = v.occupancy_status;
-                        updateMarkerColour(marker);
+                        });
                     }
-                })
-                .catch(err => console.error(err));
+                    if (v.trip) {
+                        var r = routes[v.trip.route_id];
+                        marker.trip = v.trip;
+                        if (r) {
+                            desc += `Agency: ${r.agency_id}<br>Route: ${r.route_long_name}<br>Headsign: <div id="headsign"></div>`;
+                            marker.options.desc = desc;
+                            marker.route_long_name = r.route_long_name;
+                            marker.route_type = r.route_type;
+                            layer = layers[r.route_type];
+                            if (!layer) {
+                                console.error(r);
+                                layer = layers[null];
+                            }
+                        } else {
+                            layer = layers[null];
+                        }
+                    }
+                    marker.addTo(layer);
+                    marker.speed = Math.round(v.position.speed);
+                    marker.bindTooltip(`${desc}
+                        Speed: ${marker.speed} km/h<br>
+                        Occupancy: ${occupancy[v.occupancy_status]}<br>
+                        License plate: ${v.vehicle.license_plate}
+                    `);
+                    marker.occupancy_status = v.occupancy_status;
+                    updateMarkerColour(marker);
+                }
+            })
+            .catch(err => {
+                map.spin(false);
+                console.error(err);
+                $("#status").text("Error loading vehicle locations.");
+            });
         }
-
+        setInterval(loop, 10000);
     </script>
-
-
-
 </body>
-
 </html>
