@@ -201,11 +201,11 @@
             }
             hasLoaded = true;
 
-            fetch('https://api.at.govt.nz/gtfs/v3/vehiclelocations', {
+            fetch('https://api.at.govt.nz/realtime/legacy/vehiclelocations', {
                 method: 'GET',
                 headers: {
                     'Cache-Control': 'no-cache',
-                    'Ocp-Apim-Subscription-Key': '763b2ff00d474b29bc64acd6811517bb',
+                    'Ocp-Apim-Subscription-Key': 'b122c467e7e145b7bfcd6d854d09b01b',
                 }
             })
             .then(response => response.json())
@@ -228,7 +228,7 @@
                                     method: 'GET',
                                     headers: {
                                         'Cache-Control': 'no-cache',
-                                        'Ocp-Apim-Subscription-Key': '7ddfd9ea87aa41dc9fe4efb9a5318dd5',
+                                        'Ocp-Apim-Subscription-Key': 'b122c467e7e145b7bfcd6d854d09b01b',
                                     }
                                 })
                                 .then(response => response.json())
