@@ -223,7 +223,7 @@
                     if (marker) {
                         marker.setLatLng([v.position.latitude, v.position.longitude]);
                     } else {
-                        marker = L.circle([v.position.latitude, v.position.longitude], { radius: 20, desc: desc });
+                        marker = L.circle([v.position.latitude, v.position.longitude], { radius: 40, desc: desc });
                         markers[id] = marker;
                         marker.on("tooltipopen", function (e) {
                             if (e.target.trip) {
