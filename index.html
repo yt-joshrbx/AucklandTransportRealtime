@@ -77,16 +77,15 @@
             2: L.layerGroup().addTo(map),
             3: L.layerGroup().addTo(map),
             4: L.layerGroup().addTo(map),
-            null: L.layerGroup().addTo(map)
+            5: L.layerGroup().addTo(map)
         };
 
         var search = L.control.search({
-            layer: L.layerGroup([layers[2], layers[3], layers[4], layers[null]]),
+            layer: L.layerGroup([layers[2], layers[3], layers[4], layers[5]]),
             initial: false,
             propertyName: 'desc'
         });
         map.addControl(search);
-        map.removeLayer(layers[null]);
 
         // Use event delegation for .search-input which is dynamically inserted by Leaflet Search
         $(document).on("keyup", ".search-input", function () {
