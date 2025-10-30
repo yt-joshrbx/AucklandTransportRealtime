@@ -176,7 +176,7 @@
             return String(input).replace(/[^a-zA-Z0-9_\-]/g, "_");
         }
 
-        // Display helper text for bike_allowed / bikes_allowed
+        // Display helper text for bike_allowed
         function bikeText(val) {
             // GTFS: 0 = unknown, 1 = allowed, 2 = not allowed
             if (val === null || val === undefined) return "Unknown";
@@ -197,25 +197,6 @@
             if (n === 2) return "Not accessible";
             return "Unknown";
         }
-
-        // Sample trip JSON provided by you; used as a fallback example to update tooltip fields
-        const sampleTrip = {
-            "data": {
-                "type": "trips",
-                "id": "ID unavaliable",
-                "attributes": {
-                    "trip_id": "ID unavaliable",
-                    "route_id": "ID unavaliable",
-                    "service_id": "ID unavaliable",
-                    "trip_headsign": "Headsign unavaliable",
-                    "direction_id": 0,
-                    "block_id": "ID unavaliable",
-                    "shape_id": "ID unavaliable",
-                    "wheelchair_accessible": 0,
-                    "bikes_allowed": 0
-                }
-            }
-        };
 
         map.spin(true);
         fetch('https://api.at.govt.nz/gtfs/v3/routes', {
@@ -315,25 +296,20 @@
                             })
                             .then(resp => resp.json())
                             .then(respJson => {
-                                // Use response attributes if present; otherwise fall back to the sampleTrip attributes
-                                var attrs = (respJson && respJson.data && respJson.data.attributes) ? respJson.data.attributes : sampleTrip.data.attributes;
-                                var eid = safeId(target._entityId);
-                                $("#headsign-" + eid).text(attrs.trip_headsign || "");
-                                // prefer 'bikes_allowed' (plural) as in your sample JSON, fall back to other names
-                                var bikeVal = attrs.bikes_allowed ?? attrs.bike_allowed ?? attrs.bikes_allowed;
-                                $("#bike_allowed-" + eid).text(bikeText(bikeVal));
-                                var accVal = attrs.wheelchair_accessible ?? attrs.accessibility ?? attrs.wheelchair_access;
-                                $("#accessibility-" + eid).text(accessibilityText(accVal));
+                                if (respJson.message) {
+                                    console.error(respJson.message);
+                                    $("#status").text(`Error getting trip: ${respJson.message}`);
+                                } else if (respJson.data && respJson.data.attributes) {
+                                    var attrs = respJson.data.attributes;
+                                    var eid = safeId(target._entityId);
+                                    $("#headsign-" + eid).text(attrs.trip_headsign || "");
+                                    var bikeVal = attrs.bike_allowed ?? attrs.bikes_allowed ?? attrs.bikes_allowed;
+                                    $("#bike_allowed-" + eid).text(bikeText(bikeVal));
+                                    var accVal = attrs.wheelchair_accessible ?? attrs.accessibility ?? attrs.wheelchair_access;
+                                    $("#accessibility-" + eid).text(accessibilityText(accVal));
+                                }
                             })
-                            .catch(err => {
-                                // on fetch error, still populate from sampleTrip so tooltip isn't empty
-                                var attrs = sampleTrip.data.attributes;
-                                var eid = safeId(target._entityId);
-                                $("#headsign-" + eid).text(attrs.trip_headsign || "");
-                                $("#bike_allowed-" + eid).text(bikeText(attrs.bikes_allowed));
-                                $("#accessibility-" + eid).text(accessibilityText(attrs.wheelchair_accessible));
-                                console.error(err);
-                            });
+                            .catch(err => console.error(err));
                         });
                     }
 
@@ -355,11 +331,11 @@
                     marker.addTo(layer);
                     marker.speed = Math.round((v.position && v.position.speed) ? v.position.speed : 0);
 
-                    // Read bike allowed from multiple possible locations (prefer plural 'bikes_allowed' as in sample)
+                    // Read bike allowed from multiple possible locations (vehicle-level, v-level, trip-level, attributes)
                     var bikeAllowed =
-                        (v.bikes_allowed ?? v.bike_allowed) ??
-                        (v.vehicle && (v.vehicle.bikes_allowed ?? v.vehicle.bike_allowed)) ??
-                        (v.trip && (v.trip.bikes_allowed ?? (v.trip.attributes && (v.trip.attributes.bikes_allowed ?? v.trip.attributes.bike_allowed))));
+                        (v.bike_allowed ?? v.bikes_allowed) ??
+                        (v.vehicle && (v.vehicle.bike_allowed ?? v.vehicle.bikes_allowed)) ??
+                        (v.trip && (v.trip.bike_allowed ?? (v.trip.attributes && (v.trip.attributes.bike_allowed ?? v.trip.attributes.bikes_allowed))));
 
                     // Read wheelchair/accessibility from multiple possible locations
                     var accessibility =
