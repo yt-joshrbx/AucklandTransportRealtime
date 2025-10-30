@@ -269,7 +269,7 @@
                         Speed: ${marker.speed} km/h<br>
                         Occupancy: ${occupancy[v.occupancy_status]}<br>
                         License plate: ${v.vehicle.license_plate}<br>
-                        Bike Enabled: ${v.bikes_allowed}
+                        Bike Enabled: ${v.vehicle.bikes_allowed}
                     `);
                     marker.occupancy_status = v.occupancy_status;
                     updateMarkerColour(marker);
