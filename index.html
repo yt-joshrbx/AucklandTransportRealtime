@@ -211,8 +211,8 @@
                 }
             })
             .then(response => response.json())
-// Updated snippet to read bike_allowed (and fall back to other possible names).
-// Adds mapping to human-readable text and updates tooltip/trip fetch logic
+// Updated snippet to read bike_allowed and wheelchair_accessible (accessibility).
+// Uses per-marker unique element IDs inside the tooltip to avoid collisions when multiple tooltips exist.
 .then(data => {
     map.spin(false);
 
@@ -223,6 +223,16 @@
         if (isNaN(n)) return String(val);
         if (n === 1) return "Allowed";
         if (n === 2) return "Not allowed";
+        return "Unknown";
+    }
+
+    function accessibilityText(val) {
+        // GTFS: 0 = unknown, 1 = accessible, 2 = not accessible
+        if (val === null || val === undefined) return "Unknown";
+        var n = parseInt(val, 10);
+        if (isNaN(n)) return String(val);
+        if (n === 1) return "Accessible";
+        if (n === 2) return "Not accessible";
         return "Unknown";
     }
 
@@ -237,6 +247,8 @@
             marker.setLatLng([v.position.latitude, v.position.longitude]);
         } else {
             marker = L.circle([v.position.latitude, v.position.longitude], { radius: 40, desc: desc });
+            // attach the entity id to marker so tooltipopen handlers can target unique DOM elements
+            marker._entityId = id;
             markers[id] = marker;
 
             marker.on("tooltipopen", function (e) {
@@ -254,10 +266,13 @@
                             console.error(response.message);
                             $("#status").text(`Error getting trip: ${response.message}`);
                         } else {
-                            // Update headsign and bike allowed fields in the tooltip (if present)
-                            $("#headsign").text(response.data.attributes.trip_headsign || "");
+                            // Update headsign, bike allowed, and accessibility fields in the tooltip (if present)
+                            var eid = e.target._entityId;
+                            $("#headsign-" + eid).text(response.data.attributes.trip_headsign || "");
                             var bikeVal = response.data.attributes && (response.data.attributes.bike_allowed ?? response.data.attributes.bikes_allowed);
-                            $("#bike_allowed").text(bikeText(bikeVal));
+                            $("#bike_allowed-" + eid).text(bikeText(bikeVal));
+                            var accVal = response.data.attributes && (response.data.attributes.wheelchair_accessible ?? response.data.attributes.accessibility ?? response.data.attributes.wheelchair_access);
+                            $("#accessibility-" + eid).text(accessibilityText(accVal));
                         }
                     })
                     .catch(err => console.error(err));
@@ -269,7 +284,7 @@
             var r = routes[v.trip.route_id];
             marker.trip = v.trip;
             if (r) {
-                desc += `Agency: ${r.agency_id}<br>Route: ${r.route_long_name}<br>Headsign: <div id="headsign"></div>`;
+                desc += `Agency: ${r.agency_id}<br>Route: ${r.route_long_name}<br>Headsign: <div id="headsign-${id}"></div>`;
                 marker.options.desc = desc;
                 marker.route_long_name = r.route_long_name;
                 marker.route_type = r.route_type;
@@ -292,13 +307,21 @@
             v.bikes_allowed ??
             (v.trip && (v.trip.bike_allowed ?? (v.trip.attributes && (v.trip.attributes.bike_allowed ?? v.trip.attributes.bikes_allowed))));
 
+        // Read wheelchair/accessibility from multiple possible locations
+        var accessibility =
+            v.wheelchair_accessible ??
+            v.accessibility ??
+            (v.trip && (v.trip.wheelchair_accessible ?? (v.trip.attributes && (v.trip.attributes.wheelchair_accessible ?? v.trip.attributes.accessibility ?? v.trip.attributes.wheelchair_access))));
+
         marker.bikes_allowed = bikeAllowed;
+        marker.accessibility = accessibility;
 
         marker.bindTooltip(`${desc}
             Speed: ${marker.speed} km/h<br>
             Occupancy: ${occupancy[v.occupancy_status]}<br>
             License plate: ${v.vehicle.license_plate}<br>
-            Bike Enabled: <span id="bike_allowed">${bikeText(marker.bikes_allowed)}</span>
+            Bike Enabled: <span id="bike_allowed-${id}">${bikeText(marker.bikes_allowed)}</span><br>
+            Accessibility: <span id="accessibility-${id}">${accessibilityText(marker.accessibility)}</span>
         `);
 
         marker.occupancy_status = v.occupancy_status;
