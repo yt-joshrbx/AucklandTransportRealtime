@@ -211,71 +211,100 @@
                 }
             })
             .then(response => response.json())
-            .then(data => {
-                map.spin(false);
-                for (var i in data.response.entity) {
-                    var id = data.response.entity[i].id;
-                    var v = data.response.entity[i].vehicle;
-                    var desc = `<b>${v.vehicle.label}</b><br>`;
-                    var layer = layers[null];
-                    var marker = markers[id];
-                    if (marker) {
-                        marker.setLatLng([v.position.latitude, v.position.longitude]);
-                    } else {
-                        marker = L.circle([v.position.latitude, v.position.longitude], { radius: 40, desc: desc });
-                        markers[id] = marker;
-                        marker.on("tooltipopen", function (e) {
-                            if (e.target.trip) {
-                                fetch('https://api.at.govt.nz/gtfs/v3/trips/' + e.target.trip.trip_id, {
-                                    method: 'GET',
-                                    headers: {
-                                        'Cache-Control': 'no-cache',
-                                        'Ocp-Apim-Subscription-Key': 'b122c467e7e145b7bfcd6d854d09b01b',
-                                    }
-                                })
-                                .then(response => response.json())
-                                .then(response => {
-                                    if (response.message) {
-                                        console.error(response.message);
-                                        $("#status").text(`Error getting trip: ${response.message}`);
-                                    } else {
-                                        $("#headsign").text(response.data.attributes.trip_headsign);
-                                    }
-                                })
-                                .catch(err => console.error(err));
-                            }
-                        });
-                    }
-                    if (v.trip) {
-                        var r = routes[v.trip.route_id];
-                        marker.trip = v.trip;
-                        if (r) {
-                            desc += `Agency: ${r.agency_id}<br>Route: ${r.route_long_name}<br>Headsign: <div id="headsign"></div>`;
-                            marker.options.desc = desc;
-                            marker.route_long_name = r.route_long_name;
-                            marker.route_type = r.route_type;
-                            layer = layers[r.route_type];
-                            if (!layer) {
-                                console.error(r);
-                                layer = layers[null];
-                            }
-                        } else {
-                            layer = layers[null];
+// Updated snippet to read bike_allowed (and fall back to other possible names).
+// Adds mapping to human-readable text and updates tooltip/trip fetch logic
+.then(data => {
+    map.spin(false);
+
+    function bikeText(val) {
+        // GTFS: 0 = unknown, 1 = allowed, 2 = not allowed
+        if (val === null || val === undefined) return "Unknown";
+        var n = parseInt(val, 10);
+        if (isNaN(n)) return String(val);
+        if (n === 1) return "Allowed";
+        if (n === 2) return "Not allowed";
+        return "Unknown";
+    }
+
+    for (var i in data.response.entity) {
+        var id = data.response.entity[i].id;
+        var v = data.response.entity[i].vehicle;
+        var desc = `<b>${v.vehicle.label}</b><br>`;
+        var layer = layers[null];
+        var marker = markers[id];
+
+        if (marker) {
+            marker.setLatLng([v.position.latitude, v.position.longitude]);
+        } else {
+            marker = L.circle([v.position.latitude, v.position.longitude], { radius: 40, desc: desc });
+            markers[id] = marker;
+
+            marker.on("tooltipopen", function (e) {
+                if (e.target.trip) {
+                    fetch('https://api.at.govt.nz/gtfs/v3/trips/' + e.target.trip.trip_id, {
+                        method: 'GET',
+                        headers: {
+                            'Cache-Control': 'no-cache',
+                            'Ocp-Apim-Subscription-Key': 'b122c467e7e145b7bfcd6d854d09b01b',
                         }
-                    }
-                    marker.addTo(layer);
-                    marker.speed = Math.round(v.position.speed);
-                    marker.bindTooltip(`${desc}
-                        Speed: ${marker.speed} km/h<br>
-                        Occupancy: ${occupancy[v.occupancy_status]}<br>
-                        License plate: ${v.vehicle.license_plate}<br>
-                        Bike Enabled: ${v.bikes_allowed}
-                    `);
-                    marker.bikes_allowed = v.bikes_allowed
-                    marker.occupancy_status = v.occupancy_status;
-                    updateMarkerColour(marker);
+                    })
+                    .then(response => response.json())
+                    .then(response => {
+                        if (response.message) {
+                            console.error(response.message);
+                            $("#status").text(`Error getting trip: ${response.message}`);
+                        } else {
+                            // Update headsign and bike allowed fields in the tooltip (if present)
+                            $("#headsign").text(response.data.attributes.trip_headsign || "");
+                            var bikeVal = response.data.attributes && (response.data.attributes.bike_allowed ?? response.data.attributes.bikes_allowed);
+                            $("#bike_allowed").text(bikeText(bikeVal));
+                        }
+                    })
+                    .catch(err => console.error(err));
                 }
-            })
+            });
+        }
+
+        if (v.trip) {
+            var r = routes[v.trip.route_id];
+            marker.trip = v.trip;
+            if (r) {
+                desc += `Agency: ${r.agency_id}<br>Route: ${r.route_long_name}<br>Headsign: <div id="headsign"></div>`;
+                marker.options.desc = desc;
+                marker.route_long_name = r.route_long_name;
+                marker.route_type = r.route_type;
+                layer = layers[r.route_type];
+                if (!layer) {
+                    console.error(r);
+                    layer = layers[null];
+                }
+            } else {
+                layer = layers[null];
+            }
+        }
+
+        marker.addTo(layer);
+        marker.speed = Math.round(v.position.speed);
+
+        // Read bike allowed from multiple possible locations (vehicle-level, trip-level, or trip.attributes)
+        var bikeAllowed =
+            v.bike_allowed ??
+            v.bikes_allowed ??
+            (v.trip && (v.trip.bike_allowed ?? (v.trip.attributes && (v.trip.attributes.bike_allowed ?? v.trip.attributes.bikes_allowed))));
+
+        marker.bikes_allowed = bikeAllowed;
+
+        marker.bindTooltip(`${desc}
+            Speed: ${marker.speed} km/h<br>
+            Occupancy: ${occupancy[v.occupancy_status]}<br>
+            License plate: ${v.vehicle.license_plate}<br>
+            Bike Enabled: <span id="bike_allowed">${bikeText(marker.bikes_allowed)}</span>
+        `);
+
+        marker.occupancy_status = v.occupancy_status;
+        updateMarkerColour(marker);
+    }
+})
             .catch(err => {
                 map.spin(false);
                 console.error(err);
