@@ -69,7 +69,7 @@
                 subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
             }),
             "Wikimedia": L.tileLayer.provider("Wikimedia")
-        }
+        };
 
         map.attributionControl.addAttribution("© <a href='https://dev-portal.at.govt.nz/'>AT</a>");
 
@@ -91,8 +91,9 @@
         $(document).on("keyup", ".search-input", function () {
             var searchVal = this.value.toLowerCase();
             for (var i in markers) {
+                if (!markers.hasOwnProperty(i)) continue;
                 var marker = markers[i];
-                if (!searchVal || marker.options.desc.toLowerCase().includes(searchVal)) {
+                if (!searchVal || (marker.options.desc && marker.options.desc.toLowerCase().includes(searchVal))) {
                     marker.setStyle({ opacity: 1, fillOpacity: .2 });
                 } else {
                     marker.setStyle({ opacity: 0, fillOpacity: 0 });
@@ -121,6 +122,7 @@
             window.colourscheme = this.value;
             location.hash = this.value;
             for (var i in markers) {
+                if (!markers.hasOwnProperty(i)) continue;
                 updateMarkerColour(markers[i]);
             }
         });
@@ -168,6 +170,34 @@
         var hasLoaded = false;
         var routes = {};
 
+        // Helper: safe id for building per-marker DOM ids inside tooltip
+        function safeId(input) {
+            if (input === null || input === undefined) return "id";
+            return String(input).replace(/[^a-zA-Z0-9_\-]/g, "_");
+        }
+
+        // Display helper text for bike_allowed
+        function bikeText(val) {
+            // GTFS: 0 = unknown, 1 = allowed, 2 = not allowed
+            if (val === null || val === undefined) return "Unknown";
+            var n = parseInt(val, 10);
+            if (isNaN(n)) return String(val);
+            if (n === 1) return "Allowed";
+            if (n === 2) return "Not allowed";
+            return "Unknown";
+        }
+
+        // Display helper for wheelchair/accessibility
+        function accessibilityText(val) {
+            // GTFS: 0 = unknown, 1 = accessible, 2 = not accessible
+            if (val === null || val === undefined) return "Unknown";
+            var n = parseInt(val, 10);
+            if (isNaN(n)) return String(val);
+            if (n === 1) return "Accessible";
+            if (n === 2) return "Not accessible";
+            return "Unknown";
+        }
+
         map.spin(true);
         fetch('https://api.at.govt.nz/gtfs/v3/routes', {
             method: 'GET',
@@ -203,6 +233,7 @@
             }
             hasLoaded = true;
 
+            map.spin(true);
             fetch('https://api.at.govt.nz/realtime/legacy/vehiclelocations', {
                 method: 'GET',
                 headers: {
@@ -211,123 +242,124 @@
                 }
             })
             .then(response => response.json())
-// Updated snippet to read bike_allowed and wheelchair_accessible (accessibility).
-// Uses per-marker unique element IDs inside the tooltip to avoid collisions when multiple tooltips exist.
-.then(data => {
-    map.spin(false);
+            .then(data => {
+                map.spin(false);
 
-    function bikeText(val) {
-        // GTFS: 0 = unknown, 1 = allowed, 2 = not allowed
-        if (val === null || val === undefined) return "Unknown";
-        var n = parseInt(val, 10);
-        if (isNaN(n)) return String(val);
-        if (n === 1) return "Allowed";
-        if (n === 2) return "Not allowed";
-        return "Unknown";
-    }
+                // data.response.entity is expected; guard if not present
+                if (!data || !data.response || !Array.isArray(data.response.entity)) {
+                    console.error("Unexpected vehiclelocations response", data);
+                    $("#status").text("Unexpected vehicle data.");
+                    return;
+                }
 
-    function accessibilityText(val) {
-        // GTFS: 0 = unknown, 1 = accessible, 2 = not accessible
-        if (val === null || val === undefined) return "Unknown";
-        var n = parseInt(val, 10);
-        if (isNaN(n)) return String(val);
-        if (n === 1) return "Accessible";
-        if (n === 2) return "Not accessible";
-        return "Unknown";
-    }
+                for (var i in data.response.entity) {
+                    if (!data.response.entity.hasOwnProperty(i)) continue;
+                    var ent = data.response.entity[i];
+                    var id = ent.id;
+                    var v = ent.vehicle; // note: this object contains vehicle (info), position, trip, occupancy_status, etc.
+                    if (!v) continue;
 
-    for (var i in data.response.entity) {
-        var id = data.response.entity[i].id;
-        var v = data.response.entity[i].vehicle;
-        var desc = `<b>${v.vehicle.label}</b><br>`;
-        var layer = layers[null];
-        var marker = markers[id];
+                    var vehicleInfo = v.vehicle || {}; // label, license_plate may be here
+                    var label = vehicleInfo.label || ("id " + id);
+                    var desc = `<b>${label}</b><br>`;
+                    var layer = layers[null];
+                    var marker = markers[id];
 
-        if (marker) {
-            marker.setLatLng([v.position.latitude, v.position.longitude]);
-        } else {
-            marker = L.circle([v.position.latitude, v.position.longitude], { radius: 40, desc: desc });
-            // attach the entity id to marker so tooltipopen handlers can target unique DOM elements
-            marker._entityId = id;
-            markers[id] = marker;
+                    // compute a safe id for DOM elements inside tooltip
+                    var sid = safeId(id);
 
-            marker.on("tooltipopen", function (e) {
-                if (e.target.trip) {
-                    fetch('https://api.at.govt.nz/gtfs/v3/trips/' + e.target.trip.trip_id, {
-                        method: 'GET',
-                        headers: {
-                            'Cache-Control': 'no-cache',
-                            'Ocp-Apim-Subscription-Key': 'b122c467e7e145b7bfcd6d854d09b01b',
+                    if (marker) {
+                        // update position
+                        if (v.position && typeof v.position.latitude === "number" && typeof v.position.longitude === "number") {
+                            marker.setLatLng([v.position.latitude, v.position.longitude]);
                         }
-                    })
-                    .then(response => response.json())
-                    .then(response => {
-                        if (response.message) {
-                            console.error(response.message);
-                            $("#status").text(`Error getting trip: ${response.message}`);
+                        // update description so search works
+                        marker.options.desc = desc;
+                    } else {
+                        marker = L.circle([v.position.latitude || 0, v.position.longitude || 0], { radius: 40, desc: desc });
+                        marker._entityId = id;
+                        markers[id] = marker;
+
+                        // tooltipopen fetches trip details (headsings, bike/accessibility) and updates the per-marker elements
+                        marker.on("tooltipopen", function (e) {
+                            var target = e.target;
+                            if (!target || !target.trip) return;
+                            var tripId = target.trip.trip_id;
+                            if (!tripId) return;
+
+                            fetch('https://api.at.govt.nz/gtfs/v3/trips/' + tripId, {
+                                method: 'GET',
+                                headers: {
+                                    'Cache-Control': 'no-cache',
+                                    'Ocp-Apim-Subscription-Key': 'b122c467e7e145b7bfcd6d854d09b01b',
+                                }
+                            })
+                            .then(resp => resp.json())
+                            .then(respJson => {
+                                if (respJson.message) {
+                                    console.error(respJson.message);
+                                    $("#status").text(`Error getting trip: ${respJson.message}`);
+                                } else if (respJson.data && respJson.data.attributes) {
+                                    var attrs = respJson.data.attributes;
+                                    var eid = safeId(target._entityId);
+                                    $("#headsign-" + eid).text(attrs.trip_headsign || "");
+                                    var bikeVal = attrs.bike_allowed ?? attrs.bikes_allowed ?? attrs.bikes_allowed;
+                                    $("#bike_allowed-" + eid).text(bikeText(bikeVal));
+                                    var accVal = attrs.wheelchair_accessible ?? attrs.accessibility ?? attrs.wheelchair_access;
+                                    $("#accessibility-" + eid).text(accessibilityText(accVal));
+                                }
+                            })
+                            .catch(err => console.error(err));
+                        });
+                    }
+
+                    // populate route/trip-derived info
+                    if (v.trip) {
+                        var r = routes[v.trip.route_id];
+                        marker.trip = v.trip;
+                        if (r) {
+                            desc += `Agency: ${r.agency_id}<br>Route: ${r.route_long_name}<br>Headsign: <div id="headsign-${sid}"></div>`;
+                            marker.options.desc = desc;
+                            marker.route_long_name = r.route_long_name;
+                            marker.route_type = r.route_type;
+                            layer = layers[r.route_type] || layers[null];
                         } else {
-                            // Update headsign, bike allowed, and accessibility fields in the tooltip (if present)
-                            var eid = e.target._entityId;
-                            $("#headsign-" + eid).text(response.data.attributes.trip_headsign || "");
-                            var bikeVal = response.data.attributes && (response.data.attributes.bike_allowed ?? response.data.attributes.bikes_allowed);
-                            $("#bike_allowed-" + eid).text(bikeText(bikeVal));
-                            var accVal = response.data.attributes && (response.data.attributes.wheelchair_accessible ?? response.data.attributes.accessibility ?? response.data.attributes.wheelchair_access);
-                            $("#accessibility-" + eid).text(accessibilityText(accVal));
+                            layer = layers[null];
                         }
-                    })
-                    .catch(err => console.error(err));
+                    }
+
+                    marker.addTo(layer);
+                    marker.speed = Math.round((v.position && v.position.speed) ? v.position.speed : 0);
+
+                    // Read bike allowed from multiple possible locations (vehicle-level, v-level, trip-level, attributes)
+                    var bikeAllowed =
+                        (v.bike_allowed ?? v.bikes_allowed) ??
+                        (v.vehicle && (v.vehicle.bike_allowed ?? v.vehicle.bikes_allowed)) ??
+                        (v.trip && (v.trip.bike_allowed ?? (v.trip.attributes && (v.trip.attributes.bike_allowed ?? v.trip.attributes.bikes_allowed))));
+
+                    // Read wheelchair/accessibility from multiple possible locations
+                    var accessibility =
+                        (v.wheelchair_accessible ?? v.accessibility) ??
+                        (v.vehicle && (v.vehicle.wheelchair_accessible ?? v.vehicle.accessibility)) ??
+                        (v.trip && (v.trip.wheelchair_accessible ?? (v.trip.attributes && (v.trip.attributes.wheelchair_accessible ?? v.trip.attributes.accessibility ?? v.trip.attributes.wheelchair_access))));
+
+                    marker.bikes_allowed = bikeAllowed;
+                    marker.accessibility = accessibility;
+
+                    // Bind tooltip with unique element ids per marker to allow updates when trip fetch returns
+                    var tooltipHtml = `${desc}
+                        Speed: ${marker.speed} km/h<br>
+                        Occupancy: ${occupancy[v.occupancy_status] || ""}<br>
+                        License plate: ${vehicleInfo.license_plate || ""}<br>
+                        Bike Enabled: <span id="bike_allowed-${sid}">${bikeText(marker.bikes_allowed)}</span><br>
+                        Accessibility: <span id="accessibility-${sid}">${accessibilityText(marker.accessibility)}</span>
+                    `;
+                    marker.bindTooltip(tooltipHtml);
+
+                    marker.occupancy_status = v.occupancy_status;
+                    updateMarkerColour(marker);
                 }
-            });
-        }
-
-        if (v.trip) {
-            var r = routes[v.trip.route_id];
-            marker.trip = v.trip;
-            if (r) {
-                desc += `Agency: ${r.agency_id}<br>Route: ${r.route_long_name}<br>Headsign: <div id="headsign-${id}"></div>`;
-                marker.options.desc = desc;
-                marker.route_long_name = r.route_long_name;
-                marker.route_type = r.route_type;
-                layer = layers[r.route_type];
-                if (!layer) {
-                    console.error(r);
-                    layer = layers[null];
-                }
-            } else {
-                layer = layers[null];
-            }
-        }
-
-        marker.addTo(layer);
-        marker.speed = Math.round(v.position.speed);
-
-        // Read bike allowed from multiple possible locations (vehicle-level, trip-level, or trip.attributes)
-        var bikeAllowed =
-            v.bike_allowed = 0
-            v.bikes_allowed = 0
-            (v.trip && (v.trip.bike_allowed ?? (v.trip.attributes && (v.trip.attributes.bike_allowed ?? v.trip.attributes.bikes_allowed))));
-
-        // Read wheelchair/accessibility from multiple possible locations
-        var accessibility =
-            v.wheelchair_accessible = 0
-            v.accessibility = 0
-            (v.trip && (v.trip.wheelchair_accessible ?? (v.trip.attributes && (v.trip.attributes.wheelchair_accessible ?? v.trip.attributes.accessibility ?? v.trip.attributes.wheelchair_access))));
-
-        marker.bikes_allowed = bikeAllowed;
-        marker.accessibility = accessibility;
-
-        marker.bindTooltip(`${desc}
-            Speed: ${marker.speed} km/h<br>
-            Occupancy: ${occupancy[v.occupancy_status]}<br>
-            License plate: ${v.vehicle.license_plate}<br>
-            Bike Enabled: <span id="bike_allowed-${id}">${bikeText(marker.bikes_allowed)}</span><br>
-            Accessibility: <span id="accessibility-${id}">${accessibilityText(marker.accessibility)}</span>
-        `);
-
-        marker.occupancy_status = v.occupancy_status;
-        updateMarkerColour(marker);
-    }
-})
+            })
             .catch(err => {
                 map.spin(false);
                 console.error(err);
