@@ -303,14 +303,14 @@
 
         // Read bike allowed from multiple possible locations (vehicle-level, trip-level, or trip.attributes)
         var bikeAllowed =
-            v.bike_allowed ??
-            v.bikes_allowed ??
+            v.bike_allowed = 0
+            v.bikes_allowed = 0
             (v.trip && (v.trip.bike_allowed ?? (v.trip.attributes && (v.trip.attributes.bike_allowed ?? v.trip.attributes.bikes_allowed))));
 
         // Read wheelchair/accessibility from multiple possible locations
         var accessibility =
-            v.wheelchair_accessible ??
-            v.accessibility ??
+            v.wheelchair_accessible = 0
+            v.accessibility = 0
             (v.trip && (v.trip.wheelchair_accessible ?? (v.trip.attributes && (v.trip.attributes.wheelchair_accessible ?? v.trip.attributes.accessibility ?? v.trip.attributes.wheelchair_access))));
 
         marker.bikes_allowed = bikeAllowed;
