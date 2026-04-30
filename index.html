@@ -72,27 +72,37 @@
         };
 
         map.attributionControl.addAttribution("© <a href='https://dev-portal.at.govt.nz/'>AT</a>");
+        map.attributionControl.addAttribution("© <a href='https://www.fireandemergency.nz/'>Fire and Emergency NZ</a>");
 
         var layers = {
             2: L.layerGroup().addTo(map),
             3: L.layerGroup().addTo(map),
             4: L.layerGroup().addTo(map),
-            null: L.layerGroup().addTo(map)
+            null: L.layerGroup().addTo(map),
+            emergency: L.layerGroup().addTo(map)
         };
 
         var search = L.control.search({
-            layer: L.layerGroup([layers[2], layers[3], layers[4], layers[null]]),
+            layer: L.layerGroup([layers[2], layers[3], layers[4], layers[null], layers.emergency]),
             initial: false,
             propertyName: 'desc'
         });
         map.addControl(search);
 
-        // Use event delegation for .search-input which is dynamically inserted by Leaflet Search
         $(document).on("keyup", ".search-input", function () {
             var searchVal = this.value.toLowerCase();
             for (var i in markers) {
                 if (!markers.hasOwnProperty(i)) continue;
                 var marker = markers[i];
+                if (!searchVal || (marker.options.desc && marker.options.desc.toLowerCase().includes(searchVal))) {
+                    marker.setStyle({ opacity: 1, fillOpacity: .2 });
+                } else {
+                    marker.setStyle({ opacity: 0, fillOpacity: 0 });
+                }
+            }
+            for (var i in emergencyMarkers) {
+                if (!emergencyMarkers.hasOwnProperty(i)) continue;
+                var marker = emergencyMarkers[i];
                 if (!searchVal || (marker.options.desc && marker.options.desc.toLowerCase().includes(searchVal))) {
                     marker.setStyle({ opacity: 1, fillOpacity: .2 });
                 } else {
@@ -105,7 +115,8 @@
             "AT Buses": layers[3],
             "AT Trains": layers[2],
             "AT Ferries": layers[4],
-            "Out of Service": layers[null]
+            "Out of Service": layers[null],
+            "Fire and Emergency": layers.emergency
         };
 
         L.control.layers(baseMaps, overlayMaps).addTo(map);
@@ -163,6 +174,7 @@
         }
 
         var markers = {};
+        var emergencyMarkers = {};
         var occupancy = ["empty", "many seats available", "few seats available", "standing room only", "limited standing room", "full", "not accepting passengers"];
         var occupancyColors = ["#4575b4", "#91bfdb", "#e0f3f8", "#fee090", "#fc8d59", "#d73027", "black"];
         var speedColors = chroma.scale([chroma.hsv(270, 1, 1), chroma.hsv(180, 1, 1), chroma.hsv(90, 1, 1), chroma.hsv(0, 1, 1)]).mode("hsv").domain([0, 100]);
@@ -170,15 +182,12 @@
         var hasLoaded = false;
         var routes = {};
 
-        // Helper: safe id for building per-marker DOM ids inside tooltip
         function safeId(input) {
             if (input === null || input === undefined) return "id";
             return String(input).replace(/[^a-zA-Z0-9_\-]/g, "_");
         }
 
-        // Display helper text for bike_allowed
         function bikeText(val) {
-            // GTFS: 0 = unknown, 1 = allowed, 2 = not allowed
             if (val === null || val === undefined) return "Unknown";
             var n = parseInt(val, 10);
             if (isNaN(n)) return String(val);
@@ -187,15 +196,97 @@
             return "Unknown";
         }
 
-        // Display helper for wheelchair/accessibility
         function accessibilityText(val) {
-            // GTFS: 0 = unknown, 1 = accessible, 2 = not accessible
             if (val === null || val === undefined) return "Unknown";
             var n = parseInt(val, 10);
             if (isNaN(n)) return String(val);
             if (n === 1) return "Accessible";
             if (n === 2) return "Not accessible";
             return "Unknown";
+        }
+
+        function emergencyLoop() {
+            fetch('https://gw.api.fireandemergency.nz/incr/v1/callSigns?page=1&rows=100', {
+                method: 'GET',
+                headers: {
+                    'Cache-Control': 'no-cache'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (!data || !Array.isArray(data.callSigns)) {
+                    console.log("Fire and Emergency: No call signs data");
+                    return;
+                }
+
+                for (var i in data.callSigns) {
+                    if (!data.callSigns.hasOwnProperty(i)) continue;
+                    var callSign = data.callSigns[i];
+                    var id = callSign.id || callSign.callSign;
+                    var latitude = callSign.latitude;
+                    var longitude = callSign.longitude;
+
+                    if (!latitude || !longitude) continue;
+
+                    var label = callSign.callSign || ("Call Sign " + id);
+                    var desc = "<b>" + label + "</b><br>";
+                    var marker = emergencyMarkers[id];
+
+                    var sid = safeId(id);
+
+                    if (marker) {
+                        marker.setLatLng([latitude, longitude]);
+                        marker.options.desc = desc;
+                    } else {
+                        marker = L.circle([latitude, longitude], { 
+                            radius: 50, 
+                            desc: desc,
+                            color: "red",
+                            fillColor: "red",
+                            fillOpacity: 0.3
+                        });
+                        marker._entityId = id;
+                        emergencyMarkers[id] = marker;
+
+                        marker.on("tooltipopen", function (e) {
+                            var target = e.target;
+                            if (!target) return;
+                            var callSignId = target._entityId;
+                            if (!callSignId) return;
+
+                            fetch('https://gw.api.fireandemergency.nz/incr/v1/callSigns/' + callSignId, {
+                                method: 'GET',
+                                headers: {
+                                    'Cache-Control': 'no-cache'
+                                }
+                            })
+                            .then(resp => resp.json())
+                            .then(respJson => {
+                                if (respJson && respJson.data) {
+                                    var callSignData = respJson.data;
+                                    var eid = safeId(target._entityId);
+                                    $("#callsign_status-" + eid).text(callSignData.status || "");
+                                    $("#callsign_type-" + eid).text(callSignData.type || "");
+                                }
+                            })
+                            .catch(err => console.error("Error fetching call sign details:", err));
+                        });
+                    }
+
+                    var tooltipHtml = desc +
+                        "Call Sign: " + label + "<br>" +
+                        "Status: <span id='callsign_status-" + sid + "'>Loading...</span><br>" +
+                        "Type: <span id='callsign_type-" + sid + "'>Loading...</span><br>" +
+                        "Latitude: " + latitude.toFixed(4) + "<br>" +
+                        "Longitude: " + longitude.toFixed(4);
+                    marker.bindTooltip(tooltipHtml);
+
+                    marker.addTo(layers.emergency);
+                }
+            })
+            .catch(err => {
+                console.error("Error loading emergency call signs:", err);
+            });
         }
 
         map.spin(true);
@@ -211,7 +302,7 @@
             map.spin(false);
             if (response.message) {
                 console.error(response);
-                $("#status").text(`Error getting routes: ${response.message}`);
+                $("#status").text("Error getting routes: " + response.message);
             } else {
                 for (var r of response.data) {
                     if (r.attributes.route_type == 712) r.attributes.route_type = 3;
@@ -219,6 +310,7 @@
                 }
             }
             loop();
+            emergencyLoop();
         })
         .catch(err => {
             map.spin(false);
@@ -245,7 +337,6 @@
             .then(data => {
                 map.spin(false);
 
-                // data.response.entity is expected; guard if not present
                 if (!data || !data.response || !Array.isArray(data.response.entity)) {
                     console.error("Unexpected vehiclelocations response", data);
                     $("#status").text("Unexpected vehicle data.");
@@ -256,31 +347,27 @@
                     if (!data.response.entity.hasOwnProperty(i)) continue;
                     var ent = data.response.entity[i];
                     var id = ent.id;
-                    var v = ent.vehicle; // note: this object contains vehicle (info), position, trip, occupancy_status, etc.
+                    var v = ent.vehicle;
                     if (!v) continue;
 
-                    var vehicleInfo = v.vehicle || {}; // label, license_plate may be here
+                    var vehicleInfo = v.vehicle || {};
                     var label = vehicleInfo.label || ("id " + id);
-                    var desc = `<b>${label}</b><br>`;
+                    var desc = "<b>" + label + "</b><br>";
                     var layer = layers[null];
                     var marker = markers[id];
 
-                    // compute a safe id for DOM elements inside tooltip
                     var sid = safeId(id);
 
                     if (marker) {
-                        // update position
                         if (v.position && typeof v.position.latitude === "number" && typeof v.position.longitude === "number") {
                             marker.setLatLng([v.position.latitude, v.position.longitude]);
                         }
-                        // update description so search works
                         marker.options.desc = desc;
                     } else {
                         marker = L.circle([v.position.latitude || 0, v.position.longitude || 0], { radius: 40, desc: desc });
                         marker._entityId = id;
                         markers[id] = marker;
 
-                        // tooltipopen fetches trip details (headsings, bike/accessibility) and updates the per-marker elements
                         marker.on("tooltipopen", function (e) {
                             var target = e.target;
                             if (!target || !target.trip) return;
@@ -298,7 +385,7 @@
                             .then(respJson => {
                                 if (respJson.message) {
                                     console.error(respJson.message);
-                                    $("#status").text(`Error getting trip: ${respJson.message}`);
+                                    $("#status").text("Error getting trip: " + respJson.message);
                                 } else if (respJson.data && respJson.data.attributes) {
                                     var attrs = respJson.data.attributes;
                                     var eid = safeId(target._entityId);
@@ -313,12 +400,11 @@
                         });
                     }
 
-                    // populate route/trip-derived info
                     if (v.trip) {
                         var r = routes[v.trip.route_id];
                         marker.trip = v.trip;
                         if (r) {
-                            desc += `Agency: ${r.agency_id}<br>Route: ${r.route_long_name}<br>Headsign: <div id="headsign-${sid}"></div>`;
+                            desc += "Agency: " + r.agency_id + "<br>Route: " + r.route_long_name + "<br>Headsign: <div id='headsign-" + sid + "'></div>";
                             marker.options.desc = desc;
                             marker.route_long_name = r.route_long_name;
                             marker.route_type = r.route_type;
@@ -331,13 +417,11 @@
                     marker.addTo(layer);
                     marker.speed = Math.round((v.position && v.position.speed) ? v.position.speed : 0);
 
-                    // Read bike allowed from multiple possible locations (vehicle-level, v-level, trip-level, attributes)
                     var bikeAllowed =
                         (v.bike_allowed ?? v.bikes_allowed) ??
                         (v.vehicle && (v.vehicle.bike_allowed ?? v.vehicle.bikes_allowed)) ??
                         (v.trip && (v.trip.bike_allowed ?? (v.trip.attributes && (v.trip.attributes.bike_allowed ?? v.trip.attributes.bikes_allowed))));
 
-                    // Read wheelchair/accessibility from multiple possible locations
                     var accessibility =
                         (v.wheelchair_accessible ?? v.accessibility) ??
                         (v.vehicle && (v.vehicle.wheelchair_accessible ?? v.vehicle.accessibility)) ??
@@ -346,14 +430,12 @@
                     marker.bikes_allowed = bikeAllowed;
                     marker.accessibility = accessibility;
 
-                    // Bind tooltip with unique element ids per marker to allow updates when trip fetch returns
-                    var tooltipHtml = `${desc}
-                        Speed: ${marker.speed} km/h<br>
-                        Occupancy: ${occupancy[v.occupancy_status] || ""}<br>
-                        License plate: ${vehicleInfo.license_plate || ""}<br>
-                        Bike Enabled: <span id="bike_allowed-${sid}">${bikeText(marker.bikes_allowed)}</span><br>
-                        Accessibility: <span id="accessibility-${sid}">${accessibilityText(marker.accessibility)}</span>
-                    `;
+                    var tooltipHtml = desc +
+                        "Speed: " + marker.speed + " km/h<br>" +
+                        "Occupancy: " + (occupancy[v.occupancy_status] || "") + "<br>" +
+                        "License plate: " + (vehicleInfo.license_plate || "") + "<br>" +
+                        "Bike Enabled: <span id='bike_allowed-" + sid + "'>" + bikeText(marker.bikes_allowed) + "</span><br>" +
+                        "Accessibility: <span id='accessibility-" + sid + "'>" + accessibilityText(marker.accessibility) + "</span>";
                     marker.bindTooltip(tooltipHtml);
 
                     marker.occupancy_status = v.occupancy_status;
@@ -367,6 +449,7 @@
             });
         }
         setInterval(loop, 10000);
+        setInterval(emergencyLoop, 30000);
     </script>
 </body>
 </html>
