@@ -72,18 +72,16 @@
         };
 
         map.attributionControl.addAttribution("© <a href='https://dev-portal.at.govt.nz/'>AT</a>");
-        map.attributionControl.addAttribution("© <a href='https://www.fireandemergency.nz/'>Fire and Emergency NZ</a>");
 
         var layers = {
             2: L.layerGroup().addTo(map),
             3: L.layerGroup().addTo(map),
             4: L.layerGroup().addTo(map),
-            null: L.layerGroup().addTo(map),
-            emergency: L.layerGroup().addTo(map)
+            null: L.layerGroup().addTo(map)
         };
 
         var search = L.control.search({
-            layer: L.layerGroup([layers[2], layers[3], layers[4], layers[null], layers.emergency]),
+            layer: L.layerGroup([layers[2], layers[3], layers[4], layers[null]]),
             initial: false,
             propertyName: 'desc'
         });
@@ -100,23 +98,13 @@
                     marker.setStyle({ opacity: 0, fillOpacity: 0 });
                 }
             }
-            for (var i in emergencyMarkers) {
-                if (!emergencyMarkers.hasOwnProperty(i)) continue;
-                var marker = emergencyMarkers[i];
-                if (!searchVal || (marker.options.desc && marker.options.desc.toLowerCase().includes(searchVal))) {
-                    marker.setStyle({ opacity: 1, fillOpacity: .2 });
-                } else {
-                    marker.setStyle({ opacity: 0, fillOpacity: 0 });
-                }
-            }
         });
 
         var overlayMaps = {
             "AT Buses": layers[3],
             "AT Trains": layers[2],
             "AT Ferries": layers[4],
-            "Out of Service": layers[null],
-            "Fire and Emergency": layers.emergency
+            "Out of Service": layers[null]
         };
 
         L.control.layers(baseMaps, overlayMaps).addTo(map);
@@ -174,7 +162,7 @@
         }
 
         var markers = {};
-        var emergencyMarkers = {};
+        var busServices = {};
         var occupancy = ["empty", "many seats available", "few seats available", "standing room only", "limited standing room", "full", "not accepting passengers"];
         var occupancyColors = ["#4575b4", "#91bfdb", "#e0f3f8", "#fee090", "#fc8d59", "#d73027", "black"];
         var speedColors = chroma.scale([chroma.hsv(270, 1, 1), chroma.hsv(180, 1, 1), chroma.hsv(90, 1, 1), chroma.hsv(0, 1, 1)]).mode("hsv").domain([0, 100]);
@@ -205,88 +193,17 @@
             return "Unknown";
         }
 
-        function emergencyLoop() {
-            fetch('https://gw.api.fireandemergency.nz/incr/v1/callSigns?page=1&rows=100', {
-                method: 'GET',
-                headers: {
-                    'Cache-Control': 'no-cache'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (!data || !Array.isArray(data.callSigns)) {
-                    console.log("Fire and Emergency: No call signs data");
-                    return;
-                }
-
-                for (var i in data.callSigns) {
-                    if (!data.callSigns.hasOwnProperty(i)) continue;
-                    var callSign = data.callSigns[i];
-                    var id = callSign.id || callSign.callSign;
-                    var latitude = callSign.latitude;
-                    var longitude = callSign.longitude;
-
-                    if (!latitude || !longitude) continue;
-
-                    var label = callSign.callSign || ("Call Sign " + id);
-                    var desc = "<b>" + label + "</b><br>";
-                    var marker = emergencyMarkers[id];
-
-                    var sid = safeId(id);
-
-                    if (marker) {
-                        marker.setLatLng([latitude, longitude]);
-                        marker.options.desc = desc;
-                    } else {
-                        marker = L.circle([latitude, longitude], { 
-                            radius: 50, 
-                            desc: desc,
-                            color: "red",
-                            fillColor: "red",
-                            fillOpacity: 0.3
-                        });
-                        marker._entityId = id;
-                        emergencyMarkers[id] = marker;
-
-                        marker.on("tooltipopen", function (e) {
-                            var target = e.target;
-                            if (!target) return;
-                            var callSignId = target._entityId;
-                            if (!callSignId) return;
-
-                            fetch('https://gw.api.fireandemergency.nz/incr/v1/callSigns/' + callSignId, {
-                                method: 'GET',
-                                headers: {
-                                    'Cache-Control': 'no-cache'
-                                }
-                            })
-                            .then(resp => resp.json())
-                            .then(respJson => {
-                                if (respJson && respJson.data) {
-                                    var callSignData = respJson.data;
-                                    var eid = safeId(target._entityId);
-                                    $("#callsign_status-" + eid).text(callSignData.status || "");
-                                    $("#callsign_type-" + eid).text(callSignData.type || "");
-                                }
-                            })
-                            .catch(err => console.error("Error fetching call sign details:", err));
-                        });
+        // Load bus services data from JSON
+        function loadBusServices() {
+            fetch('bus_services.json')
+                .then(response => response.json())
+                .then(data => {
+                    for (var service of data) {
+                        busServices[service.RouteNumber] = service;
                     }
-
-                    var tooltipHtml = desc +
-                        "Call Sign: " + label + "<br>" +
-                        "Status: <span id='callsign_status-" + sid + "'>Loading...</span><br>" +
-                        "Type: <span id='callsign_type-" + sid + "'>Loading...</span><br>" +
-                        "Latitude: " + latitude.toFixed(4) + "<br>" +
-                        "Longitude: " + longitude.toFixed(4);
-                    marker.bindTooltip(tooltipHtml);
-
-                    marker.addTo(layers.emergency);
-                }
-            })
-            .catch(err => {
-                console.error("Error loading emergency call signs:", err);
-            });
+                    console.log("Loaded " + Object.keys(busServices).length + " bus services");
+                })
+                .catch(err => console.error("Error loading bus services:", err));
         }
 
         map.spin(true);
@@ -309,8 +226,8 @@
                     routes[r.id] = r.attributes;
                 }
             }
+            loadBusServices();
             loop();
-            emergencyLoop();
         })
         .catch(err => {
             map.spin(false);
@@ -430,12 +347,25 @@
                     marker.bikes_allowed = bikeAllowed;
                     marker.accessibility = accessibility;
 
+                    // Get bus service data from route number
+                    var busServiceData = "";
+                    if (r && r.route_short_name && busServices[r.route_short_name]) {
+                        var service = busServices[r.route_short_name];
+                        busServiceData = "<br><b>Bus Service Details:</b><br>" +
+                            "Route Pattern: " + service.RoutePattern + "<br>" +
+                            "Service Name: " + service.RouteName + "<br>" +
+                            "Agency: " + service.AgencyName + "<br>" +
+                            "Mode: " + service.Mode + "<br>" +
+                            "Route Length: " + Math.round(service.ShapeLength) + " m";
+                    }
+
                     var tooltipHtml = desc +
                         "Speed: " + marker.speed + " km/h<br>" +
                         "Occupancy: " + (occupancy[v.occupancy_status] || "") + "<br>" +
                         "License plate: " + (vehicleInfo.license_plate || "") + "<br>" +
                         "Bike Enabled: <span id='bike_allowed-" + sid + "'>" + bikeText(marker.bikes_allowed) + "</span><br>" +
-                        "Accessibility: <span id='accessibility-" + sid + "'>" + accessibilityText(marker.accessibility) + "</span>";
+                        "Accessibility: <span id='accessibility-" + sid + "'>" + accessibilityText(marker.accessibility) + "</span>" +
+                        busServiceData;
                     marker.bindTooltip(tooltipHtml);
 
                     marker.occupancy_status = v.occupancy_status;
@@ -449,7 +379,6 @@
             });
         }
         setInterval(loop, 10000);
-        setInterval(emergencyLoop, 30000);
     </script>
 </body>
 </html>
