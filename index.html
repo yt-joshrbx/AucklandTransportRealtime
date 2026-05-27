@@ -240,7 +240,7 @@
 
         // Load bus services data from JSON
         function loadBusServices() {
-            fetch('bus_services.json')
+            fetch('bus_service.json')
                 .then(response => response.json())
                 .then(data => {
                     for (var service of data) {
