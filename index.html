@@ -73,6 +73,39 @@
 
         map.attributionControl.addAttribution("© <a href='https://dev-portal.at.govt.nz/'>AT</a>");
 
+        // Define custom icons for different transport modes
+        var busIcon = L.icon({
+            iconUrl: 'at-bus-icon.png',      // Image 1: Bus icon
+            iconSize: [32, 32],
+            iconAnchor: [16, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker bus-marker'
+        });
+
+        var trainIcon = L.icon({
+            iconUrl: 'at-train-icon.png',    // Image 3: Train icon
+            iconSize: [32, 32],
+            iconAnchor: [16, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker train-marker'
+        });
+
+        var ferryIcon = L.icon({
+            iconUrl: 'at-ferry-icon.png',    // Image 2: Ferry icon
+            iconSize: [32, 32],
+            iconAnchor: [16, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker ferry-marker'
+        });
+
+        var otherIcon = L.icon({
+            iconUrl: 'unknown-icon.png',      // Default to bus icon
+            iconSize: [32, 32],
+            iconAnchor: [16, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker other-marker'
+        });
+
         var layers = {
             2: L.layerGroup().addTo(map),
             3: L.layerGroup().addTo(map),
@@ -93,9 +126,9 @@
                 if (!markers.hasOwnProperty(i)) continue;
                 var marker = markers[i];
                 if (!searchVal || (marker.options.desc && marker.options.desc.toLowerCase().includes(searchVal))) {
-                    marker.setStyle({ opacity: 1, fillOpacity: .2 });
+                    marker.setStyle({ opacity: 1 });
                 } else {
-                    marker.setStyle({ opacity: 0, fillOpacity: 0 });
+                    marker.setStyle({ opacity: 0 });
                 }
             }
         });
@@ -158,7 +191,19 @@
             } else if (window.colourscheme == "Speed") {
                 color = speedColors(marker.speed);
             }
-            marker.setStyle({ color: color });
+            // Apply color filter to SVG icons
+            if (marker._icon && color !== "black") {
+                marker._icon.style.filter = "hue-rotate(" + Math.random() * 360 + "deg)";
+            }
+        }
+
+        function getIconForRouteType(routeType) {
+            switch(routeType) {
+                case 2: return trainIcon;    // Train
+                case 3: return busIcon;      // Bus
+                case 4: return ferryIcon;    // Ferry
+                default: return otherIcon;
+            }
         }
 
         var markers = {};
@@ -272,6 +317,7 @@
                     var desc = "<b>" + label + "</b><br>";
                     var layer = layers[null];
                     var marker = markers[id];
+                    var routeType = null;
 
                     var sid = safeId(id);
 
@@ -281,8 +327,23 @@
                         }
                         marker.options.desc = desc;
                     } else {
-                        marker = L.circle([v.position.latitude || 0, v.position.longitude || 0], { radius: 40, desc: desc });
+                        // Determine icon based on route type
+                        var icon = otherIcon;
+                        if (v.trip) {
+                            var r = routes[v.trip.route_id];
+                            if (r) {
+                                routeType = r.route_type;
+                                icon = getIconForRouteType(routeType);
+                            }
+                        }
+
+                        marker = L.marker([v.position.latitude || 0, v.position.longitude || 0], { 
+                            icon: icon,
+                            desc: desc,
+                            opacity: 1
+                        });
                         marker._entityId = id;
+                        marker.route_type = routeType;
                         markers[id] = marker;
 
                         marker.on("tooltipopen", function (e) {
