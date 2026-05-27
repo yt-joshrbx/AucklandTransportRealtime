@@ -206,12 +206,6 @@
             }
         }
 
-        var markers = {};
-        var busServices = {};
-        var occupancy = ["empty", "many seats available", "few seats available", "standing room only", "limited standing room", "full", "not accepting passengers"];
-        var occupancyColors = ["#4575b4", "#91bfdb", "#e0f3f8", "#fee090", "#fc8d59", "#d73027", "black"];
-        var speedColors = chroma.scale([chroma.hsv(270, 1, 1), chroma.hsv(180, 1, 1), chroma.hsv(90, 1, 1), chroma.hsv(0, 1, 1)]).mode("hsv").domain([0, 100]);
-
         var hasLoaded = false;
         var routes = {};
 
