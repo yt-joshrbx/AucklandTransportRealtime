@@ -1,4394 +1,4394 @@
 [
  {
    "OBJECTID": 117851,
-   "Route Pattern": 1001,
-   "Agency Name": "TZG",
+   "RoutePattern": 1001,
+   "AgencyName": "TZG",
    "RouteName": "Northwest To City Centre Via Motorway",
    "RouteNumber": "WX1",
    "Mode": "Bus",
-   "Shape__Length": "19892.3260838339"
+   "ShapeLength": "19892.3260838339"
  },
  {
    "OBJECTID": 117852,
-   "Route Pattern": 1002,
-   "Agency Name": "TZG",
+   "RoutePattern": 1002,
+   "AgencyName": "TZG",
    "RouteName": "City Centre To Northwest Via Motorway",
    "RouteNumber": "WX1",
    "Mode": "Bus",
-   "Shape__Length": "19795.2790996946"
+   "ShapeLength": "19795.2790996946"
  },
  {
    "OBJECTID": 117853,
-   "Route Pattern": 1105,
-   "Agency Name": "TZG",
+   "RoutePattern": 1105,
+   "AgencyName": "TZG",
    "RouteName": "Northwest To City Centre Via Triangle Rd",
    "RouteNumber": "11T",
    "Mode": "Bus",
-   "Shape__Length": "20804.385162835"
+   "ShapeLength": "20804.385162835"
  },
  {
    "OBJECTID": 117854,
-   "Route Pattern": 1106,
-   "Agency Name": "TZG",
+   "RoutePattern": 1106,
+   "AgencyName": "TZG",
    "RouteName": "City Centre To Northwest Via Triangle Rd",
    "RouteNumber": "11T",
    "Mode": "Bus",
-   "Shape__Length": "20507.2730920404"
+   "ShapeLength": "20507.2730920404"
  },
  {
    "OBJECTID": 117855,
-   "Route Pattern": 1107,
-   "Agency Name": "TZG",
+   "RoutePattern": 1107,
+   "AgencyName": "TZG",
    "RouteName": "Northwest To City Centre Via Waimumu Rd",
    "RouteNumber": "11W",
    "Mode": "Bus",
-   "Shape__Length": "22711.1571269081"
+   "ShapeLength": "22711.1571269081"
  },
  {
    "OBJECTID": 117856,
-   "Route Pattern": 1108,
-   "Agency Name": "TZG",
+   "RoutePattern": 1108,
+   "AgencyName": "TZG",
    "RouteName": "City Centre To Northwest Via Waimumu Rd",
    "RouteNumber": "11W",
    "Mode": "Bus",
-   "Shape__Length": "22399.035189882"
+   "ShapeLength": "22399.035189882"
  },
  {
    "OBJECTID": 117857,
-   "Route Pattern": 1201,
-   "Agency Name": "TZG",
+   "RoutePattern": 1201,
+   "AgencyName": "TZG",
    "RouteName": "Henderson to Constellation Station",
    "RouteNumber": "12",
    "Mode": "Bus",
-   "Shape__Length": "25172.0414121427"
+   "ShapeLength": "25172.0414121427"
  },
  {
    "OBJECTID": 117858,
-   "Route Pattern": 1202,
-   "Agency Name": "TZG",
+   "RoutePattern": 1202,
+   "AgencyName": "TZG",
    "RouteName": "Constellation Station to Henderson",
    "RouteNumber": "12",
    "Mode": "Bus",
-   "Shape__Length": "25356.530392688"
+   "ShapeLength": "25356.530392688"
  },
  {
    "OBJECTID": 117859,
-   "Route Pattern": 1203,
-   "Agency Name": "TZG",
+   "RoutePattern": 1203,
+   "AgencyName": "TZG",
    "RouteName": "Henderson to Akoranga Station via Constellation",
    "RouteNumber": "12",
    "Mode": "Bus",
-   "Shape__Length": "31149.6835794405"
+   "ShapeLength": "31149.6835794405"
  },
  {
    "OBJECTID": 117860,
-   "Route Pattern": 1204,
-   "Agency Name": "TZG",
+   "RoutePattern": 1204,
+   "AgencyName": "TZG",
    "RouteName": "Akoranga Station to Henderson via Constellation",
    "RouteNumber": "12",
    "Mode": "Bus",
-   "Shape__Length": "31407.0983247731"
+   "ShapeLength": "31407.0983247731"
  },
  {
    "OBJECTID": 117861,
-   "Route Pattern": 1209,
-   "Agency Name": "TZG",
+   "RoutePattern": 1209,
+   "AgencyName": "TZG",
    "RouteName": "Henderson to Hobsonville via Westgate",
    "RouteNumber": "12",
    "Mode": "Bus",
-   "Shape__Length": "14814.987751634"
+   "ShapeLength": "14814.987751634"
  },
  {
    "OBJECTID": 117862,
-   "Route Pattern": 1302,
-   "Agency Name": "RTH",
+   "RoutePattern": 1302,
+   "AgencyName": "RTH",
    "RouteName": "Te Atatu Peninsula Loop To Henderson",
    "RouteNumber": "13",
    "Mode": "Bus",
-   "Shape__Length": "17003.8949019104"
+   "ShapeLength": "17003.8949019104"
  },
  {
    "OBJECTID": 117863,
-   "Route Pattern": 1304,
-   "Agency Name": "RTH",
+   "RoutePattern": 1304,
+   "AgencyName": "RTH",
    "RouteName": "Te Atatu Peninsula To Henderson",
    "RouteNumber": "13",
    "Mode": "Bus",
-   "Shape__Length": "7575.9835372591"
+   "ShapeLength": "7575.9835372591"
  },
  {
    "OBJECTID": 117864,
-   "Route Pattern": 1403,
-   "Agency Name": "NZB",
+   "RoutePattern": 1403,
+   "AgencyName": "NZB",
    "RouteName": "Lincoln Rd To New Lynn Via Henderson",
    "RouteNumber": "14",
    "Mode": "Bus",
-   "Shape__Length": "11269.1557000806"
+   "ShapeLength": "11269.1557000806"
  },
  {
    "OBJECTID": 117865,
-   "Route Pattern": 1404,
-   "Agency Name": "NZB",
+   "RoutePattern": 1404,
+   "AgencyName": "NZB",
    "RouteName": "New Lynn to Lincoln Rd via Henderson",
    "RouteNumber": "14",
    "Mode": "Bus",
-   "Shape__Length": "11448.2226720045"
+   "ShapeLength": "11448.2226720045"
  },
  {
    "OBJECTID": 117866,
-   "Route Pattern": 1803,
-   "Agency Name": "NZB",
+   "RoutePattern": 1803,
+   "AgencyName": "NZB",
    "RouteName": "New Lynn To City Centre Via Great North Rd",
    "RouteNumber": "18",
    "Mode": "Bus",
-   "Shape__Length": "12790.3885017469"
+   "ShapeLength": "12790.3885017469"
  },
  {
    "OBJECTID": 117867,
-   "Route Pattern": 1804,
-   "Agency Name": "NZB",
+   "RoutePattern": 1804,
+   "AgencyName": "NZB",
    "RouteName": "City Centre To New Lynn Via Great North Rd",
    "RouteNumber": "18",
    "Mode": "Bus",
-   "Shape__Length": "12723.99279529"
+   "ShapeLength": "12723.99279529"
  },
  {
    "OBJECTID": 117868,
-   "Route Pattern": 1806,
-   "Agency Name": "NZB",
+   "RoutePattern": 1806,
+   "AgencyName": "NZB",
    "RouteName": "City Centre To Henderson Via Great North Rd",
    "RouteNumber": "18",
    "Mode": "Bus",
-   "Shape__Length": "19839.3624232771"
+   "ShapeLength": "19839.3624232771"
  },
  {
    "OBJECTID": 117869,
-   "Route Pattern": 2005,
-   "Agency Name": "NZB",
+   "RoutePattern": 2005,
+   "AgencyName": "NZB",
    "RouteName": "St Lukes To Wynyard Quarter Via Kingsland",
    "RouteNumber": "20",
    "Mode": "Bus",
-   "Shape__Length": "7808.03363911317"
+   "ShapeLength": "7808.03363911317"
  },
  {
    "OBJECTID": 117870,
-   "Route Pattern": 2006,
-   "Agency Name": "NZB",
+   "RoutePattern": 2006,
+   "AgencyName": "NZB",
    "RouteName": "Wynyard Quarter To St Lukes Via Kingsland",
    "RouteNumber": "20",
    "Mode": "Bus",
-   "Shape__Length": "7844.887120149"
+   "ShapeLength": "7844.887120149"
  },
  {
    "OBJECTID": 117871,
-   "Route Pattern": 2201,
-   "Agency Name": "NZB",
+   "RoutePattern": 2201,
+   "AgencyName": "NZB",
    "RouteName": "Rosebank Rd To City Centre Via New North Rd",
    "RouteNumber": "22R",
    "Mode": "Bus",
-   "Shape__Length": "14410.6408745829"
+   "ShapeLength": "14410.6408745829"
  },
  {
    "OBJECTID": 117872,
-   "Route Pattern": 2202,
-   "Agency Name": "NZB",
+   "RoutePattern": 2202,
+   "AgencyName": "NZB",
    "RouteName": "City Centre To Rosebank Rd Via New North Rd",
    "RouteNumber": "22R",
    "Mode": "Bus",
-   "Shape__Length": "14359.5556772633"
+   "ShapeLength": "14359.5556772633"
  },
  {
    "OBJECTID": 117873,
-   "Route Pattern": 2203,
-   "Agency Name": "NZB",
+   "RoutePattern": 2203,
+   "AgencyName": "NZB",
    "RouteName": "New Lynn To City Centre Via New North Rd",
    "RouteNumber": "22N",
    "Mode": "Bus",
-   "Shape__Length": "13327.8716730107"
+   "ShapeLength": "13327.8716730107"
  },
  {
    "OBJECTID": 117874,
-   "Route Pattern": 2204,
-   "Agency Name": "NZB",
+   "RoutePattern": 2204,
+   "AgencyName": "NZB",
    "RouteName": "City Centre To New Lynn Via New North Rd",
    "RouteNumber": "22N",
    "Mode": "Bus",
-   "Shape__Length": "13630.6456221569"
+   "ShapeLength": "13630.6456221569"
  },
  {
    "OBJECTID": 117875,
-   "Route Pattern": 2401,
-   "Agency Name": "NZB",
+   "RoutePattern": 2401,
+   "AgencyName": "NZB",
    "RouteName": "New Lynn To City Centre Via Sandingham Rd",
    "RouteNumber": "24R",
    "Mode": "Bus",
-   "Shape__Length": "14583.0942667281"
+   "ShapeLength": "14583.0942667281"
  },
  {
    "OBJECTID": 117876,
-   "Route Pattern": 2402,
-   "Agency Name": "NZB",
+   "RoutePattern": 2402,
+   "AgencyName": "NZB",
    "RouteName": "City Centre To New Lynn Via Sandringham Rd",
    "RouteNumber": "24R",
    "Mode": "Bus",
-   "Shape__Length": "14446.6926121667"
+   "ShapeLength": "14446.6926121667"
  },
  {
    "OBJECTID": 117877,
-   "Route Pattern": 2403,
-   "Agency Name": "NZB",
+   "RoutePattern": 2403,
+   "AgencyName": "NZB",
    "RouteName": "New Lynn And Blockhouse Bay To City Centre Via Sandringham R",
    "RouteNumber": "24B",
    "Mode": "Bus",
-   "Shape__Length": "15892.7806056013"
+   "ShapeLength": "15892.7806056013"
  },
  {
    "OBJECTID": 117878,
-   "Route Pattern": 2404,
-   "Agency Name": "NZB",
+   "RoutePattern": 2404,
+   "AgencyName": "NZB",
    "RouteName": "City Centre To Blockhouse Bay New Lynn Via Sandringham Rd",
    "RouteNumber": "24B",
    "Mode": "Bus",
-   "Shape__Length": "15781.4474317901"
+   "ShapeLength": "15781.4474317901"
  },
  {
    "OBJECTID": 117879,
-   "Route Pattern": 2405,
-   "Agency Name": "NZB",
+   "RoutePattern": 2405,
+   "AgencyName": "NZB",
    "RouteName": "Blockhouse Bay To City Centre Via Sandringham Rd",
    "RouteNumber": "24B",
    "Mode": "Bus",
-   "Shape__Length": "13149.0078334202"
+   "ShapeLength": "13149.0078334202"
  },
  {
    "OBJECTID": 117880,
-   "Route Pattern": 2406,
-   "Agency Name": "NZB",
+   "RoutePattern": 2406,
+   "AgencyName": "NZB",
    "RouteName": "City Centre To Blockhouse Bay Via Sandringham Rd",
    "RouteNumber": "24B",
    "Mode": "Bus",
-   "Shape__Length": "13109.0596651728"
+   "ShapeLength": "13109.0596651728"
  },
  {
    "OBJECTID": 117881,
-   "Route Pattern": 2503,
-   "Agency Name": "NZB",
+   "RoutePattern": 2503,
+   "AgencyName": "NZB",
    "RouteName": "Lynfield To City Centre Via Dominion Rd",
    "RouteNumber": "25L",
    "Mode": "Bus",
-   "Shape__Length": "14739.6891672291"
+   "ShapeLength": "14739.6891672291"
  },
  {
    "OBJECTID": 117882,
-   "Route Pattern": 2504,
-   "Agency Name": "NZB",
+   "RoutePattern": 2504,
+   "AgencyName": "NZB",
    "RouteName": "City Centre To Lynfield Via Dominion Rd",
    "RouteNumber": "25L",
    "Mode": "Bus",
-   "Shape__Length": "14234.8192834664"
+   "ShapeLength": "14234.8192834664"
  },
  {
    "OBJECTID": 117883,
-   "Route Pattern": 2505,
-   "Agency Name": "NZB",
+   "RoutePattern": 2505,
+   "AgencyName": "NZB",
    "RouteName": "Blockhouse Bay To City Centre Via Dominion Rd",
    "RouteNumber": "25B",
    "Mode": "Bus",
-   "Shape__Length": "12998.7183151801"
+   "ShapeLength": "12998.7183151801"
  },
  {
    "OBJECTID": 117884,
-   "Route Pattern": 2506,
-   "Agency Name": "NZB",
+   "RoutePattern": 2506,
+   "AgencyName": "NZB",
    "RouteName": "City Centre To Blockhouse Bay Via Dominion Rd",
    "RouteNumber": "25B",
    "Mode": "Bus",
-   "Shape__Length": "12626.5656169039"
+   "ShapeLength": "12626.5656169039"
  },
  {
    "OBJECTID": 117885,
-   "Route Pattern": 2702,
-   "Agency Name": "NZB",
+   "RoutePattern": 2702,
+   "AgencyName": "NZB",
    "RouteName": "Britomart To Waikowhai Via Mt Eden Rd",
    "RouteNumber": "27W",
    "Mode": "Bus",
-   "Shape__Length": "12892.339868136"
+   "ShapeLength": "12892.339868136"
  },
  {
    "OBJECTID": 117886,
-   "Route Pattern": 2704,
-   "Agency Name": "NZB",
+   "RoutePattern": 2704,
+   "AgencyName": "NZB",
    "RouteName": "Britomart To Waikowhai Via Mt Eden Rd And Hillsborough Rd",
    "RouteNumber": "27H",
    "Mode": "Bus",
-   "Shape__Length": "12645.3072644362"
+   "ShapeLength": "12645.3072644362"
  },
  {
    "OBJECTID": 117887,
-   "Route Pattern": 2705,
-   "Agency Name": "NZB",
+   "RoutePattern": 2705,
+   "AgencyName": "NZB",
    "RouteName": "Waikowhai To Britomart Via Mt Eden Rd",
    "RouteNumber": "27W",
    "Mode": "Bus",
-   "Shape__Length": "13240.4691555964"
+   "ShapeLength": "13240.4691555964"
  },
  {
    "OBJECTID": 117888,
-   "Route Pattern": 2707,
-   "Agency Name": "NZB",
+   "RoutePattern": 2707,
+   "AgencyName": "NZB",
    "RouteName": "Waikowhai To Britomart Via Hillsborough Rd And Mt Eden Rd",
    "RouteNumber": "27H",
    "Mode": "Bus",
-   "Shape__Length": "12983.7475793459"
+   "ShapeLength": "12983.7475793459"
  },
  {
    "OBJECTID": 117889,
-   "Route Pattern": 2710,
-   "Agency Name": "NZB",
+   "RoutePattern": 2710,
+   "AgencyName": "NZB",
    "RouteName": "Britomart To Three Kings Via Mt Eden Rd",
    "RouteNumber": "27T",
    "Mode": "Bus",
-   "Shape__Length": "8243.68472358927"
+   "ShapeLength": "8243.68472358927"
  },
  {
    "OBJECTID": 117890,
-   "Route Pattern": 2717,
-   "Agency Name": "NZB",
+   "RoutePattern": 2717,
+   "AgencyName": "NZB",
    "RouteName": "Three Kings To Britomart Via Mt Eden Rd",
    "RouteNumber": "27T",
    "Mode": "Bus",
-   "Shape__Length": "8701.89183768685"
+   "ShapeLength": "8701.89183768685"
  },
  {
    "OBJECTID": 117891,
-   "Route Pattern": 3007,
-   "Agency Name": "NZB",
+   "RoutePattern": 3007,
+   "AgencyName": "NZB",
    "RouteName": "Onehunga To City Centre Via Manukau Rd",
    "RouteNumber": "30",
    "Mode": "Bus",
-   "Shape__Length": "10683.039558584"
+   "ShapeLength": "10683.039558584"
  },
  {
    "OBJECTID": 117892,
-   "Route Pattern": 3008,
-   "Agency Name": "NZB",
+   "RoutePattern": 3008,
+   "AgencyName": "NZB",
    "RouteName": "City Centre To Onehunga Via Manukau Rd",
    "RouteNumber": "30",
    "Mode": "Bus",
-   "Shape__Length": "11220.8721185313"
+   "ShapeLength": "11220.8721185313"
  },
  {
    "OBJECTID": 117893,
-   "Route Pattern": 3010,
-   "Agency Name": "NZB",
+   "RoutePattern": 3010,
+   "AgencyName": "NZB",
    "RouteName": "City Centre To Otara Transport Centre via Manukau Rd",
    "RouteNumber": "30",
    "Mode": "Bus",
-   "Shape__Length": "27188.9418681107"
+   "ShapeLength": "27188.9418681107"
  },
  {
    "OBJECTID": 117894,
-   "Route Pattern": 3109,
-   "Agency Name": "RTH",
+   "RoutePattern": 3109,
+   "AgencyName": "RTH",
    "RouteName": "Mangere Town Centre to Botany Town Centre Via Otara",
    "RouteNumber": "31",
    "Mode": "Bus",
-   "Shape__Length": "17063.8735002654"
+   "ShapeLength": "17063.8735002654"
  },
  {
    "OBJECTID": 117895,
-   "Route Pattern": 3110,
-   "Agency Name": "RTH",
+   "RoutePattern": 3110,
+   "AgencyName": "RTH",
    "RouteName": "Botany Town Centre to Mangere Town Centre Via Otara",
    "RouteNumber": "31",
    "Mode": "Bus",
-   "Shape__Length": "17057.3193705468"
+   "ShapeLength": "17057.3193705468"
  },
  {
    "OBJECTID": 117896,
-   "Route Pattern": 3207,
-   "Agency Name": "RTH",
+   "RoutePattern": 3207,
+   "AgencyName": "RTH",
    "RouteName": "Mangere Town Centre to Sylvia Park via Otahuhu",
    "RouteNumber": "32",
    "Mode": "Bus",
-   "Shape__Length": "12450.0981118894"
+   "ShapeLength": "12450.0981118894"
  },
  {
    "OBJECTID": 117897,
-   "Route Pattern": 3208,
-   "Agency Name": "RTH",
+   "RoutePattern": 3208,
+   "AgencyName": "RTH",
    "RouteName": "Sylvia Park to Mangere Town Centre via Otahuhu",
    "RouteNumber": "32",
    "Mode": "Bus",
-   "Shape__Length": "12680.4933369557"
+   "ShapeLength": "12680.4933369557"
  },
  {
    "OBJECTID": 117898,
-   "Route Pattern": 3305,
-   "Agency Name": "RTH",
+   "RoutePattern": 3305,
+   "AgencyName": "RTH",
    "RouteName": "Papakura Interchange to Otahuhu Station via Great South Rd",
    "RouteNumber": "33",
    "Mode": "Bus",
-   "Shape__Length": "20532.8433502356"
+   "ShapeLength": "20532.8433502356"
  },
  {
    "OBJECTID": 117899,
-   "Route Pattern": 3306,
-   "Agency Name": "RTH",
+   "RoutePattern": 3306,
+   "AgencyName": "RTH",
    "RouteName": "Otahuhu Station To Papakura Interchange Via Great South Rd",
    "RouteNumber": "33",
    "Mode": "Bus",
-   "Shape__Length": "20569.3516117165"
+   "ShapeLength": "20569.3516117165"
  },
  {
    "OBJECTID": 117900,
-   "Route Pattern": 3503,
-   "Agency Name": "HE",
+   "RoutePattern": 3503,
+   "AgencyName": "HE",
    "RouteName": "Ormiston To Botany Via Chapel Rd",
    "RouteNumber": "35",
    "Mode": "Bus",
-   "Shape__Length": "7494.45975674645"
+   "ShapeLength": "7494.45975674645"
  },
  {
    "OBJECTID": 117901,
-   "Route Pattern": 3505,
-   "Agency Name": "HE",
+   "RoutePattern": 3505,
+   "AgencyName": "HE",
    "RouteName": "Manukau Bus Station To Botany Via Chapel Rd And Ormiston",
    "RouteNumber": "35",
    "Mode": "Bus",
-   "Shape__Length": "13219.43849326"
+   "ShapeLength": "13219.43849326"
  },
  {
    "OBJECTID": 117902,
-   "Route Pattern": 3508,
-   "Agency Name": "HE",
+   "RoutePattern": 3508,
+   "AgencyName": "HE",
    "RouteName": "Botany To Manukau Bus Station Via Chapel Rd And Ormiston",
    "RouteNumber": "35",
    "Mode": "Bus",
-   "Shape__Length": "12919.4637906199"
+   "ShapeLength": "12919.4637906199"
  },
  {
    "OBJECTID": 117903,
-   "Route Pattern": 3510,
-   "Agency Name": "HE",
+   "RoutePattern": 3510,
+   "AgencyName": "HE",
    "RouteName": "Botany To Manukau Bus Station Via Chapel Rd And Ormiston Rd",
    "RouteNumber": "35",
    "Mode": "Bus",
-   "Shape__Length": "12919.4637906199"
+   "ShapeLength": "12919.4637906199"
  },
  {
    "OBJECTID": 117904,
-   "Route Pattern": 3605,
-   "Agency Name": "RTH",
+   "RoutePattern": 3605,
+   "AgencyName": "RTH",
    "RouteName": "Manukau To Onehunga via Mangere Town Centre",
    "RouteNumber": "36",
    "Mode": "Bus",
-   "Shape__Length": "19099.9620154598"
+   "ShapeLength": "19099.9620154598"
  },
  {
    "OBJECTID": 117905,
-   "Route Pattern": 3606,
-   "Agency Name": "RTH",
+   "RoutePattern": 3606,
+   "AgencyName": "RTH",
    "RouteName": "Onehunga to Manukau Via Mangere Town Centre",
    "RouteNumber": "36",
    "Mode": "Bus",
-   "Shape__Length": "18963.3671784009"
+   "ShapeLength": "18963.3671784009"
  },
  {
    "OBJECTID": 117906,
-   "Route Pattern": 3701,
-   "Agency Name": "RTH",
+   "RoutePattern": 3701,
+   "AgencyName": "RTH",
    "RouteName": "Manurewa to Highbrook via Roscommon, Puhinui and Preston Rd",
    "RouteNumber": "37",
    "Mode": "Bus",
-   "Shape__Length": "18286.220773241"
+   "ShapeLength": "18286.220773241"
  },
  {
    "OBJECTID": 117907,
-   "Route Pattern": 3701,
-   "Agency Name": "RTH",
+   "RoutePattern": 3701,
+   "AgencyName": "RTH",
    "RouteName": "Manurewa to Highbrook via Roscommon, Puhinui and Preston Rd",
    "RouteNumber": "37",
    "Mode": "Bus",
-   "Shape__Length": "18277.4615667844"
+   "ShapeLength": "18277.4615667844"
  },
  {
    "OBJECTID": 117908,
-   "Route Pattern": 3702,
-   "Agency Name": "RTH",
+   "RoutePattern": 3702,
+   "AgencyName": "RTH",
    "RouteName": "Highbrook to Manurewa via Preston Rd, Puhinui and Roscommon",
    "RouteNumber": "37",
    "Mode": "Bus",
-   "Shape__Length": "18251.8907813575"
+   "ShapeLength": "18251.8907813575"
  },
  {
    "OBJECTID": 117909,
-   "Route Pattern": 3702,
-   "Agency Name": "RTH",
+   "RoutePattern": 3702,
+   "AgencyName": "RTH",
    "RouteName": "Highbrook to Manurewa via Preston Rd, Puhinui and Roscommon",
    "RouteNumber": "37",
    "Mode": "Bus",
-   "Shape__Length": "18248.8041419557"
+   "ShapeLength": "18248.8041419557"
  },
  {
    "OBJECTID": 117910,
-   "Route Pattern": 3811,
-   "Agency Name": "RTH",
+   "RoutePattern": 3811,
+   "AgencyName": "RTH",
    "RouteName": "Airport to Onehunga via Mangere Town Centre",
    "RouteNumber": "38",
    "Mode": "Bus",
-   "Shape__Length": "17478.1776497819"
+   "ShapeLength": "17478.1776497819"
  },
  {
    "OBJECTID": 117911,
-   "Route Pattern": 3812,
-   "Agency Name": "RTH",
+   "RoutePattern": 3812,
+   "AgencyName": "RTH",
    "RouteName": "Onehunga to Airport via Mangere Town Centre",
    "RouteNumber": "38",
    "Mode": "Bus",
-   "Shape__Length": "15024.9914392572"
+   "ShapeLength": "15024.9914392572"
  },
  {
    "OBJECTID": 117912,
-   "Route Pattern": 3901,
-   "Agency Name": "RTH",
+   "RoutePattern": 3901,
+   "AgencyName": "RTH",
    "RouteName": "Manurewa Interchange To Otara / MIT Via Mahia Rd",
    "RouteNumber": "39",
    "Mode": "Bus",
-   "Shape__Length": "21781.9853704077"
+   "ShapeLength": "21781.9853704077"
  },
  {
    "OBJECTID": 117913,
-   "Route Pattern": 3902,
-   "Agency Name": "RTH",
+   "RoutePattern": 3902,
+   "AgencyName": "RTH",
    "RouteName": "Otara / MIT To Manurewa Interchange Via Mahia Rd",
    "RouteNumber": "39",
    "Mode": "Bus",
-   "Shape__Length": "22298.0149975506"
+   "ShapeLength": "22298.0149975506"
  },
  {
    "OBJECTID": 117914,
-   "Route Pattern": 3902,
-   "Agency Name": "RTH",
+   "RoutePattern": 3902,
+   "AgencyName": "RTH",
    "RouteName": "Otara / MIT To Manurewa Interchange Via Mahia Rd",
    "RouteNumber": "39",
    "Mode": "Bus",
-   "Shape__Length": "22297.1827276279"
+   "ShapeLength": "22297.1827276279"
  },
  {
    "OBJECTID": 117915,
-   "Route Pattern": 5001,
-   "Agency Name": "WBC",
+   "RoutePattern": 5001,
+   "AgencyName": "WBC",
    "RouteName": "Onetangi (Seventh Ave) To Matiatia Wharf",
    "RouteNumber": "50A",
    "Mode": "Bus",
-   "Shape__Length": "12029.5397742558"
+   "ShapeLength": "12029.5397742558"
  },
  {
    "OBJECTID": 117916,
-   "Route Pattern": 5002,
-   "Agency Name": "WBC",
+   "RoutePattern": 5002,
+   "AgencyName": "WBC",
    "RouteName": "Matiatia Wharf To Onetangi (Seventh Ave)",
    "RouteNumber": "50A",
    "Mode": "Bus",
-   "Shape__Length": "12087.7094618858"
+   "ShapeLength": "12087.7094618858"
  },
  {
    "OBJECTID": 117917,
-   "Route Pattern": 5003,
-   "Agency Name": "WBC",
+   "RoutePattern": 5003,
+   "AgencyName": "WBC",
    "RouteName": "Onetangi (Fourth Ave) to Matiatia Wharf",
    "RouteNumber": "50B",
    "Mode": "Bus",
-   "Shape__Length": "11179.8509896628"
+   "ShapeLength": "11179.8509896628"
  },
  {
    "OBJECTID": 117918,
-   "Route Pattern": 5004,
-   "Agency Name": "WBC",
+   "RoutePattern": 5004,
+   "AgencyName": "WBC",
    "RouteName": "Matiatia Wharf To Onetangi (Fourth Ave)",
    "RouteNumber": "50B",
    "Mode": "Bus",
-   "Shape__Length": "11785.8000663313"
+   "ShapeLength": "11785.8000663313"
  },
  {
    "OBJECTID": 117919,
-   "Route Pattern": 5011,
-   "Agency Name": "WBC",
+   "RoutePattern": 5011,
+   "AgencyName": "WBC",
    "RouteName": "Onetangi (Waiheke Rd) To Matiatia Wharf",
    "RouteNumber": "50A",
    "Mode": "Bus",
-   "Shape__Length": "14145.4591278899"
+   "ShapeLength": "14145.4591278899"
  },
  {
    "OBJECTID": 117920,
-   "Route Pattern": 5012,
-   "Agency Name": "WBC",
+   "RoutePattern": 5012,
+   "AgencyName": "WBC",
    "RouteName": "Matiatia Wharf To Onetangi (Waiheke Rd)",
    "RouteNumber": "50A",
    "Mode": "Bus",
-   "Shape__Length": "14214.5174024008"
+   "ShapeLength": "14214.5174024008"
  },
  {
    "OBJECTID": 117921,
-   "Route Pattern": 6301,
-   "Agency Name": "NZB",
+   "RoutePattern": 6301,
+   "AgencyName": "NZB",
    "RouteName": "St Lukes To Newmarket Via Wellesley St",
    "RouteNumber": "OUT",
    "Mode": "Bus",
-   "Shape__Length": "15607.9362591286"
+   "ShapeLength": "15607.9362591286"
  },
  {
    "OBJECTID": 117922,
-   "Route Pattern": 6302,
-   "Agency Name": "NZB",
+   "RoutePattern": 6302,
+   "AgencyName": "NZB",
    "RouteName": "Newmarket To St Lukes Via Wellesley St",
    "RouteNumber": "OUT",
    "Mode": "Bus",
-   "Shape__Length": "16333.7447078102"
+   "ShapeLength": "16333.7447078102"
  },
  {
    "OBJECTID": 117923,
-   "Route Pattern": 6403,
-   "Agency Name": "NZB",
+   "RoutePattern": 6403,
+   "AgencyName": "NZB",
    "RouteName": "St Lukes To Newmarket Via Mt Eden",
    "RouteNumber": "64",
    "Mode": "Bus",
-   "Shape__Length": "7500.27301531706"
+   "ShapeLength": "7500.27301531706"
  },
  {
    "OBJECTID": 117924,
-   "Route Pattern": 6404,
-   "Agency Name": "NZB",
+   "RoutePattern": 6404,
+   "AgencyName": "NZB",
    "RouteName": "Newmarket To St Lukes Via Mt Eden",
    "RouteNumber": "64",
    "Mode": "Bus",
-   "Shape__Length": "8516.63854737447"
+   "ShapeLength": "8516.63854737447"
  },
  {
    "OBJECTID": 117925,
-   "Route Pattern": 6501,
-   "Agency Name": "NZB",
+   "RoutePattern": 6501,
+   "AgencyName": "NZB",
    "RouteName": "Walker Park To Glen Innes",
    "RouteNumber": "65",
    "Mode": "Bus",
-   "Shape__Length": "17909.9913139354"
+   "ShapeLength": "17909.9913139354"
  },
  {
    "OBJECTID": 117926,
-   "Route Pattern": 6502,
-   "Agency Name": "NZB",
+   "RoutePattern": 6502,
+   "AgencyName": "NZB",
    "RouteName": "Glen Innes To Walker Park",
    "RouteNumber": "65",
    "Mode": "Bus",
-   "Shape__Length": "18041.3804431158"
+   "ShapeLength": "18041.3804431158"
  },
  {
    "OBJECTID": 117927,
-   "Route Pattern": 6503,
-   "Agency Name": "NZB",
+   "RoutePattern": 6503,
+   "AgencyName": "NZB",
    "RouteName": "Selwyn Village To Glen Innes",
    "RouteNumber": "65",
    "Mode": "Bus",
-   "Shape__Length": "18007.1762183419"
+   "ShapeLength": "18007.1762183419"
  },
  {
    "OBJECTID": 117928,
-   "Route Pattern": 6504,
-   "Agency Name": "NZB",
+   "RoutePattern": 6504,
+   "AgencyName": "NZB",
    "RouteName": "Glen Innes To Selwyn Village",
    "RouteNumber": "65",
    "Mode": "Bus",
-   "Shape__Length": "19210.5245590588"
+   "ShapeLength": "19210.5245590588"
  },
  {
    "OBJECTID": 117929,
-   "Route Pattern": 6505,
-   "Agency Name": "NZB",
+   "RoutePattern": 6505,
+   "AgencyName": "NZB",
    "RouteName": "Coyle Park To Glen Innes",
    "RouteNumber": "65",
    "Mode": "Bus",
-   "Shape__Length": "18673.6054021209"
+   "ShapeLength": "18673.6054021209"
  },
  {
    "OBJECTID": 117930,
-   "Route Pattern": 6506,
-   "Agency Name": "NZB",
+   "RoutePattern": 6506,
+   "AgencyName": "NZB",
    "RouteName": "Glen Innes To Coyle Park",
    "RouteNumber": "65",
    "Mode": "Bus",
-   "Shape__Length": "19064.5522156716"
+   "ShapeLength": "19064.5522156716"
  },
  {
    "OBJECTID": 117931,
-   "Route Pattern": 6601,
-   "Agency Name": "RTH",
+   "RoutePattern": 6601,
+   "AgencyName": "RTH",
    "RouteName": "Pt Chevalier Beach To Sylvia Park Via Mt Albert Rd",
    "RouteNumber": "66",
    "Mode": "Bus",
-   "Shape__Length": "18782.7811288465"
+   "ShapeLength": "18782.7811288465"
  },
  {
    "OBJECTID": 117932,
-   "Route Pattern": 6602,
-   "Agency Name": "RTH",
+   "RoutePattern": 6602,
+   "AgencyName": "RTH",
    "RouteName": "Sylvia Park To Pt Chevalier Beach Via Mt Albert Rd",
    "RouteNumber": "66",
    "Mode": "Bus",
-   "Shape__Length": "18565.5308489164"
+   "ShapeLength": "18565.5308489164"
  },
  {
    "OBJECTID": 117933,
-   "Route Pattern": 6701,
-   "Agency Name": "NZB",
+   "RoutePattern": 6701,
+   "AgencyName": "NZB",
    "RouteName": "New Lynn To Otahuhu Via Onehunga",
    "RouteNumber": "67A",
    "Mode": "Bus",
-   "Shape__Length": "21868.560536814"
+   "ShapeLength": "21868.560536814"
  },
  {
    "OBJECTID": 117934,
-   "Route Pattern": 6702,
-   "Agency Name": "NZB",
+   "RoutePattern": 6702,
+   "AgencyName": "NZB",
    "RouteName": "Otahuhu To New Lynn Via Onehunga",
    "RouteNumber": "67A",
    "Mode": "Bus",
-   "Shape__Length": "22511.198655221"
+   "ShapeLength": "22511.198655221"
  },
  {
    "OBJECTID": 117935,
-   "Route Pattern": 6703,
-   "Agency Name": "NZB",
+   "RoutePattern": 6703,
+   "AgencyName": "NZB",
    "RouteName": "New Lynn To Onehunga Only",
    "RouteNumber": "67B",
    "Mode": "Bus",
-   "Shape__Length": "13368.8689285721"
+   "ShapeLength": "13368.8689285721"
  },
  {
    "OBJECTID": 117936,
-   "Route Pattern": 6704,
-   "Agency Name": "NZB",
+   "RoutePattern": 6704,
+   "AgencyName": "NZB",
    "RouteName": "Onehunga To New Lynn Only",
    "RouteNumber": "67B",
    "Mode": "Bus",
-   "Shape__Length": "13632.2424683097"
+   "ShapeLength": "13632.2424683097"
  },
  {
    "OBJECTID": 117937,
-   "Route Pattern": 6803,
-   "Agency Name": "NZB",
+   "RoutePattern": 6803,
+   "AgencyName": "NZB",
    "RouteName": "New Lynn To Onehunga Station",
    "RouteNumber": "68",
    "Mode": "Bus",
-   "Shape__Length": "12913.3297772886"
+   "ShapeLength": "12913.3297772886"
  },
  {
    "OBJECTID": 117938,
-   "Route Pattern": 6804,
-   "Agency Name": "NZB",
+   "RoutePattern": 6804,
+   "AgencyName": "NZB",
    "RouteName": "Onehunga Station To New Lynn",
    "RouteNumber": "68",
    "Mode": "Bus",
-   "Shape__Length": "13194.7649258522"
+   "ShapeLength": "13194.7649258522"
  },
  {
    "OBJECTID": 117939,
-   "Route Pattern": 7005,
-   "Agency Name": "HE",
+   "RoutePattern": 7005,
+   "AgencyName": "HE",
    "RouteName": "Botany To Britomart Via Panmure",
    "RouteNumber": "70",
    "Mode": "Bus",
-   "Shape__Length": "21218.4228378547"
+   "ShapeLength": "21218.4228378547"
  },
  {
    "OBJECTID": 117940,
-   "Route Pattern": 7006,
-   "Agency Name": "HE",
+   "RoutePattern": 7006,
+   "AgencyName": "HE",
    "RouteName": "Britomart To Botany Via Panmure",
    "RouteNumber": "70",
    "Mode": "Bus",
-   "Shape__Length": "20597.84742046"
+   "ShapeLength": "20597.84742046"
  },
  {
    "OBJECTID": 117941,
-   "Route Pattern": 7007,
-   "Agency Name": "HE",
+   "RoutePattern": 7007,
+   "AgencyName": "HE",
    "RouteName": "Ellerslie To Britomart",
    "RouteNumber": "70",
    "Mode": "Bus",
-   "Shape__Length": "9739.78423867537"
+   "ShapeLength": "9739.78423867537"
  },
  {
    "OBJECTID": 117942,
-   "Route Pattern": 7008,
-   "Agency Name": "HE",
+   "RoutePattern": 7008,
+   "AgencyName": "HE",
    "RouteName": "Panmure To Botany",
    "RouteNumber": "70",
    "Mode": "Bus",
-   "Shape__Length": "7751.52520331555"
+   "ShapeLength": "7751.52520331555"
  },
  {
    "OBJECTID": 117943,
-   "Route Pattern": 7009,
-   "Agency Name": "HE",
+   "RoutePattern": 7009,
+   "AgencyName": "HE",
    "RouteName": "Panmure To Britomart Via Ellerslie",
    "RouteNumber": "70",
    "Mode": "Bus",
-   "Shape__Length": "13562.9401739828"
+   "ShapeLength": "13562.9401739828"
  },
  {
    "OBJECTID": 117944,
-   "Route Pattern": 7010,
-   "Agency Name": "HE",
+   "RoutePattern": 7010,
+   "AgencyName": "HE",
    "RouteName": "Britomart To Howick And Botany Via Ellerslie And Panmure",
    "RouteNumber": "70H",
    "Mode": "Bus",
-   "Shape__Length": "29527.8121814613"
+   "ShapeLength": "29527.8121814613"
  },
  {
    "OBJECTID": 117945,
-   "Route Pattern": 7205,
-   "Agency Name": "HE",
+   "RoutePattern": 7205,
+   "AgencyName": "HE",
    "RouteName": "Botany And Howick To Britomart Express Via Panmure And Motor",
    "RouteNumber": "72X",
    "Mode": "Bus",
-   "Shape__Length": "30606.1883793143"
+   "ShapeLength": "30606.1883793143"
  },
  {
    "OBJECTID": 117946,
-   "Route Pattern": 7206,
-   "Agency Name": "HE",
+   "RoutePattern": 7206,
+   "AgencyName": "HE",
    "RouteName": "Britomart To Howick And Botany Express Via Motorway And Panm",
    "RouteNumber": "72X",
    "Mode": "Bus",
-   "Shape__Length": "29305.3735687647"
+   "ShapeLength": "29305.3735687647"
  },
  {
    "OBJECTID": 117947,
-   "Route Pattern": 7207,
-   "Agency Name": "HE",
+   "RoutePattern": 7207,
+   "AgencyName": "HE",
    "RouteName": "Botany And Howick To Panmure Via Chapel Rd, Cook St, And Pak",
    "RouteNumber": "72C",
    "Mode": "Bus",
-   "Shape__Length": "14994.1203176494"
+   "ShapeLength": "14994.1203176494"
  },
  {
    "OBJECTID": 117948,
-   "Route Pattern": 7208,
-   "Agency Name": "HE",
+   "RoutePattern": 7208,
+   "AgencyName": "HE",
    "RouteName": "Pamure To Howick And Botany Via Pakuranga Rd, Cook St, and C",
    "RouteNumber": "72C",
    "Mode": "Bus",
-   "Shape__Length": "14707.4682085688"
+   "ShapeLength": "14707.4682085688"
  },
  {
    "OBJECTID": 117949,
-   "Route Pattern": 7209,
-   "Agency Name": "HE",
+   "RoutePattern": 7209,
+   "AgencyName": "HE",
    "RouteName": "Botany and Howick to Panmure via Millhouse Dr, Meadowland Dr",
    "RouteNumber": "72M",
    "Mode": "Bus",
-   "Shape__Length": "16955.415564402"
+   "ShapeLength": "16955.415564402"
  },
  {
    "OBJECTID": 117950,
-   "Route Pattern": 7210,
-   "Agency Name": "HE",
+   "RoutePattern": 7210,
+   "AgencyName": "HE",
    "RouteName": "Pamure to Howick and Botany via Pakuranga Rd, Meadowland Dr",
    "RouteNumber": "72M",
    "Mode": "Bus",
-   "Shape__Length": "16684.4116702984"
+   "ShapeLength": "16684.4116702984"
  },
  {
    "OBJECTID": 117951,
-   "Route Pattern": 7401,
-   "Agency Name": "GBT",
+   "RoutePattern": 7401,
+   "AgencyName": "GBT",
    "RouteName": "Onehunga To Glen Innes Via Panmure",
    "RouteNumber": "74",
    "Mode": "Bus",
-   "Shape__Length": "13492.5197741999"
+   "ShapeLength": "13492.5197741999"
  },
  {
    "OBJECTID": 117952,
-   "Route Pattern": 7402,
-   "Agency Name": "GBT",
+   "RoutePattern": 7402,
+   "AgencyName": "GBT",
    "RouteName": "Glen Innes To Onehunga Via Panmure",
    "RouteNumber": "74",
    "Mode": "Bus",
-   "Shape__Length": "14050.5239531694"
+   "ShapeLength": "14050.5239531694"
  },
  {
    "OBJECTID": 117953,
-   "Route Pattern": 7403,
-   "Agency Name": "GBT",
+   "RoutePattern": 7403,
+   "AgencyName": "GBT",
    "RouteName": "Panmure To Glen Innes",
    "RouteNumber": "74",
    "Mode": "Bus",
-   "Shape__Length": "4310.53626908497"
+   "ShapeLength": "4310.53626908497"
  },
  {
    "OBJECTID": 117954,
-   "Route Pattern": 7501,
-   "Agency Name": "NZB",
+   "RoutePattern": 7501,
+   "AgencyName": "NZB",
    "RouteName": "Glen Innes To Wynyard Quarter Via Remuera Rd",
    "RouteNumber": "75",
    "Mode": "Bus",
-   "Shape__Length": "14597.6886608723"
+   "ShapeLength": "14597.6886608723"
  },
  {
    "OBJECTID": 117955,
-   "Route Pattern": 7502,
-   "Agency Name": "NZB",
+   "RoutePattern": 7502,
+   "AgencyName": "NZB",
    "RouteName": "Wynyard Quarter To Glen Innes Via Remuera Rd",
    "RouteNumber": "75",
    "Mode": "Bus",
-   "Shape__Length": "14394.5695683423"
+   "ShapeLength": "14394.5695683423"
  },
  {
    "OBJECTID": 117956,
-   "Route Pattern": 7601,
-   "Agency Name": "NZB",
+   "RoutePattern": 7601,
+   "AgencyName": "NZB",
    "RouteName": "Glen Innes To Britomart Via Orakei",
    "RouteNumber": "76",
    "Mode": "Bus",
-   "Shape__Length": "14507.6612641649"
+   "ShapeLength": "14507.6612641649"
  },
  {
    "OBJECTID": 117957,
-   "Route Pattern": 7602,
-   "Agency Name": "NZB",
+   "RoutePattern": 7602,
+   "AgencyName": "NZB",
    "RouteName": "Britomart To Glen Innes Via Orakei",
    "RouteNumber": "76",
    "Mode": "Bus",
-   "Shape__Length": "14527.8943494159"
+   "ShapeLength": "14527.8943494159"
  },
  {
    "OBJECTID": 117958,
-   "Route Pattern": 7701,
-   "Agency Name": "NZB",
+   "RoutePattern": 7701,
+   "AgencyName": "NZB",
    "RouteName": "Glen Innes To Britomart Via St Heliers And Tamaki Dr",
    "RouteNumber": "TMK",
    "Mode": "Bus",
-   "Shape__Length": "13850.9356632697"
+   "ShapeLength": "13850.9356632697"
  },
  {
    "OBJECTID": 117959,
-   "Route Pattern": 7702,
-   "Agency Name": "NZB",
+   "RoutePattern": 7702,
+   "AgencyName": "NZB",
    "RouteName": "Britomart To Glen Innes Via Tamaki Dr And St Heliers",
    "RouteNumber": "TMK",
    "Mode": "Bus",
-   "Shape__Length": "14108.8884802969"
+   "ShapeLength": "14108.8884802969"
  },
  {
    "OBJECTID": 117960,
-   "Route Pattern": 8203,
-   "Agency Name": "NZB",
+   "RoutePattern": 8203,
+   "AgencyName": "NZB",
    "RouteName": "Milford To Mayoral Dr Via Takapuna",
    "RouteNumber": "82",
    "Mode": "Bus",
-   "Shape__Length": "12678.6696986467"
+   "ShapeLength": "12678.6696986467"
  },
  {
    "OBJECTID": 117961,
-   "Route Pattern": 8204,
-   "Agency Name": "NZB",
+   "RoutePattern": 8204,
+   "AgencyName": "NZB",
    "RouteName": "Mayoral Dr To Milford Via Takapuna",
    "RouteNumber": "82",
    "Mode": "Bus",
-   "Shape__Length": "12516.672542957"
+   "ShapeLength": "12516.672542957"
  },
  {
    "OBJECTID": 117962,
-   "Route Pattern": 8208,
-   "Agency Name": "NZB",
+   "RoutePattern": 8208,
+   "AgencyName": "NZB",
    "RouteName": "Mayoral Dr To Browns Bay Via Milford and Takapuna",
    "RouteNumber": "82",
    "Mode": "Bus",
-   "Shape__Length": "21520.416405651"
+   "ShapeLength": "21520.416405651"
  },
  {
    "OBJECTID": 117963,
-   "Route Pattern": 8301,
-   "Agency Name": "RTH",
+   "RoutePattern": 8301,
+   "AgencyName": "RTH",
    "RouteName": "Massey University To Takapuna Via Browns Bay",
    "RouteNumber": "83",
    "Mode": "Bus",
-   "Shape__Length": "23774.3559167938"
+   "ShapeLength": "23774.3559167938"
  },
  {
    "OBJECTID": 117964,
-   "Route Pattern": 8302,
-   "Agency Name": "RTH",
+   "RoutePattern": 8302,
+   "AgencyName": "RTH",
    "RouteName": "Takapuna To Massey University Via Browns Bay",
    "RouteNumber": "83",
    "Mode": "Bus",
-   "Shape__Length": "23634.2341512989"
+   "ShapeLength": "23634.2341512989"
  },
  {
    "OBJECTID": 117965,
-   "Route Pattern": 8303,
-   "Agency Name": "RTH",
+   "RoutePattern": 8303,
+   "AgencyName": "RTH",
    "RouteName": "Browns Bay To Takapuna Via Mairangi Bay And Busway",
    "RouteNumber": "83",
    "Mode": "Bus",
-   "Shape__Length": "14466.0532287102"
+   "ShapeLength": "14466.0532287102"
  },
  {
    "OBJECTID": 117966,
-   "Route Pattern": 8304,
-   "Agency Name": "RTH",
+   "RoutePattern": 8304,
+   "AgencyName": "RTH",
    "RouteName": "Browns Bay To Massey University Via Albany Station",
    "RouteNumber": "83",
    "Mode": "Bus",
-   "Shape__Length": "9389.90864129423"
+   "ShapeLength": "9389.90864129423"
  },
  {
    "OBJECTID": 117967,
-   "Route Pattern": 9401,
-   "Agency Name": "RTH",
+   "RoutePattern": 9401,
+   "AgencyName": "RTH",
    "RouteName": "Beach Haven To Takapuna via Highbury And Northcote Shops",
    "RouteNumber": "94",
    "Mode": "Bus",
-   "Shape__Length": "17132.8465346106"
+   "ShapeLength": "17132.8465346106"
  },
  {
    "OBJECTID": 117968,
-   "Route Pattern": 9402,
-   "Agency Name": "RTH",
+   "RoutePattern": 9402,
+   "AgencyName": "RTH",
    "RouteName": "Takapuna to Beach Haven via Northcote & Highbury (Full Loop)",
    "RouteNumber": "94",
    "Mode": "Bus",
-   "Shape__Length": "16847.198528996"
+   "ShapeLength": "16847.198528996"
  },
  {
    "OBJECTID": 117969,
-   "Route Pattern": 9404,
-   "Agency Name": "RTH",
+   "RoutePattern": 9404,
+   "AgencyName": "RTH",
    "RouteName": "Takapuna to Beach Haven via Northcote Shops And Highbury",
    "RouteNumber": "94",
    "Mode": "Bus",
-   "Shape__Length": "10310.4675837472"
+   "ShapeLength": "10310.4675837472"
  },
  {
    "OBJECTID": 117970,
-   "Route Pattern": 9406,
-   "Agency Name": "RTH",
+   "RoutePattern": 9406,
+   "AgencyName": "RTH",
    "RouteName": "Takapuna to Beach Haven & Smales Farm Clockwise (Late Night)",
    "RouteNumber": "94",
    "Mode": "Bus",
-   "Shape__Length": "21703.3384841749"
+   "ShapeLength": "21703.3384841749"
  },
  {
    "OBJECTID": 117971,
-   "Route Pattern": 9408,
-   "Agency Name": "RTH",
+   "RoutePattern": 9408,
+   "AgencyName": "RTH",
    "RouteName": "Takapuna To Beach Haven (Late Night)",
    "RouteNumber": "94",
    "Mode": "Bus",
-   "Shape__Length": "13315.3149222812"
+   "ShapeLength": "13315.3149222812"
  },
  {
    "OBJECTID": 117972,
-   "Route Pattern": 9503,
-   "Agency Name": "RTH",
+   "RoutePattern": 9503,
+   "AgencyName": "RTH",
    "RouteName": "Bayview To Britomart (Lower Albert St)",
    "RouteNumber": "95B",
    "Mode": "Bus",
-   "Shape__Length": "17804.3922006714"
+   "ShapeLength": "17804.3922006714"
  },
  {
    "OBJECTID": 117973,
-   "Route Pattern": 9504,
-   "Agency Name": "RTH",
+   "RoutePattern": 9504,
+   "AgencyName": "RTH",
    "RouteName": "Britomart (Quay St) To Bayview",
    "RouteNumber": "95B",
    "Mode": "Bus",
-   "Shape__Length": "12975.957870232"
+   "ShapeLength": "12975.957870232"
  },
  {
    "OBJECTID": 117974,
-   "Route Pattern": 9506,
-   "Agency Name": "RTH",
+   "RoutePattern": 9506,
+   "AgencyName": "RTH",
    "RouteName": "Britomart (Quay St) To Bayview (Full Loop)",
    "RouteNumber": "95B",
    "Mode": "Bus",
-   "Shape__Length": "17727.2611048189"
+   "ShapeLength": "17727.2611048189"
  },
  {
    "OBJECTID": 117975,
-   "Route Pattern": 9511,
-   "Agency Name": "RTH",
+   "RoutePattern": 9511,
+   "AgencyName": "RTH",
    "RouteName": "Constellation Station To Britomart (Albert St) Via Glenfield",
    "RouteNumber": "95C",
    "Mode": "Bus",
-   "Shape__Length": "16039.6221750997"
+   "ShapeLength": "16039.6221750997"
  },
  {
    "OBJECTID": 117976,
-   "Route Pattern": 9512,
-   "Agency Name": "RTH",
+   "RoutePattern": 9512,
+   "AgencyName": "RTH",
    "RouteName": "Britomart (Quay St) to Constellation Station via Glenfield",
    "RouteNumber": "95C",
    "Mode": "Bus",
-   "Shape__Length": "15707.9231303493"
+   "ShapeLength": "15707.9231303493"
  },
  {
    "OBJECTID": 117977,
-   "Route Pattern": 9703,
-   "Agency Name": "RTH",
+   "RoutePattern": 9703,
+   "AgencyName": "RTH",
    "RouteName": "Beach Haven To Britomart (Lower Albert St)",
    "RouteNumber": "97R",
    "Mode": "Bus",
-   "Shape__Length": "17392.4227258934"
+   "ShapeLength": "17392.4227258934"
  },
  {
    "OBJECTID": 117978,
-   "Route Pattern": 9704,
-   "Agency Name": "RTH",
+   "RoutePattern": 9704,
+   "AgencyName": "RTH",
    "RouteName": "Britomart (Quay St) To Beach Haven",
    "RouteNumber": "97R",
    "Mode": "Bus",
-   "Shape__Length": "10581.7561530081"
+   "ShapeLength": "10581.7561530081"
  },
  {
    "OBJECTID": 117979,
-   "Route Pattern": 9705,
-   "Agency Name": "RTH",
+   "RoutePattern": 9705,
+   "AgencyName": "RTH",
    "RouteName": "Beach Haven To Britomart (Lower Albert) via Highbury Bypass",
    "RouteNumber": "97R",
    "Mode": "Bus",
-   "Shape__Length": "17074.1857679261"
+   "ShapeLength": "17074.1857679261"
  },
  {
    "OBJECTID": 117980,
-   "Route Pattern": 9706,
-   "Agency Name": "RTH",
+   "RoutePattern": 9706,
+   "AgencyName": "RTH",
    "RouteName": "Britomart (Quay St) To Beach Haven Via Rangatira Rd",
    "RouteNumber": "97R",
    "Mode": "Bus",
-   "Shape__Length": "17118.4870982569"
+   "ShapeLength": "17118.4870982569"
  },
  {
    "OBJECTID": 117981,
-   "Route Pattern": 9708,
-   "Agency Name": "RTH",
+   "RoutePattern": 9708,
+   "AgencyName": "RTH",
    "RouteName": "Britomart (Quay St) To Beach Haven Via Highbury & Rangatira",
    "RouteNumber": "97R",
    "Mode": "Bus",
-   "Shape__Length": "16820.0653683353"
+   "ShapeLength": "16820.0653683353"
  },
  {
    "OBJECTID": 117982,
-   "Route Pattern": 9711,
-   "Agency Name": "RTH",
+   "RoutePattern": 9711,
+   "AgencyName": "RTH",
    "RouteName": "Beach Haven to Britomart (Lower Albert St)",
    "RouteNumber": "97B",
    "Mode": "Bus",
-   "Shape__Length": "17383.7658749412"
+   "ShapeLength": "17383.7658749412"
  },
  {
    "OBJECTID": 117983,
-   "Route Pattern": 9712,
-   "Agency Name": "RTH",
+   "RoutePattern": 9712,
+   "AgencyName": "RTH",
    "RouteName": "Britomart (Quay St) To Verrans Corner",
    "RouteNumber": "97B",
    "Mode": "Bus",
-   "Shape__Length": "10581.7561530081"
+   "ShapeLength": "10581.7561530081"
  },
  {
    "OBJECTID": 117984,
-   "Route Pattern": 9713,
-   "Agency Name": "RTH",
+   "RoutePattern": 9713,
+   "AgencyName": "RTH",
    "RouteName": "Beach Haven To Britomart (Lower Albert) Via Highbury Bypass",
    "RouteNumber": "97B",
    "Mode": "Bus",
-   "Shape__Length": "17065.5289169738"
+   "ShapeLength": "17065.5289169738"
  },
  {
    "OBJECTID": 117985,
-   "Route Pattern": 9714,
-   "Agency Name": "RTH",
+   "RoutePattern": 9714,
+   "AgencyName": "RTH",
    "RouteName": "Britomart (Quay St) To Beach Haven Via Birkdale Rd",
    "RouteNumber": "97B",
    "Mode": "Bus",
-   "Shape__Length": "17116.4879055457"
+   "ShapeLength": "17116.4879055457"
  },
  {
    "OBJECTID": 117986,
-   "Route Pattern": 9716,
-   "Agency Name": "RTH",
+   "RoutePattern": 9716,
+   "AgencyName": "RTH",
    "RouteName": "Britomart (Quay St) To Beach Haven Via Highbury Bypass",
    "RouteNumber": "97B",
    "Mode": "Bus",
-   "Shape__Length": "16818.0661756241"
+   "ShapeLength": "16818.0661756241"
  },
  {
    "OBJECTID": 117987,
-   "Route Pattern": 10101,
-   "Agency Name": "NZB",
+   "RoutePattern": 10101,
+   "AgencyName": "NZB",
    "RouteName": "Pt Chevalier To Auckland University Via Jervois Rd",
    "RouteNumber": "101",
    "Mode": "Bus",
-   "Shape__Length": "8939.71778311375"
+   "ShapeLength": "8939.71778311375"
  },
  {
    "OBJECTID": 117988,
-   "Route Pattern": 10102,
-   "Agency Name": "NZB",
+   "RoutePattern": 10102,
+   "AgencyName": "NZB",
    "RouteName": "Auckland University To Pt Chevalier Via Jervois Rd",
    "RouteNumber": "101",
    "Mode": "Bus",
-   "Shape__Length": "8912.24584758482"
+   "ShapeLength": "8912.24584758482"
  },
  {
    "OBJECTID": 117989,
-   "Route Pattern": 10501,
-   "Agency Name": "NZB",
+   "RoutePattern": 10501,
+   "AgencyName": "NZB",
    "RouteName": "Westmere To Britomart Via Richmond Rd",
    "RouteNumber": "105",
    "Mode": "Bus",
-   "Shape__Length": "7972.44469258008"
+   "ShapeLength": "7972.44469258008"
  },
  {
    "OBJECTID": 117990,
-   "Route Pattern": 10502,
-   "Agency Name": "NZB",
+   "RoutePattern": 10502,
+   "AgencyName": "NZB",
    "RouteName": "Britomart To Westmere Via Richmond Rd",
    "RouteNumber": "105",
    "Mode": "Bus",
-   "Shape__Length": "8277.13583028366"
+   "ShapeLength": "8277.13583028366"
  },
  {
    "OBJECTID": 117991,
-   "Route Pattern": 10601,
-   "Agency Name": "NZB",
+   "RoutePattern": 10601,
+   "AgencyName": "NZB",
    "RouteName": "Freemans Bay Loop",
    "RouteNumber": "106",
    "Mode": "Bus",
-   "Shape__Length": "5100.2149872593"
+   "ShapeLength": "5100.2149872593"
  },
  {
    "OBJECTID": 117992,
-   "Route Pattern": 11101,
-   "Agency Name": "RTH",
+   "RoutePattern": 11101,
+   "AgencyName": "RTH",
    "RouteName": "Royal Heights Loop",
    "RouteNumber": "111",
    "Mode": "Bus",
-   "Shape__Length": "8208.44805580776"
+   "ShapeLength": "8208.44805580776"
  },
  {
    "OBJECTID": 117993,
-   "Route Pattern": 11110,
-   "Agency Name": "ATMB",
+   "RoutePattern": 11110,
+   "AgencyName": "ATMB",
    "RouteName": "Britomart To Swanson Western Rail Bus",
    "RouteNumber": "RBW",
    "Mode": "Bus",
-   "Shape__Length": "32641.1059196744"
+   "ShapeLength": "32641.1059196744"
  },
  {
    "OBJECTID": 117994,
-   "Route Pattern": 11111,
-   "Agency Name": "ATMB",
+   "RoutePattern": 11111,
+   "AgencyName": "ATMB",
    "RouteName": "Swanson To Britomart Western Rail Bus",
    "RouteNumber": "RBW",
    "Mode": "Bus",
-   "Shape__Length": "32320.091322342"
+   "ShapeLength": "32320.091322342"
  },
  {
    "OBJECTID": 117995,
-   "Route Pattern": 11118,
-   "Agency Name": "ATMB",
+   "RoutePattern": 11118,
+   "AgencyName": "ATMB",
    "RouteName": "Henderson To Swanson Western Rail Bus",
    "RouteNumber": "RBW",
    "Mode": "Bus",
-   "Shape__Length": "7131.7312416424"
+   "ShapeLength": "7131.7312416424"
  },
  {
    "OBJECTID": 117996,
-   "Route Pattern": 11121,
-   "Agency Name": "ATMB",
+   "RoutePattern": 11121,
+   "AgencyName": "ATMB",
    "RouteName": "Swanson To New Lynn Western Rail Bus",
    "RouteNumber": "RBW",
    "Mode": "Bus",
-   "Shape__Length": "16044.909381117"
+   "ShapeLength": "16044.909381117"
  },
  {
    "OBJECTID": 117997,
-   "Route Pattern": 11124,
-   "Agency Name": "ATMB",
+   "RoutePattern": 11124,
+   "AgencyName": "ATMB",
    "RouteName": "New Lynn To Swanson Western Rail Bus",
    "RouteNumber": "RBW",
    "Mode": "Bus",
-   "Shape__Length": "16292.604874814"
+   "ShapeLength": "16292.604874814"
  },
  {
    "OBJECTID": 117998,
-   "Route Pattern": 11130,
-   "Agency Name": "ATMB",
+   "RoutePattern": 11130,
+   "AgencyName": "ATMB",
    "RouteName": "Kingsland To Swanson Western Rail Bus",
    "RouteNumber": "RBW",
    "Mode": "Bus",
-   "Shape__Length": "25006.7216098019"
+   "ShapeLength": "25006.7216098019"
  },
  {
    "OBJECTID": 117999,
-   "Route Pattern": 11137,
-   "Agency Name": "ATMB",
+   "RoutePattern": 11137,
+   "AgencyName": "ATMB",
    "RouteName": "Swanson To Kingsland Western Rail Bus",
    "RouteNumber": "RBW",
    "Mode": "Bus",
-   "Shape__Length": "24747.827446718"
+   "ShapeLength": "24747.827446718"
  },
  {
    "OBJECTID": 118000,
-   "Route Pattern": 11146,
-   "Agency Name": "ATMB",
+   "RoutePattern": 11146,
+   "AgencyName": "ATMB",
    "RouteName": "Britomart to Swanson via Khyber Pass",
    "RouteNumber": "RBW",
    "Mode": "Bus",
-   "Shape__Length": "31841.2597863991"
+   "ShapeLength": "31841.2597863991"
  },
  {
    "OBJECTID": 118001,
-   "Route Pattern": 11147,
-   "Agency Name": "ATMB",
+   "RoutePattern": 11147,
+   "AgencyName": "ATMB",
    "RouteName": "Swanson to Britomart via Khyber Pass",
    "RouteNumber": "RBW",
    "Mode": "Bus",
-   "Shape__Length": "31508.5476590349"
+   "ShapeLength": "31508.5476590349"
  },
  {
    "OBJECTID": 118002,
-   "Route Pattern": 11153,
-   "Agency Name": "ATMB",
+   "RoutePattern": 11153,
+   "AgencyName": "ATMB",
    "RouteName": "Kingsland to Britomart via Khyber Pass",
    "RouteNumber": "RBW",
    "Mode": "Bus",
-   "Shape__Length": "6760.7202123169"
+   "ShapeLength": "6760.7202123169"
  },
  {
    "OBJECTID": 118003,
-   "Route Pattern": 11156,
-   "Agency Name": "ATMB",
+   "RoutePattern": 11156,
+   "AgencyName": "ATMB",
    "RouteName": "Britomart to Kingsland via Khyber Pass",
    "RouteNumber": "RBW",
    "Mode": "Bus",
-   "Shape__Length": "6839.32147239833"
+   "ShapeLength": "6839.32147239833"
  },
  {
    "OBJECTID": 118004,
-   "Route Pattern": 11201,
-   "Agency Name": "RTH",
+   "RoutePattern": 11201,
+   "AgencyName": "RTH",
    "RouteName": "Hob Pt Wharf To Northwest Via W Harbour",
    "RouteNumber": "112",
    "Mode": "Bus",
-   "Shape__Length": "10111.1635045375"
+   "ShapeLength": "10111.1635045375"
  },
  {
    "OBJECTID": 118005,
-   "Route Pattern": 11202,
-   "Agency Name": "RTH",
+   "RoutePattern": 11202,
+   "AgencyName": "RTH",
    "RouteName": "Northwest To Hob Pt Wharf Via W Harbour",
    "RouteNumber": "112",
    "Mode": "Bus",
-   "Shape__Length": "10008.7216439497"
+   "ShapeLength": "10008.7216439497"
  },
  {
    "OBJECTID": 118006,
-   "Route Pattern": 11401,
-   "Agency Name": "RTH",
+   "RoutePattern": 11401,
+   "AgencyName": "RTH",
    "RouteName": "Hob Pt Wharf To Northwest Via Whenuapai",
    "RouteNumber": "114",
    "Mode": "Bus",
-   "Shape__Length": "16513.7995196827"
+   "ShapeLength": "16513.7995196827"
  },
  {
    "OBJECTID": 118007,
-   "Route Pattern": 11402,
-   "Agency Name": "RTH",
+   "RoutePattern": 11402,
+   "AgencyName": "RTH",
    "RouteName": "Northwest To Hob Pt Wharf Via Whenuapai",
    "RouteNumber": "114",
    "Mode": "Bus",
-   "Shape__Length": "16407.780842079"
+   "ShapeLength": "16407.780842079"
  },
  {
    "OBJECTID": 118008,
-   "Route Pattern": 11601,
-   "Agency Name": "RTH",
+   "RoutePattern": 11601,
+   "AgencyName": "RTH",
    "RouteName": "West Hills Loop",
    "RouteNumber": "116",
    "Mode": "Bus",
-   "Shape__Length": "5489.0016427332"
+   "ShapeLength": "5489.0016427332"
  },
  {
    "OBJECTID": 118009,
-   "Route Pattern": 12201,
-   "Agency Name": "NZB",
+   "RoutePattern": 12201,
+   "AgencyName": "NZB",
    "RouteName": "Huapai North To Westgate Via Kumeu",
    "RouteNumber": "122",
    "Mode": "Bus",
-   "Shape__Length": "11779.0478795719"
+   "ShapeLength": "11779.0478795719"
  },
  {
    "OBJECTID": 118010,
-   "Route Pattern": 12202,
-   "Agency Name": "NZB",
+   "RoutePattern": 12202,
+   "AgencyName": "NZB",
    "RouteName": "Westgate To Huapai North Via Kumeu",
    "RouteNumber": "122",
    "Mode": "Bus",
-   "Shape__Length": "12159.4362623138"
+   "ShapeLength": "12159.4362623138"
  },
  {
    "OBJECTID": 118011,
-   "Route Pattern": 12301,
-   "Agency Name": "NZB",
+   "RoutePattern": 12301,
+   "AgencyName": "NZB",
    "RouteName": "Huapai Triangle To Westgate Via Kumeu",
    "RouteNumber": "123",
    "Mode": "Bus",
-   "Shape__Length": "11670.3805747349"
+   "ShapeLength": "11670.3805747349"
  },
  {
    "OBJECTID": 118012,
-   "Route Pattern": 12302,
-   "Agency Name": "NZB",
+   "RoutePattern": 12302,
+   "AgencyName": "NZB",
    "RouteName": "Westgate to Huapai Triangle via Kumeu",
    "RouteNumber": "123",
    "Mode": "Bus",
-   "Shape__Length": "13115.0539254573"
+   "ShapeLength": "13115.0539254573"
  },
  {
    "OBJECTID": 118013,
-   "Route Pattern": 12501,
-   "Agency Name": "NZB",
+   "RoutePattern": 12501,
+   "AgencyName": "NZB",
    "RouteName": "Helensville To Westgate Via Kumeu",
    "RouteNumber": "125",
    "Mode": "Bus",
-   "Shape__Length": "38348.6199071988"
+   "ShapeLength": "38348.6199071988"
  },
  {
    "OBJECTID": 118014,
-   "Route Pattern": 12502,
-   "Agency Name": "NZB",
+   "RoutePattern": 12502,
+   "AgencyName": "NZB",
    "RouteName": "Westgate To Helensville Via Kumeu",
    "RouteNumber": "125",
    "Mode": "Bus",
-   "Shape__Length": "38180.6209125392"
+   "ShapeLength": "38180.6209125392"
  },
  {
    "OBJECTID": 118015,
-   "Route Pattern": 12601,
-   "Agency Name": "RTH",
+   "RoutePattern": 12601,
+   "AgencyName": "RTH",
    "RouteName": "Albany To Westgate Via Riverhead",
    "RouteNumber": "126",
    "Mode": "Bus",
-   "Shape__Length": "27037.1265131368"
+   "ShapeLength": "27037.1265131368"
  },
  {
    "OBJECTID": 118016,
-   "Route Pattern": 12602,
-   "Agency Name": "RTH",
+   "RoutePattern": 12602,
+   "AgencyName": "RTH",
    "RouteName": "Westgate To Albany Via Riverhead",
    "RouteNumber": "126",
    "Mode": "Bus",
-   "Shape__Length": "27250.4999432329"
+   "ShapeLength": "27250.4999432329"
  },
  {
    "OBJECTID": 118017,
-   "Route Pattern": 12603,
-   "Agency Name": "RTH",
+   "RoutePattern": 12603,
+   "AgencyName": "RTH",
    "RouteName": "Riverhead To Westgate",
    "RouteNumber": "126",
    "Mode": "Bus",
-   "Shape__Length": "9322.81331380695"
+   "ShapeLength": "9322.81331380695"
  },
  {
    "OBJECTID": 118018,
-   "Route Pattern": 12801,
-   "Agency Name": "NZB",
+   "RoutePattern": 12801,
+   "AgencyName": "NZB",
    "RouteName": "Hibiscus Coast Station To Helensville",
    "RouteNumber": "128",
    "Mode": "Bus",
-   "Shape__Length": "30025.7122650619"
+   "ShapeLength": "30025.7122650619"
  },
  {
    "OBJECTID": 118019,
-   "Route Pattern": 12802,
-   "Agency Name": "NZB",
+   "RoutePattern": 12802,
+   "AgencyName": "NZB",
    "RouteName": "Helensville To Hibiscus Coast Station",
    "RouteNumber": "128",
    "Mode": "Bus",
-   "Shape__Length": "29949.4746637004"
+   "ShapeLength": "29949.4746637004"
  },
  {
    "OBJECTID": 118020,
-   "Route Pattern": 13501,
-   "Agency Name": "RTH",
+   "RoutePattern": 13501,
+   "AgencyName": "RTH",
    "RouteName": "Te Atatu (Totara Rd) To Henderson",
    "RouteNumber": "135",
    "Mode": "Bus",
-   "Shape__Length": "8629.51686859915"
+   "ShapeLength": "8629.51686859915"
  },
  {
    "OBJECTID": 118021,
-   "Route Pattern": 13502,
-   "Agency Name": "RTH",
+   "RoutePattern": 13502,
+   "AgencyName": "RTH",
    "RouteName": "Henderson To Te Atatu (Totara Rd)",
    "RouteNumber": "135",
    "Mode": "Bus",
-   "Shape__Length": "9416.88094290763"
+   "ShapeLength": "9416.88094290763"
  },
  {
    "OBJECTID": 118022,
-   "Route Pattern": 14301,
-   "Agency Name": "RTH",
+   "RoutePattern": 14301,
+   "AgencyName": "RTH",
    "RouteName": "Ranui to Henderson via Sturges Rd",
    "RouteNumber": "143",
    "Mode": "Bus",
-   "Shape__Length": "6929.52665352308"
+   "ShapeLength": "6929.52665352308"
  },
  {
    "OBJECTID": 118023,
-   "Route Pattern": 14302,
-   "Agency Name": "RTH",
+   "RoutePattern": 14302,
+   "AgencyName": "RTH",
    "RouteName": "Henderson to Ranui via Sturges Rd",
    "RouteNumber": "143",
    "Mode": "Bus",
-   "Shape__Length": "7699.26244633576"
+   "ShapeLength": "7699.26244633576"
  },
  {
    "OBJECTID": 118024,
-   "Route Pattern": 14501,
-   "Agency Name": "RTH",
+   "RoutePattern": 14501,
+   "AgencyName": "RTH",
    "RouteName": "Lincoln Rd To Henderson Via Western H",
    "RouteNumber": "145",
    "Mode": "Bus",
-   "Shape__Length": "12918.4569718151"
+   "ShapeLength": "12918.4569718151"
  },
  {
    "OBJECTID": 118025,
-   "Route Pattern": 14502,
-   "Agency Name": "RTH",
+   "RoutePattern": 14502,
+   "AgencyName": "RTH",
    "RouteName": "Henderson To Lincoln Rd Via Western H",
    "RouteNumber": "145",
    "Mode": "Bus",
-   "Shape__Length": "12974.3360964916"
+   "ShapeLength": "12974.3360964916"
  },
  {
    "OBJECTID": 118026,
-   "Route Pattern": 14701,
-   "Agency Name": "RTH",
+   "RoutePattern": 14701,
+   "AgencyName": "RTH",
    "RouteName": "Waitakere Township To Henderson",
    "RouteNumber": "147",
    "Mode": "Bus",
-   "Shape__Length": "13817.4264246153"
+   "ShapeLength": "13817.4264246153"
  },
  {
    "OBJECTID": 118027,
-   "Route Pattern": 14702,
-   "Agency Name": "RTH",
+   "RoutePattern": 14702,
+   "AgencyName": "RTH",
    "RouteName": "Henderson To Waitakere Township",
    "RouteNumber": "147",
    "Mode": "Bus",
-   "Shape__Length": "13211.4135481064"
+   "ShapeLength": "13211.4135481064"
  },
  {
    "OBJECTID": 118028,
-   "Route Pattern": 14801,
-   "Agency Name": "RTH",
+   "RoutePattern": 14801,
+   "AgencyName": "RTH",
    "RouteName": "Ranui To Lincoln Rd",
    "RouteNumber": "148",
    "Mode": "Bus",
-   "Shape__Length": "4226.0027823825"
+   "ShapeLength": "4226.0027823825"
  },
  {
    "OBJECTID": 118029,
-   "Route Pattern": 14802,
-   "Agency Name": "RTH",
+   "RoutePattern": 14802,
+   "AgencyName": "RTH",
    "RouteName": "Lincoln Rd To Ranui",
    "RouteNumber": "148",
    "Mode": "Bus",
-   "Shape__Length": "5296.89194942625"
+   "ShapeLength": "5296.89194942625"
  },
  {
    "OBJECTID": 118030,
-   "Route Pattern": 14901,
-   "Agency Name": "RTH",
+   "RoutePattern": 14901,
+   "AgencyName": "RTH",
    "RouteName": "Ranui To New Lynn Via Rosebank",
    "RouteNumber": "149",
    "Mode": "Bus",
-   "Shape__Length": "15573.5291316533"
+   "ShapeLength": "15573.5291316533"
  },
  {
    "OBJECTID": 118031,
-   "Route Pattern": 14902,
-   "Agency Name": "RTH",
+   "RoutePattern": 14902,
+   "AgencyName": "RTH",
    "RouteName": "New Lynn To Ranui Via Rosebank",
    "RouteNumber": "149",
    "Mode": "Bus",
-   "Shape__Length": "15801.4496540083"
+   "ShapeLength": "15801.4496540083"
  },
  {
    "OBJECTID": 118032,
-   "Route Pattern": 15201,
-   "Agency Name": "RTH",
+   "RoutePattern": 15201,
+   "AgencyName": "RTH",
    "RouteName": "Henderson to New Lynn via Sunnyvale and Glen Eden",
    "RouteNumber": "152",
    "Mode": "Bus",
-   "Shape__Length": "13871.5212265969"
+   "ShapeLength": "13871.5212265969"
  },
  {
    "OBJECTID": 118033,
-   "Route Pattern": 15202,
-   "Agency Name": "RTH",
+   "RoutePattern": 15202,
+   "AgencyName": "RTH",
    "RouteName": "New Lynn to Henderson via Glen Eden and Sunnyvale",
    "RouteNumber": "152",
    "Mode": "Bus",
-   "Shape__Length": "13984.3483488333"
+   "ShapeLength": "13984.3483488333"
  },
  {
    "OBJECTID": 118034,
-   "Route Pattern": 15405,
-   "Agency Name": "RTH",
+   "RoutePattern": 15405,
+   "AgencyName": "RTH",
    "RouteName": "Henderson to New Lynn via Glen Eden",
    "RouteNumber": "154",
    "Mode": "Bus",
-   "Shape__Length": "13951.7763922885"
+   "ShapeLength": "13951.7763922885"
  },
  {
    "OBJECTID": 118035,
-   "Route Pattern": 15406,
-   "Agency Name": "RTH",
+   "RoutePattern": 15406,
+   "AgencyName": "RTH",
    "RouteName": "New Lynn to Henderson via Glen Eden",
    "RouteNumber": "154",
    "Mode": "Bus",
-   "Shape__Length": "14057.2814075739"
+   "ShapeLength": "14057.2814075739"
  },
  {
    "OBJECTID": 118036,
-   "Route Pattern": 16101,
-   "Agency Name": "RTH",
+   "RoutePattern": 16101,
+   "AgencyName": "RTH",
    "RouteName": "Brains Park to New Lynn",
    "RouteNumber": "161",
    "Mode": "Bus",
-   "Shape__Length": "5150.02950829287"
+   "ShapeLength": "5150.02950829287"
  },
  {
    "OBJECTID": 118037,
-   "Route Pattern": 16102,
-   "Agency Name": "RTH",
+   "RoutePattern": 16102,
+   "AgencyName": "RTH",
    "RouteName": "New Lynn to Brains Park",
    "RouteNumber": "161",
    "Mode": "Bus",
-   "Shape__Length": "4148.82984941082"
+   "ShapeLength": "4148.82984941082"
  },
  {
    "OBJECTID": 118038,
-   "Route Pattern": 16201,
-   "Agency Name": "NZB",
+   "RoutePattern": 16201,
+   "AgencyName": "NZB",
    "RouteName": "Henderson to New Lynn via Glendene",
    "RouteNumber": "162",
    "Mode": "Bus",
-   "Shape__Length": "10026.5039493373"
+   "ShapeLength": "10026.5039493373"
  },
  {
    "OBJECTID": 118039,
-   "Route Pattern": 16202,
-   "Agency Name": "NZB",
+   "RoutePattern": 16202,
+   "AgencyName": "NZB",
    "RouteName": "New Lynn to Henderson via Glendene",
    "RouteNumber": "162",
    "Mode": "Bus",
-   "Shape__Length": "9989.89086789312"
+   "ShapeLength": "9989.89086789312"
  },
  {
    "OBJECTID": 118040,
-   "Route Pattern": 17027,
-   "Agency Name": "RTH",
+   "RoutePattern": 17027,
+   "AgencyName": "RTH",
    "RouteName": "Titirangi South to New Lynn",
    "RouteNumber": "170",
    "Mode": "Bus",
-   "Shape__Length": "7828.63086667369"
+   "ShapeLength": "7828.63086667369"
  },
  {
    "OBJECTID": 118041,
-   "Route Pattern": 17028,
-   "Agency Name": "RTH",
+   "RoutePattern": 17028,
+   "AgencyName": "RTH",
    "RouteName": "New Lynn to Titirangi South",
    "RouteNumber": "170",
    "Mode": "Bus",
-   "Shape__Length": "7848.59853152634"
+   "ShapeLength": "7848.59853152634"
  },
  {
    "OBJECTID": 118042,
-   "Route Pattern": 17030,
-   "Agency Name": "RTH",
+   "RoutePattern": 17030,
+   "AgencyName": "RTH",
    "RouteName": "New Lynn to Titirangi South via Otitori Bay Rd",
    "RouteNumber": "170",
    "Mode": "Bus",
-   "Shape__Length": "9356.75167651638"
+   "ShapeLength": "9356.75167651638"
  },
  {
    "OBJECTID": 118043,
-   "Route Pattern": 17105,
-   "Agency Name": "RTH",
+   "RoutePattern": 17105,
+   "AgencyName": "RTH",
    "RouteName": "Laingholm To New Lynn",
    "RouteNumber": "171",
    "Mode": "Bus",
-   "Shape__Length": "16026.9278458124"
+   "ShapeLength": "16026.9278458124"
  },
  {
    "OBJECTID": 118044,
-   "Route Pattern": 17116,
-   "Agency Name": "RTH",
+   "RoutePattern": 17116,
+   "AgencyName": "RTH",
    "RouteName": "New Lynn To Laingholm Loop",
    "RouteNumber": "171",
    "Mode": "Bus",
-   "Shape__Length": "20455.282773268"
+   "ShapeLength": "20455.282773268"
  },
  {
    "OBJECTID": 118045,
-   "Route Pattern": 17205,
-   "Agency Name": "RTH",
+   "RoutePattern": 17205,
+   "AgencyName": "RTH",
    "RouteName": "Glen Eden to New Lynn via Titirangi",
    "RouteNumber": "172",
    "Mode": "Bus",
-   "Shape__Length": "8762.99855761239"
+   "ShapeLength": "8762.99855761239"
  },
  {
    "OBJECTID": 118046,
-   "Route Pattern": 17208,
-   "Agency Name": "RTH",
+   "RoutePattern": 17208,
+   "AgencyName": "RTH",
    "RouteName": "New Lynn to Glen Eden via Titirangi",
    "RouteNumber": "172",
    "Mode": "Bus",
-   "Shape__Length": "9061.8217589964"
+   "ShapeLength": "9061.8217589964"
  },
  {
    "OBJECTID": 118047,
-   "Route Pattern": 18603,
-   "Agency Name": "RTH",
+   "RoutePattern": 18603,
+   "AgencyName": "RTH",
    "RouteName": "South Lynn Loop",
    "RouteNumber": "186",
    "Mode": "Bus",
-   "Shape__Length": "5995.06712625258"
+   "ShapeLength": "5995.06712625258"
  },
  {
    "OBJECTID": 118048,
-   "Route Pattern": 19101,
-   "Agency Name": "RTH",
+   "RoutePattern": 19101,
+   "AgencyName": "RTH",
    "RouteName": "Lynfield To New Lynn Via Blockhouse Bay And Avondale",
    "RouteNumber": "191",
    "Mode": "Bus",
-   "Shape__Length": "16974.7636982477"
+   "ShapeLength": "16974.7636982477"
  },
  {
    "OBJECTID": 118049,
-   "Route Pattern": 19101,
-   "Agency Name": "RTH",
+   "RoutePattern": 19101,
+   "AgencyName": "RTH",
    "RouteName": "Lynfield To New Lynn Via Blockhouse Bay And Avondale",
    "RouteNumber": "191",
    "Mode": "Bus",
-   "Shape__Length": "16974.7636982477"
+   "ShapeLength": "16974.7636982477"
  },
  {
    "OBJECTID": 118050,
-   "Route Pattern": 19102,
-   "Agency Name": "RTH",
+   "RoutePattern": 19102,
+   "AgencyName": "RTH",
    "RouteName": "New Lynn To Lynfield Via Avondale And Blockhouse Bay",
    "RouteNumber": "191",
    "Mode": "Bus",
-   "Shape__Length": "16842.4667557302"
+   "ShapeLength": "16842.4667557302"
  },
  {
    "OBJECTID": 118051,
-   "Route Pattern": 19102,
-   "Agency Name": "RTH",
+   "RoutePattern": 19102,
+   "AgencyName": "RTH",
    "RouteName": "New Lynn To Lynfield Via Avondale And Blockhouse Bay",
    "RouteNumber": "191",
    "Mode": "Bus",
-   "Shape__Length": "16842.4667557302"
+   "ShapeLength": "16842.4667557302"
  },
  {
    "OBJECTID": 118052,
-   "Route Pattern": 19507,
-   "Agency Name": "RTH",
+   "RoutePattern": 19507,
+   "AgencyName": "RTH",
    "RouteName": "New Lynn To City Centre Via Green Bay",
    "RouteNumber": "195",
    "Mode": "Bus",
-   "Shape__Length": "20892.2706813339"
+   "ShapeLength": "20892.2706813339"
  },
  {
    "OBJECTID": 118053,
-   "Route Pattern": 19508,
-   "Agency Name": "RTH",
+   "RoutePattern": 19508,
+   "AgencyName": "RTH",
    "RouteName": "City Centre To New Lynn Via Green Bay",
    "RouteNumber": "195",
    "Mode": "Bus",
-   "Shape__Length": "21075.0523362338"
+   "ShapeLength": "21075.0523362338"
  },
  {
    "OBJECTID": 118054,
-   "Route Pattern": 19509,
-   "Agency Name": "RTH",
+   "RoutePattern": 19509,
+   "AgencyName": "RTH",
    "RouteName": "New Lynn To Blockhouse Bay Via Green Bay",
    "RouteNumber": "195",
    "Mode": "Bus",
-   "Shape__Length": "7494.85534811705"
+   "ShapeLength": "7494.85534811705"
  },
  {
    "OBJECTID": 118055,
-   "Route Pattern": 20007,
-   "Agency Name": "TZG",
+   "RoutePattern": 20007,
+   "AgencyName": "TZG",
    "RouteName": "Hibiscus Coast Station To Auckland Universities",
    "RouteNumber": "NX2",
    "Mode": "Bus",
-   "Shape__Length": "31846.6862406721"
+   "ShapeLength": "31846.6862406721"
  },
  {
    "OBJECTID": 118056,
-   "Route Pattern": 20008,
-   "Agency Name": "TZG",
+   "RoutePattern": 20008,
+   "AgencyName": "TZG",
    "RouteName": "Auckland Universities To Albany Station Via Wellesley St",
    "RouteNumber": "NX2",
    "Mode": "Bus",
-   "Shape__Length": "18565.7293052337"
+   "ShapeLength": "18565.7293052337"
  },
  {
    "OBJECTID": 118057,
-   "Route Pattern": 20016,
-   "Agency Name": "TZG",
+   "RoutePattern": 20016,
+   "AgencyName": "TZG",
    "RouteName": "Auckland Universities To Hibiscus Coast Stn",
    "RouteNumber": "NX2",
    "Mode": "Bus",
-   "Shape__Length": "31988.6909547549"
+   "ShapeLength": "31988.6909547549"
  },
  {
    "OBJECTID": 118058,
-   "Route Pattern": 20023,
-   "Agency Name": "TZG",
+   "RoutePattern": 20023,
+   "AgencyName": "TZG",
    "RouteName": "Albany Station To Auckland Universities Via Wellesley St",
    "RouteNumber": "NX2",
    "Mode": "Bus",
-   "Shape__Length": "18955.3428892367"
+   "ShapeLength": "18955.3428892367"
  },
  {
    "OBJECTID": 118059,
-   "Route Pattern": 20025,
-   "Agency Name": "TZG",
+   "RoutePattern": 20025,
+   "AgencyName": "TZG",
    "RouteName": "Constellation To Auckland Universities Via Wellesley St",
    "RouteNumber": "NX2",
    "Mode": "Bus",
-   "Shape__Length": "14628.7734479608"
+   "ShapeLength": "14628.7734479608"
  },
  {
    "OBJECTID": 118060,
-   "Route Pattern": 20903,
-   "Agency Name": "RTH",
+   "RoutePattern": 20903,
+   "AgencyName": "RTH",
    "RouteName": "Titirangi to City Centre via Green Bay and New North Rd",
    "RouteNumber": "209",
    "Mode": "Bus",
-   "Shape__Length": "17178.1170770694"
+   "ShapeLength": "17178.1170770694"
  },
  {
    "OBJECTID": 118061,
-   "Route Pattern": 20904,
-   "Agency Name": "RTH",
+   "RoutePattern": 20904,
+   "AgencyName": "RTH",
    "RouteName": "City Centre to Titirangi via New North Rd and Green Bay",
    "RouteNumber": "209",
    "Mode": "Bus",
-   "Shape__Length": "17372.0698593696"
+   "ShapeLength": "17372.0698593696"
  },
  {
    "OBJECTID": 118062,
-   "Route Pattern": 22210,
-   "Agency Name": "ATMB",
+   "RoutePattern": 22210,
+   "AgencyName": "ATMB",
    "RouteName": "Britomart To Pukekohe Southern Rail Bus",
    "RouteNumber": "RBS",
    "Mode": "Bus",
-   "Shape__Length": "57901.8164007272"
+   "ShapeLength": "57901.8164007272"
  },
  {
    "OBJECTID": 118063,
-   "Route Pattern": 22211,
-   "Agency Name": "ATMB",
+   "RoutePattern": 22211,
+   "AgencyName": "ATMB",
    "RouteName": "Pukekohe To Britomart Southern Rail Bus",
    "RouteNumber": "RBS",
    "Mode": "Bus",
-   "Shape__Length": "58253.991690384"
+   "ShapeLength": "58253.991690384"
  },
  {
    "OBJECTID": 118064,
-   "Route Pattern": 22214,
-   "Agency Name": "ATMB",
+   "RoutePattern": 22214,
+   "AgencyName": "ATMB",
    "RouteName": "Otahuhu To Pukekohe Southern Rail Bus",
    "RouteNumber": "RBS",
    "Mode": "Bus",
-   "Shape__Length": "42426.0147221827"
+   "ShapeLength": "42426.0147221827"
  },
  {
    "OBJECTID": 118065,
-   "Route Pattern": 22215,
-   "Agency Name": "ATMB",
+   "RoutePattern": 22215,
+   "AgencyName": "ATMB",
    "RouteName": "Pukekohe To Otahuhu Southern Rail Bus",
    "RouteNumber": "RBS",
    "Mode": "Bus",
-   "Shape__Length": "43045.8778141004"
+   "ShapeLength": "43045.8778141004"
  },
  {
    "OBJECTID": 118066,
-   "Route Pattern": 22228,
-   "Agency Name": "ATMB",
+   "RoutePattern": 22228,
+   "AgencyName": "ATMB",
    "RouteName": "Papakura To Pukekohe Southern Rail Bus",
    "RouteNumber": "RBS",
    "Mode": "Bus",
-   "Shape__Length": "20653.1914885607"
+   "ShapeLength": "20653.1914885607"
  },
  {
    "OBJECTID": 118067,
-   "Route Pattern": 22229,
-   "Agency Name": "ATMB",
+   "RoutePattern": 22229,
+   "AgencyName": "ATMB",
    "RouteName": "Pukekohe To Papakura Southern Rail Bus",
    "RouteNumber": "RBS",
    "Mode": "Bus",
-   "Shape__Length": "21108.3719344453"
+   "ShapeLength": "21108.3719344453"
  },
  {
    "OBJECTID": 118068,
-   "Route Pattern": 22235,
-   "Agency Name": "ATMB",
+   "RoutePattern": 22235,
+   "AgencyName": "ATMB",
    "RouteName": "Otahuhu To Britomart Southern Rail Bus",
    "RouteNumber": "RBS",
    "Mode": "Bus",
-   "Shape__Length": "14846.4625011207"
+   "ShapeLength": "14846.4625011207"
  },
  {
    "OBJECTID": 118069,
-   "Route Pattern": 22259,
-   "Agency Name": "ATMB",
+   "RoutePattern": 22259,
+   "AgencyName": "ATMB",
    "RouteName": "Pukekohe To Puhinui Southern Rail Bus",
    "RouteNumber": "RBS",
    "Mode": "Bus",
-   "Shape__Length": "37008.8853556539"
+   "ShapeLength": "37008.8853556539"
  },
  {
    "OBJECTID": 118070,
-   "Route Pattern": 22260,
-   "Agency Name": "ATMB",
+   "RoutePattern": 22260,
+   "AgencyName": "ATMB",
    "RouteName": "Puhinui To Pukekohe Southern Rail Bus",
    "RouteNumber": "RBS",
    "Mode": "Bus",
-   "Shape__Length": "36324.6326017349"
+   "ShapeLength": "36324.6326017349"
  },
  {
    "OBJECTID": 118071,
-   "Route Pattern": 22277,
-   "Agency Name": "ATMB",
+   "RoutePattern": 22277,
+   "AgencyName": "ATMB",
    "RouteName": "Pukekohe To Britomart Southern Rail Bus (ROI)",
    "RouteNumber": "RBS",
    "Mode": "Bus",
-   "Shape__Length": "58119.0185671219"
+   "ShapeLength": "58119.0185671219"
  },
  {
    "OBJECTID": 118072,
-   "Route Pattern": 22278,
-   "Agency Name": "ATMB",
+   "RoutePattern": 22278,
+   "AgencyName": "ATMB",
    "RouteName": "Britomart To Pukekohe Southern Rail Bus (ROI)",
    "RouteNumber": "RBS",
    "Mode": "Bus",
-   "Shape__Length": "57561.4062826198"
+   "ShapeLength": "57561.4062826198"
  },
  {
    "OBJECTID": 118073,
-   "Route Pattern": 22279,
-   "Agency Name": "ATMB",
+   "RoutePattern": 22279,
+   "AgencyName": "ATMB",
    "RouteName": "Papakura To Britomart Southern Rail Bus (ROI)",
    "RouteNumber": "RBS",
    "Mode": "Bus",
-   "Shape__Length": "37010.6466326764"
+   "ShapeLength": "37010.6466326764"
  },
  {
    "OBJECTID": 118074,
-   "Route Pattern": 22280,
-   "Agency Name": "ATMB",
+   "RoutePattern": 22280,
+   "AgencyName": "ATMB",
    "RouteName": "Britomart To Papakura Southern Rail Bus (ROI)",
    "RouteNumber": "RBS",
    "Mode": "Bus",
-   "Shape__Length": "36913.1846292115"
+   "ShapeLength": "36913.1846292115"
  },
  {
    "OBJECTID": 118075,
-   "Route Pattern": 25201,
-   "Agency Name": "NZB",
+   "RoutePattern": 25201,
+   "AgencyName": "NZB",
    "RouteName": "Lynfield To Civic Centre Via Dominion Rd",
    "RouteNumber": "252",
    "Mode": "Bus",
-   "Shape__Length": "13614.4972325848"
+   "ShapeLength": "13614.4972325848"
  },
  {
    "OBJECTID": 118076,
-   "Route Pattern": 25202,
-   "Agency Name": "NZB",
+   "RoutePattern": 25202,
+   "AgencyName": "NZB",
    "RouteName": "Civic Centre To Lynfield Via Dominion Rd",
    "RouteNumber": "252",
    "Mode": "Bus",
-   "Shape__Length": "13458.2323976846"
+   "ShapeLength": "13458.2323976846"
  },
  {
    "OBJECTID": 118077,
-   "Route Pattern": 25301,
-   "Agency Name": "NZB",
+   "RoutePattern": 25301,
+   "AgencyName": "NZB",
    "RouteName": "Blockhouse Bay To Civic Centre Via Dominion Rd",
    "RouteNumber": "253",
    "Mode": "Bus",
-   "Shape__Length": "11873.5263805357"
+   "ShapeLength": "11873.5263805357"
  },
  {
    "OBJECTID": 118078,
-   "Route Pattern": 25302,
-   "Agency Name": "NZB",
+   "RoutePattern": 25302,
+   "AgencyName": "NZB",
    "RouteName": "Civic Centre To Blockhouse Bay Via Dominion Rd",
    "RouteNumber": "253",
    "Mode": "Bus",
-   "Shape__Length": "11849.9787311221"
+   "ShapeLength": "11849.9787311221"
  },
  {
    "OBJECTID": 118079,
-   "Route Pattern": 27001,
-   "Agency Name": "RTH",
+   "RoutePattern": 27001,
+   "AgencyName": "RTH",
    "RouteName": "Albany Station To Britomart (Lower Albert St)",
    "RouteNumber": "NX1",
    "Mode": "Bus",
-   "Shape__Length": "17822.2781198824"
+   "ShapeLength": "17822.2781198824"
  },
  {
    "OBJECTID": 118080,
-   "Route Pattern": 27002,
-   "Agency Name": "RTH",
+   "RoutePattern": 27002,
+   "AgencyName": "RTH",
    "RouteName": "Britomart (Lower Albert St) To Albany Station",
    "RouteNumber": "NX1",
    "Mode": "Bus",
-   "Shape__Length": "18266.4333809393"
+   "ShapeLength": "18266.4333809393"
  },
  {
    "OBJECTID": 118081,
-   "Route Pattern": 27003,
-   "Agency Name": "RTH",
+   "RoutePattern": 27003,
+   "AgencyName": "RTH",
    "RouteName": "Hibiscus Coast Station To Britomart (Lower Albert St)",
    "RouteNumber": "NX1",
    "Mode": "Bus",
-   "Shape__Length": "30767.1454017276"
+   "ShapeLength": "30767.1454017276"
  },
  {
    "OBJECTID": 118082,
-   "Route Pattern": 27004,
-   "Agency Name": "RTH",
+   "RoutePattern": 27004,
+   "AgencyName": "RTH",
    "RouteName": "Britomart (Lower Albert St) To Hibiscus Coast Station",
    "RouteNumber": "NX1",
    "Mode": "Bus",
-   "Shape__Length": "31689.3950304604"
+   "ShapeLength": "31689.3950304604"
  },
  {
    "OBJECTID": 118083,
-   "Route Pattern": 27007,
-   "Agency Name": "RTH",
+   "RoutePattern": 27007,
+   "AgencyName": "RTH",
    "RouteName": "Hibiscus Coast Station To Britomart (Lower Albert) AM Peak",
    "RouteNumber": "NX1",
    "Mode": "Bus",
-   "Shape__Length": "30767.1454017276"
+   "ShapeLength": "30767.1454017276"
  },
  {
    "OBJECTID": 118084,
-   "Route Pattern": 27012,
-   "Agency Name": "RTH",
+   "RoutePattern": 27012,
+   "AgencyName": "RTH",
    "RouteName": "Smales Farm To Hibiscus Coast Station",
    "RouteNumber": "NX1",
    "Mode": "Bus",
-   "Shape__Length": "21920.8077665906"
+   "ShapeLength": "21920.8077665906"
  },
  {
    "OBJECTID": 118085,
-   "Route Pattern": 27014,
-   "Agency Name": "RTH",
+   "RoutePattern": 27014,
+   "AgencyName": "RTH",
    "RouteName": "Akoranga to Albany Station",
    "RouteNumber": "NX1",
    "Mode": "Bus",
-   "Shape__Length": "10221.4684736257"
+   "ShapeLength": "10221.4684736257"
  },
  {
    "OBJECTID": 118086,
-   "Route Pattern": 27016,
-   "Agency Name": "RTH",
+   "RoutePattern": 27016,
+   "AgencyName": "RTH",
    "RouteName": "Akoranga to Hibiscus Coast Station",
    "RouteNumber": "NX1",
    "Mode": "Bus",
-   "Shape__Length": "23644.4301231468"
+   "ShapeLength": "23644.4301231468"
  },
  {
    "OBJECTID": 118087,
-   "Route Pattern": 29501,
-   "Agency Name": "NZB",
+   "RoutePattern": 29501,
+   "AgencyName": "NZB",
    "RouteName": "Ellerslie Station To City Centre Via Royal Oak",
    "RouteNumber": "295",
    "Mode": "Bus",
-   "Shape__Length": "15662.4477702834"
+   "ShapeLength": "15662.4477702834"
  },
  {
    "OBJECTID": 118088,
-   "Route Pattern": 29502,
-   "Agency Name": "NZB",
+   "RoutePattern": 29502,
+   "AgencyName": "NZB",
    "RouteName": "City Centre To Ellerslie Station Via Royal Oak",
    "RouteNumber": "295",
    "Mode": "Bus",
-   "Shape__Length": "15042.5912685084"
+   "ShapeLength": "15042.5912685084"
  },
  {
    "OBJECTID": 118089,
-   "Route Pattern": 29503,
-   "Agency Name": "NZB",
+   "RoutePattern": 29503,
+   "AgencyName": "NZB",
    "RouteName": "Ellerslie Station To Royal Oak",
    "RouteNumber": "295",
    "Mode": "Bus",
-   "Shape__Length": "5913.39292222598"
+   "ShapeLength": "5913.39292222598"
  },
  {
    "OBJECTID": 118090,
-   "Route Pattern": 29504,
-   "Agency Name": "NZB",
+   "RoutePattern": 29504,
+   "AgencyName": "NZB",
    "RouteName": "Royal Oak To Ellerslie Station",
    "RouteNumber": "295",
    "Mode": "Bus",
-   "Shape__Length": "4943.71148600379"
+   "ShapeLength": "4943.71148600379"
  },
  {
    "OBJECTID": 118091,
-   "Route Pattern": 29505,
-   "Agency Name": "NZB",
+   "RoutePattern": 29505,
+   "AgencyName": "NZB",
    "RouteName": "Royal Oak To City Centre",
    "RouteNumber": "295",
    "Mode": "Bus",
-   "Shape__Length": "9749.05484805747"
+   "ShapeLength": "9749.05484805747"
  },
  {
    "OBJECTID": 118092,
-   "Route Pattern": 29506,
-   "Agency Name": "NZB",
+   "RoutePattern": 29506,
+   "AgencyName": "NZB",
    "RouteName": "City Centre To Royal Oak",
    "RouteNumber": "295",
    "Mode": "Bus",
-   "Shape__Length": "10105.7720803395"
+   "ShapeLength": "10105.7720803395"
  },
  {
    "OBJECTID": 118093,
-   "Route Pattern": 29801,
-   "Agency Name": "GBT",
+   "RoutePattern": 29801,
+   "AgencyName": "GBT",
    "RouteName": "Onehunga To Sylvia Park Via Ellerslie",
    "RouteNumber": "298",
    "Mode": "Bus",
-   "Shape__Length": "12428.0232329317"
+   "ShapeLength": "12428.0232329317"
  },
  {
    "OBJECTID": 118094,
-   "Route Pattern": 29802,
-   "Agency Name": "GBT",
+   "RoutePattern": 29802,
+   "AgencyName": "GBT",
    "RouteName": "Sylvia Park To Onehunga Via Ellerslie",
    "RouteNumber": "298",
    "Mode": "Bus",
-   "Shape__Length": "12761.4108087527"
+   "ShapeLength": "12761.4108087527"
  },
  {
    "OBJECTID": 118095,
-   "Route Pattern": 30905,
-   "Agency Name": "RTH",
+   "RoutePattern": 30905,
+   "AgencyName": "RTH",
    "RouteName": "Mangere Town Centre To City Centre",
    "RouteNumber": "309X",
    "Mode": "Bus",
-   "Shape__Length": "24010.668744002"
+   "ShapeLength": "24010.668744002"
  },
  {
    "OBJECTID": 118096,
-   "Route Pattern": 30906,
-   "Agency Name": "RTH",
+   "RoutePattern": 30906,
+   "AgencyName": "RTH",
    "RouteName": "Stop E The Civic To Mangere",
    "RouteNumber": "309X",
    "Mode": "Bus",
-   "Shape__Length": "25024.6938516819"
+   "ShapeLength": "25024.6938516819"
  },
  {
    "OBJECTID": 118097,
-   "Route Pattern": 30907,
-   "Agency Name": "RTH",
+   "RoutePattern": 30907,
+   "AgencyName": "RTH",
    "RouteName": "Mangere Town Centre to City Centre",
    "RouteNumber": "309",
    "Mode": "Bus",
-   "Shape__Length": "26193.1069912333"
+   "ShapeLength": "26193.1069912333"
  },
  {
    "OBJECTID": 118098,
-   "Route Pattern": 30908,
-   "Agency Name": "RTH",
+   "RoutePattern": 30908,
+   "AgencyName": "RTH",
    "RouteName": "City Centre to Mangere Town Centre",
    "RouteNumber": "309",
    "Mode": "Bus",
-   "Shape__Length": "26349.9894800739"
+   "ShapeLength": "26349.9894800739"
  },
  {
    "OBJECTID": 118099,
-   "Route Pattern": 31102,
-   "Agency Name": "RTH",
+   "RoutePattern": 31102,
+   "AgencyName": "RTH",
    "RouteName": "Otahuhu Station to Otahuhu Station via Mangere Bridge",
    "RouteNumber": "311",
    "Mode": "Bus",
-   "Shape__Length": "14395.8587160713"
+   "ShapeLength": "14395.8587160713"
  },
  {
    "OBJECTID": 118100,
-   "Route Pattern": 31307,
-   "Agency Name": "RTH",
+   "RoutePattern": 31307,
+   "AgencyName": "RTH",
    "RouteName": "Mangere to Manukau Bus Station Via Papatoetoe",
    "RouteNumber": "313",
    "Mode": "Bus",
-   "Shape__Length": "12573.924325962"
+   "ShapeLength": "12573.924325962"
  },
  {
    "OBJECTID": 118101,
-   "Route Pattern": 31308,
-   "Agency Name": "RTH",
+   "RoutePattern": 31308,
+   "AgencyName": "RTH",
    "RouteName": "Manukau Bus Station to Mangere Via Papatoetoe",
    "RouteNumber": "313",
    "Mode": "Bus",
-   "Shape__Length": "12123.8632247121"
+   "ShapeLength": "12123.8632247121"
  },
  {
    "OBJECTID": 118102,
-   "Route Pattern": 31405,
-   "Agency Name": "RTH",
+   "RoutePattern": 31405,
+   "AgencyName": "RTH",
    "RouteName": "Ormiston to Middlemore Station Via Otara",
    "RouteNumber": "314",
    "Mode": "Bus",
-   "Shape__Length": "10497.5068629244"
+   "ShapeLength": "10497.5068629244"
  },
  {
    "OBJECTID": 118103,
-   "Route Pattern": 31406,
-   "Agency Name": "RTH",
+   "RoutePattern": 31406,
+   "AgencyName": "RTH",
    "RouteName": "Middlemore Station to Ormiston Via Otara",
    "RouteNumber": "314",
    "Mode": "Bus",
-   "Shape__Length": "10574.0690172528"
+   "ShapeLength": "10574.0690172528"
  },
  {
    "OBJECTID": 118104,
-   "Route Pattern": 32101,
-   "Agency Name": "NZB",
+   "RoutePattern": 32101,
+   "AgencyName": "NZB",
    "RouteName": "Middlemore Station To Britomart Via Greenlane Hospital",
    "RouteNumber": "321",
    "Mode": "Bus",
-   "Shape__Length": "21949.6459785215"
+   "ShapeLength": "21949.6459785215"
  },
  {
    "OBJECTID": 118105,
-   "Route Pattern": 32102,
-   "Agency Name": "NZB",
+   "RoutePattern": 32102,
+   "AgencyName": "NZB",
    "RouteName": "Britomart To Middlemore Station Via Greenlane Hospital",
    "RouteNumber": "321",
    "Mode": "Bus",
-   "Shape__Length": "21710.6798730124"
+   "ShapeLength": "21710.6798730124"
  },
  {
    "OBJECTID": 118106,
-   "Route Pattern": 32103,
-   "Agency Name": "NZB",
+   "RoutePattern": 32103,
+   "AgencyName": "NZB",
    "RouteName": "Middlemore Station To Ellerslie Station Via Otahuhu",
    "RouteNumber": "321",
    "Mode": "Bus",
-   "Shape__Length": "10763.9711209696"
+   "ShapeLength": "10763.9711209696"
  },
  {
    "OBJECTID": 118107,
-   "Route Pattern": 32301,
-   "Agency Name": "GBT",
+   "RoutePattern": 32301,
+   "AgencyName": "GBT",
    "RouteName": "Otahuhu Station To Panmure Via Panama Rd",
    "RouteNumber": "323",
    "Mode": "Bus",
-   "Shape__Length": "11443.2819637077"
+   "ShapeLength": "11443.2819637077"
  },
  {
    "OBJECTID": 118108,
-   "Route Pattern": 32302,
-   "Agency Name": "GBT",
+   "RoutePattern": 32302,
+   "AgencyName": "GBT",
    "RouteName": "Panmure To Otahuhu Station Via Panama Rd",
    "RouteNumber": "323",
    "Mode": "Bus",
-   "Shape__Length": "11393.746054484"
+   "ShapeLength": "11393.746054484"
  },
  {
    "OBJECTID": 118109,
-   "Route Pattern": 32407,
-   "Agency Name": "RTH",
+   "RoutePattern": 32407,
+   "AgencyName": "RTH",
    "RouteName": "Mangere Town Centre to Seaside Park Via Otahuhu",
    "RouteNumber": "324",
    "Mode": "Bus",
-   "Shape__Length": "11378.4541128113"
+   "ShapeLength": "11378.4541128113"
  },
  {
    "OBJECTID": 118110,
-   "Route Pattern": 32408,
-   "Agency Name": "RTH",
+   "RoutePattern": 32408,
+   "AgencyName": "RTH",
    "RouteName": "Seaside Park to Mangere Town Centre Via Otahuhu",
    "RouteNumber": "324",
    "Mode": "Bus",
-   "Shape__Length": "11431.3177207919"
+   "ShapeLength": "11431.3177207919"
  },
  {
    "OBJECTID": 118111,
-   "Route Pattern": 32409,
-   "Agency Name": "RTH",
+   "RoutePattern": 32409,
+   "AgencyName": "RTH",
    "RouteName": "Landing Drive to Otahuhu Town Centre via Mangere Town Centre",
    "RouteNumber": "324",
    "Mode": "Bus",
-   "Shape__Length": "14638.1049376434"
+   "ShapeLength": "14638.1049376434"
  },
  {
    "OBJECTID": 118112,
-   "Route Pattern": 32410,
-   "Agency Name": "RTH",
+   "RoutePattern": 32410,
+   "AgencyName": "RTH",
    "RouteName": "Otahuhu Town Centre to Landing Drive via Mangere Town Centre",
    "RouteNumber": "324",
    "Mode": "Bus",
-   "Shape__Length": "14187.066678025"
+   "ShapeLength": "14187.066678025"
  },
  {
    "OBJECTID": 118113,
-   "Route Pattern": 32505,
-   "Agency Name": "RTH",
+   "RoutePattern": 32505,
+   "AgencyName": "RTH",
    "RouteName": "Mangere Town Ctr to Manukau Station Via Otahuhu & Otara",
    "RouteNumber": "325",
    "Mode": "Bus",
-   "Shape__Length": "22363.1134595738"
+   "ShapeLength": "22363.1134595738"
  },
  {
    "OBJECTID": 118114,
-   "Route Pattern": 32506,
-   "Agency Name": "RTH",
+   "RoutePattern": 32506,
+   "AgencyName": "RTH",
    "RouteName": "Manukau Bus Station to Mangere Town Ctr Via Otara & Otahuhu",
    "RouteNumber": "325",
    "Mode": "Bus",
-   "Shape__Length": "22381.5762566202"
+   "ShapeLength": "22381.5762566202"
  },
  {
    "OBJECTID": 118115,
-   "Route Pattern": 32603,
-   "Agency Name": "RTH",
+   "RoutePattern": 32603,
+   "AgencyName": "RTH",
    "RouteName": "Mangere Town Centre To Middlemore via Earlsworth Rd (C)",
    "RouteNumber": "326",
    "Mode": "Bus",
-   "Shape__Length": "6627.35603491263"
+   "ShapeLength": "6627.35603491263"
  },
  {
    "OBJECTID": 118116,
-   "Route Pattern": 32604,
-   "Agency Name": "RTH",
+   "RoutePattern": 32604,
+   "AgencyName": "RTH",
    "RouteName": "Middlemore to Mangere Town Centre via Gray Ave (C)",
    "RouteNumber": "326",
    "Mode": "Bus",
-   "Shape__Length": "6234.07027060873"
+   "ShapeLength": "6234.07027060873"
  },
  {
    "OBJECTID": 118117,
-   "Route Pattern": 32605,
-   "Agency Name": "RTH",
+   "RoutePattern": 32605,
+   "AgencyName": "RTH",
    "RouteName": "Mangere Town Centre to Middlemore via Gray Ave (AC)",
    "RouteNumber": "326",
    "Mode": "Bus",
-   "Shape__Length": "6583.93600997401"
+   "ShapeLength": "6583.93600997401"
  },
  {
    "OBJECTID": 118118,
-   "Route Pattern": 32606,
-   "Agency Name": "RTH",
+   "RoutePattern": 32606,
+   "AgencyName": "RTH",
    "RouteName": "Middlemore to Mangere Town Centre via Earlsworth Rd (AC)",
    "RouteNumber": "326",
    "Mode": "Bus",
-   "Shape__Length": "6285.43223643668"
+   "ShapeLength": "6285.43223643668"
  },
  {
    "OBJECTID": 118119,
-   "Route Pattern": 32705,
-   "Agency Name": "RTH",
+   "RoutePattern": 32705,
+   "AgencyName": "RTH",
    "RouteName": "Otahuhu Station To Seaside Park",
    "RouteNumber": "327",
    "Mode": "Bus",
-   "Shape__Length": "3344.39318589384"
+   "ShapeLength": "3344.39318589384"
  },
  {
    "OBJECTID": 118120,
-   "Route Pattern": 32706,
-   "Agency Name": "RTH",
+   "RoutePattern": 32706,
+   "AgencyName": "RTH",
    "RouteName": "Seaside Park To Otahuhu Station",
    "RouteNumber": "327",
    "Mode": "Bus",
-   "Shape__Length": "3506.18731829879"
+   "ShapeLength": "3506.18731829879"
  },
  {
    "OBJECTID": 118121,
-   "Route Pattern": 35103,
-   "Agency Name": "HE",
+   "RoutePattern": 35103,
+   "AgencyName": "HE",
    "RouteName": "Botany To Otahuhu Station Via Highbrook",
    "RouteNumber": "351",
    "Mode": "Bus",
-   "Shape__Length": "13195.6357180358"
+   "ShapeLength": "13195.6357180358"
  },
  {
    "OBJECTID": 118122,
-   "Route Pattern": 35104,
-   "Agency Name": "HE",
+   "RoutePattern": 35104,
+   "AgencyName": "HE",
    "RouteName": "Otahuhu Station To Botany Via Highbrook",
    "RouteNumber": "351",
    "Mode": "Bus",
-   "Shape__Length": "13478.9724999127"
+   "ShapeLength": "13478.9724999127"
  },
  {
    "OBJECTID": 118123,
-   "Route Pattern": 35203,
-   "Agency Name": "HE",
+   "RoutePattern": 35203,
+   "AgencyName": "HE",
    "RouteName": "Manukau Bus Station To Panmure Via Flat Bush",
    "RouteNumber": "352",
    "Mode": "Bus",
-   "Shape__Length": "21832.8781464546"
+   "ShapeLength": "21832.8781464546"
  },
  {
    "OBJECTID": 118124,
-   "Route Pattern": 35204,
-   "Agency Name": "HE",
+   "RoutePattern": 35204,
+   "AgencyName": "HE",
    "RouteName": "Panmure To Manukau Bus Station Via Flat Bush",
    "RouteNumber": "352",
    "Mode": "Bus",
-   "Shape__Length": "21643.858518177"
+   "ShapeLength": "21643.858518177"
  },
  {
    "OBJECTID": 118125,
-   "Route Pattern": 35303,
-   "Agency Name": "HE",
+   "RoutePattern": 35303,
+   "AgencyName": "HE",
    "RouteName": "Manukau Bus Station To Botany Town Centre Via Preston Rd",
    "RouteNumber": "353",
    "Mode": "Bus",
-   "Shape__Length": "10734.0270523648"
+   "ShapeLength": "10734.0270523648"
  },
  {
    "OBJECTID": 118126,
-   "Route Pattern": 35304,
-   "Agency Name": "HE",
+   "RoutePattern": 35304,
+   "AgencyName": "HE",
    "RouteName": "Botany Town Centre To Manukau Bus Station Via Preston Rd",
    "RouteNumber": "353",
    "Mode": "Bus",
-   "Shape__Length": "10698.9610051557"
+   "ShapeLength": "10698.9610051557"
  },
  {
    "OBJECTID": 118127,
-   "Route Pattern": 35503,
-   "Agency Name": "HE",
+   "RoutePattern": 35503,
+   "AgencyName": "HE",
    "RouteName": "Ormiston To Botany Via Mission Heights",
    "RouteNumber": "355",
    "Mode": "Bus",
-   "Shape__Length": "10450.8852133328"
+   "ShapeLength": "10450.8852133328"
  },
  {
    "OBJECTID": 118128,
-   "Route Pattern": 35504,
-   "Agency Name": "HE",
+   "RoutePattern": 35504,
+   "AgencyName": "HE",
    "RouteName": "Botany To Manukau Bus Station Via Mission Heights & Ormiston",
    "RouteNumber": "355",
    "Mode": "Bus",
-   "Shape__Length": "16116.7532294418"
+   "ShapeLength": "16116.7532294418"
  },
  {
    "OBJECTID": 118129,
-   "Route Pattern": 35505,
-   "Agency Name": "HE",
+   "RoutePattern": 35505,
+   "AgencyName": "HE",
    "RouteName": "Manukau Bus Station To Botany Via Ormiston & Mission Heights",
    "RouteNumber": "355",
    "Mode": "Bus",
-   "Shape__Length": "16289.1937831369"
+   "ShapeLength": "16289.1937831369"
  },
  {
    "OBJECTID": 118130,
-   "Route Pattern": 36205,
-   "Agency Name": "RTH",
+   "RoutePattern": 36205,
+   "AgencyName": "RTH",
    "RouteName": "Weymouth to Manukau Bus Station via Great South Rd",
    "RouteNumber": "362",
    "Mode": "Bus",
-   "Shape__Length": "12047.0463883662"
+   "ShapeLength": "12047.0463883662"
  },
  {
    "OBJECTID": 118131,
-   "Route Pattern": 36205,
-   "Agency Name": "RTH",
+   "RoutePattern": 36205,
+   "AgencyName": "RTH",
    "RouteName": "Weymouth to Manukau Bus Station via Great South Rd",
    "RouteNumber": "362",
    "Mode": "Bus",
-   "Shape__Length": "12042.2240863472"
+   "ShapeLength": "12042.2240863472"
  },
  {
    "OBJECTID": 118132,
-   "Route Pattern": 36206,
-   "Agency Name": "RTH",
+   "RoutePattern": 36206,
+   "AgencyName": "RTH",
    "RouteName": "Manukau Bus Station to Weymouth via Great South Rd",
    "RouteNumber": "362",
    "Mode": "Bus",
-   "Shape__Length": "11032.1305075758"
+   "ShapeLength": "11032.1305075758"
  },
  {
    "OBJECTID": 118133,
-   "Route Pattern": 36304,
-   "Agency Name": "RTH",
+   "RoutePattern": 36304,
+   "AgencyName": "RTH",
    "RouteName": "Manurewa Interchange to Wattle Downs Loop",
    "RouteNumber": "363",
    "Mode": "Bus",
-   "Shape__Length": "10376.56259419"
+   "ShapeLength": "10376.56259419"
  },
  {
    "OBJECTID": 118134,
-   "Route Pattern": 36401,
-   "Agency Name": "RTH",
+   "RoutePattern": 36401,
+   "AgencyName": "RTH",
    "RouteName": "Papakura Station to Manurewa Station via Takaanini",
    "RouteNumber": "364",
    "Mode": "Bus",
-   "Shape__Length": "13844.907190586"
+   "ShapeLength": "13844.907190586"
  },
  {
    "OBJECTID": 118135,
-   "Route Pattern": 36402,
-   "Agency Name": "RTH",
+   "RoutePattern": 36402,
+   "AgencyName": "RTH",
    "RouteName": "Manurewa Station to Papakura Station via Takaanini",
    "RouteNumber": "364",
    "Mode": "Bus",
-   "Shape__Length": "13549.501874254"
+   "ShapeLength": "13549.501874254"
  },
  {
    "OBJECTID": 118136,
-   "Route Pattern": 36505,
-   "Agency Name": "RTH",
+   "RoutePattern": 36505,
+   "AgencyName": "RTH",
    "RouteName": "Papakura Interchange to Manukau Bus Station via Porchester",
    "RouteNumber": "365",
    "Mode": "Bus",
-   "Shape__Length": "18334.0848744156"
+   "ShapeLength": "18334.0848744156"
  },
  {
    "OBJECTID": 118137,
-   "Route Pattern": 36506,
-   "Agency Name": "RTH",
+   "RoutePattern": 36506,
+   "AgencyName": "RTH",
    "RouteName": "Manukau Bus Station to Papakura Interchange via Porchester",
    "RouteNumber": "365",
    "Mode": "Bus",
-   "Shape__Length": "18152.0636834651"
+   "ShapeLength": "18152.0636834651"
  },
  {
    "OBJECTID": 118138,
-   "Route Pattern": 36607,
-   "Agency Name": "RTH",
+   "RoutePattern": 36607,
+   "AgencyName": "RTH",
    "RouteName": "Manurewa Interchange to Manukau Bus Station Via The Gardens",
    "RouteNumber": "366",
    "Mode": "Bus",
-   "Shape__Length": "13095.3035906836"
+   "ShapeLength": "13095.3035906836"
  },
  {
    "OBJECTID": 118139,
-   "Route Pattern": 36608,
-   "Agency Name": "RTH",
+   "RoutePattern": 36608,
+   "AgencyName": "RTH",
    "RouteName": "Manukau Bus Station to Manurewa Via The Gardens",
    "RouteNumber": "366",
    "Mode": "Bus",
-   "Shape__Length": "13501.3998452869"
+   "ShapeLength": "13501.3998452869"
  },
  {
    "OBJECTID": 118140,
-   "Route Pattern": 37204,
-   "Agency Name": "RTH",
+   "RoutePattern": 37204,
+   "AgencyName": "RTH",
    "RouteName": "Papakura Shops to Keri Hill Loop",
    "RouteNumber": "372",
    "Mode": "Bus",
-   "Shape__Length": "6670.24325280883"
+   "ShapeLength": "6670.24325280883"
  },
  {
    "OBJECTID": 118141,
-   "Route Pattern": 37303,
-   "Agency Name": "RTH",
+   "RoutePattern": 37303,
+   "AgencyName": "RTH",
    "RouteName": "Red Hill to Papakura Shops",
    "RouteNumber": "373",
    "Mode": "Bus",
-   "Shape__Length": "6307.94259613385"
+   "ShapeLength": "6307.94259613385"
  },
  {
    "OBJECTID": 118142,
-   "Route Pattern": 37304,
-   "Agency Name": "RTH",
+   "RoutePattern": 37304,
+   "AgencyName": "RTH",
    "RouteName": "Papakura Shops to Red Hill",
    "RouteNumber": "373",
    "Mode": "Bus",
-   "Shape__Length": "6775.55457516489"
+   "ShapeLength": "6775.55457516489"
  },
  {
    "OBJECTID": 118143,
-   "Route Pattern": 37606,
-   "Agency Name": "RTH",
+   "RoutePattern": 37606,
+   "AgencyName": "RTH",
    "RouteName": "Papakura Shops to Auranga Dr via Drury",
    "RouteNumber": "376",
    "Mode": "Bus",
-   "Shape__Length": "13093.0429276714"
+   "ShapeLength": "13093.0429276714"
  },
  {
    "OBJECTID": 118144,
-   "Route Pattern": 37606,
-   "Agency Name": "RTH",
+   "RoutePattern": 37606,
+   "AgencyName": "RTH",
    "RouteName": "Papakura Shops to Auranga Dr via Drury",
    "RouteNumber": "376",
    "Mode": "Bus",
-   "Shape__Length": "13093.0429276714"
+   "ShapeLength": "13093.0429276714"
  },
  {
    "OBJECTID": 118145,
-   "Route Pattern": 37706,
-   "Agency Name": "RTH",
+   "RoutePattern": 37706,
+   "AgencyName": "RTH",
    "RouteName": "Papakura Interchange to Park Estate Loop",
    "RouteNumber": "377",
    "Mode": "Bus",
-   "Shape__Length": "9073.01704297943"
+   "ShapeLength": "9073.01704297943"
  },
  {
    "OBJECTID": 118146,
-   "Route Pattern": 37804,
-   "Agency Name": "RTH",
+   "RoutePattern": 37804,
+   "AgencyName": "RTH",
    "RouteName": "Papakura Shops to Karaka Harbourside Loop and Karaka Lakes",
    "RouteNumber": "378",
    "Mode": "Bus",
-   "Shape__Length": "11698.8262183931"
+   "ShapeLength": "11698.8262183931"
  },
  {
    "OBJECTID": 118147,
-   "Route Pattern": 37901,
-   "Agency Name": "RTH",
+   "RoutePattern": 37901,
+   "AgencyName": "RTH",
    "RouteName": "Clarks Beach To Papakura",
    "RouteNumber": "379",
    "Mode": "Bus",
-   "Shape__Length": "27396.1334635111"
+   "ShapeLength": "27396.1334635111"
  },
  {
    "OBJECTID": 118148,
-   "Route Pattern": 37901,
-   "Agency Name": "RTH",
+   "RoutePattern": 37901,
+   "AgencyName": "RTH",
    "RouteName": "Clarks Beach To Papakura",
    "RouteNumber": "379",
    "Mode": "Bus",
-   "Shape__Length": "27398.3006142153"
+   "ShapeLength": "27398.3006142153"
  },
  {
    "OBJECTID": 118149,
-   "Route Pattern": 37902,
-   "Agency Name": "RTH",
+   "RoutePattern": 37902,
+   "AgencyName": "RTH",
    "RouteName": "Papakura To Clarks Beach",
    "RouteNumber": "379",
    "Mode": "Bus",
-   "Shape__Length": "29413.5651327481"
+   "ShapeLength": "29413.5651327481"
  },
  {
    "OBJECTID": 118150,
-   "Route Pattern": 37902,
-   "Agency Name": "RTH",
+   "RoutePattern": 37902,
+   "AgencyName": "RTH",
    "RouteName": "Papakura To Clarks Beach",
    "RouteNumber": "379",
    "Mode": "Bus",
-   "Shape__Length": "29411.6433869116"
+   "ShapeLength": "29411.6433869116"
  },
  {
    "OBJECTID": 118151,
-   "Route Pattern": 37903,
-   "Agency Name": "RTH",
+   "RoutePattern": 37903,
+   "AgencyName": "RTH",
    "RouteName": "Clarks Beach to Papakura",
    "RouteNumber": "379",
    "Mode": "Bus",
-   "Shape__Length": "29431.1164584961"
+   "ShapeLength": "29431.1164584961"
  },
  {
    "OBJECTID": 118152,
-   "Route Pattern": 37903,
-   "Agency Name": "RTH",
+   "RoutePattern": 37903,
+   "AgencyName": "RTH",
    "RouteName": "Clarks Beach to Papakura",
    "RouteNumber": "379",
    "Mode": "Bus",
-   "Shape__Length": "29427.0275619554"
+   "ShapeLength": "29427.0275619554"
  },
  {
    "OBJECTID": 118153,
-   "Route Pattern": 37904,
-   "Agency Name": "RTH",
+   "RoutePattern": 37904,
+   "AgencyName": "RTH",
    "RouteName": "Papakura to Clarks Beach",
    "RouteNumber": "379",
    "Mode": "Bus",
-   "Shape__Length": "29413.5651327481"
+   "ShapeLength": "29413.5651327481"
  },
  {
    "OBJECTID": 118154,
-   "Route Pattern": 37904,
-   "Agency Name": "RTH",
+   "RoutePattern": 37904,
+   "AgencyName": "RTH",
    "RouteName": "Papakura to Clarks Beach",
    "RouteNumber": "379",
    "Mode": "Bus",
-   "Shape__Length": "29411.6433869116"
+   "ShapeLength": "29411.6433869116"
  },
  {
    "OBJECTID": 118155,
-   "Route Pattern": 38019,
-   "Agency Name": "RTH",
+   "RoutePattern": 38019,
+   "AgencyName": "RTH",
    "RouteName": "Airport Link via Puhinui Station",
    "RouteNumber": "AIR",
    "Mode": "Bus",
-   "Shape__Length": "17916.8731726936"
+   "ShapeLength": "17916.8731726936"
  },
  {
    "OBJECTID": 118156,
-   "Route Pattern": 39106,
-   "Agency Name": "RTH",
+   "RoutePattern": 39106,
+   "AgencyName": "RTH",
    "RouteName": "Pukekohe Northeast loop",
    "RouteNumber": "391",
    "Mode": "Bus",
-   "Shape__Length": "7396.29931397164"
+   "ShapeLength": "7396.29931397164"
  },
  {
    "OBJECTID": 118157,
-   "Route Pattern": 39210,
-   "Agency Name": "RTH",
+   "RoutePattern": 39210,
+   "AgencyName": "RTH",
    "RouteName": "Pukekohe Station to Pukekohe Station",
    "RouteNumber": "392",
    "Mode": "Bus",
-   "Shape__Length": "9437.61896804193"
+   "ShapeLength": "9437.61896804193"
  },
  {
    "OBJECTID": 118158,
-   "Route Pattern": 39306,
-   "Agency Name": "RTH",
+   "RoutePattern": 39306,
+   "AgencyName": "RTH",
    "RouteName": "Pukekohe South Loop",
    "RouteNumber": "393",
    "Mode": "Bus",
-   "Shape__Length": "7942.36452886294"
+   "ShapeLength": "7942.36452886294"
  },
  {
    "OBJECTID": 118159,
-   "Route Pattern": 39409,
-   "Agency Name": "RTH",
+   "RoutePattern": 39409,
+   "AgencyName": "RTH",
    "RouteName": "Pukekohe Interchange To Paerata Rise Loop",
    "RouteNumber": "394",
    "Mode": "Bus",
-   "Shape__Length": "13857.9855145909"
+   "ShapeLength": "13857.9855145909"
  },
  {
    "OBJECTID": 118160,
-   "Route Pattern": 39503,
-   "Agency Name": "RTH",
+   "RoutePattern": 39503,
+   "AgencyName": "RTH",
    "RouteName": "Waiuku to Papakura Interchange",
    "RouteNumber": "395",
    "Mode": "Bus",
-   "Shape__Length": "34568.4303244784"
+   "ShapeLength": "34568.4303244784"
  },
  {
    "OBJECTID": 118161,
-   "Route Pattern": 39504,
-   "Agency Name": "RTH",
+   "RoutePattern": 39504,
+   "AgencyName": "RTH",
    "RouteName": "Papakura Interchange to Waiuku",
    "RouteNumber": "395",
    "Mode": "Bus",
-   "Shape__Length": "34372.7691310376"
+   "ShapeLength": "34372.7691310376"
  },
  {
    "OBJECTID": 118162,
-   "Route Pattern": 39611,
-   "Agency Name": "RTH",
+   "RoutePattern": 39611,
+   "AgencyName": "RTH",
    "RouteName": "Waiuku to Pukekohe via Patumahoe",
    "RouteNumber": "396",
    "Mode": "Bus",
-   "Shape__Length": "27123.6752911429"
+   "ShapeLength": "27123.6752911429"
  },
  {
    "OBJECTID": 118163,
-   "Route Pattern": 39612,
-   "Agency Name": "RTH",
+   "RoutePattern": 39612,
+   "AgencyName": "RTH",
    "RouteName": "Pukekohe to Waiuku via Patumahoe",
    "RouteNumber": "396",
    "Mode": "Bus",
-   "Shape__Length": "27334.658613562"
+   "ShapeLength": "27334.658613562"
  },
  {
    "OBJECTID": 118164,
-   "Route Pattern": 39613,
-   "Agency Name": "RTH",
+   "RoutePattern": 39613,
+   "AgencyName": "RTH",
    "RouteName": "Pukekohe to Waiuku via Patumahoe Loop",
    "RouteNumber": "396",
    "Mode": "Bus",
-   "Shape__Length": "35328.4741419967"
+   "ShapeLength": "35328.4741419967"
  },
  {
    "OBJECTID": 118165,
-   "Route Pattern": 44416,
-   "Agency Name": "ATMB",
+   "RoutePattern": 44416,
+   "AgencyName": "ATMB",
    "RouteName": "Newmarket To Onehunga Onehunga Rail Bus",
    "RouteNumber": "RBO",
    "Mode": "Bus",
-   "Shape__Length": "11156.470380466"
+   "ShapeLength": "11156.470380466"
  },
  {
    "OBJECTID": 118166,
-   "Route Pattern": 44417,
-   "Agency Name": "ATMB",
+   "RoutePattern": 44417,
+   "AgencyName": "ATMB",
    "RouteName": "Onehunga To Newmarket Onehunga Rail Bus",
    "RouteNumber": "RBO",
    "Mode": "Bus",
-   "Shape__Length": "11215.8569189316"
+   "ShapeLength": "11215.8569189316"
  },
  {
    "OBJECTID": 118167,
-   "Route Pattern": 50101,
-   "Agency Name": "WBC",
+   "RoutePattern": 50101,
+   "AgencyName": "WBC",
    "RouteName": "Kennedy Point to Matiatia Wharf",
    "RouteNumber": "501",
    "Mode": "Bus",
-   "Shape__Length": "8090.39112516775"
+   "ShapeLength": "8090.39112516775"
  },
  {
    "OBJECTID": 118168,
-   "Route Pattern": 50102,
-   "Agency Name": "WBC",
+   "RoutePattern": 50102,
+   "AgencyName": "WBC",
    "RouteName": "Matiatia Wharf To Kennedy Point",
    "RouteNumber": "501",
    "Mode": "Bus",
-   "Shape__Length": "8751.21073217083"
+   "ShapeLength": "8751.21073217083"
  },
  {
    "OBJECTID": 118169,
-   "Route Pattern": 50201,
-   "Agency Name": "WBC",
+   "RoutePattern": 50201,
+   "AgencyName": "WBC",
    "RouteName": "Rocky Bay to Matiatia Wharf",
    "RouteNumber": "502",
    "Mode": "Bus",
-   "Shape__Length": "14658.589205597"
+   "ShapeLength": "14658.589205597"
  },
  {
    "OBJECTID": 118170,
-   "Route Pattern": 50202,
-   "Agency Name": "WBC",
+   "RoutePattern": 50202,
+   "AgencyName": "WBC",
    "RouteName": "Matiatia Wharf to Rocky Bay",
    "RouteNumber": "502",
    "Mode": "Bus",
-   "Shape__Length": "14481.9283530581"
+   "ShapeLength": "14481.9283530581"
  },
  {
    "OBJECTID": 118171,
-   "Route Pattern": 55520,
-   "Agency Name": "ATMB",
+   "RoutePattern": 55520,
+   "AgencyName": "ATMB",
    "RouteName": "Britomart To Otahuhu Via All Stations",
    "RouteNumber": "RBE",
    "Mode": "Bus",
-   "Shape__Length": "23126.3700662"
+   "ShapeLength": "23126.3700662"
  },
  {
    "OBJECTID": 118172,
-   "Route Pattern": 55521,
-   "Agency Name": "ATMB",
+   "RoutePattern": 55521,
+   "AgencyName": "ATMB",
    "RouteName": "Otahuhu To Britomart Via All Stations",
    "RouteNumber": "RBE",
    "Mode": "Bus",
-   "Shape__Length": "23271.9923449587"
+   "ShapeLength": "23271.9923449587"
  },
  {
    "OBJECTID": 118173,
-   "Route Pattern": 55524,
-   "Agency Name": "ATMB",
+   "RoutePattern": 55524,
+   "AgencyName": "ATMB",
    "RouteName": "Britomart To Manukau Eastern Rail Bus",
    "RouteNumber": "RBE",
    "Mode": "Bus",
-   "Shape__Length": "32968.7140422502"
+   "ShapeLength": "32968.7140422502"
  },
  {
    "OBJECTID": 118174,
-   "Route Pattern": 55525,
-   "Agency Name": "ATMB",
+   "RoutePattern": 55525,
+   "AgencyName": "ATMB",
    "RouteName": "Manukau To Britomart Eastern Rail Bus",
    "RouteNumber": "RBE",
    "Mode": "Bus",
-   "Shape__Length": "33158.6495548252"
+   "ShapeLength": "33158.6495548252"
  },
  {
    "OBJECTID": 118175,
-   "Route Pattern": 55536,
-   "Agency Name": "ATMB",
+   "RoutePattern": 55536,
+   "AgencyName": "ATMB",
    "RouteName": "Britomart To The Strand Eastern Rail Bus",
    "RouteNumber": "RBE",
    "Mode": "Bus",
-   "Shape__Length": "1428.69998188662"
+   "ShapeLength": "1428.69998188662"
  },
  {
    "OBJECTID": 118176,
-   "Route Pattern": 55537,
-   "Agency Name": "ATMB",
+   "RoutePattern": 55537,
+   "AgencyName": "ATMB",
    "RouteName": "The Strand To Britomart Eastern Rail Bus",
    "RouteNumber": "RBE",
    "Mode": "Bus",
-   "Shape__Length": "2191.46343889725"
+   "ShapeLength": "2191.46343889725"
  },
  {
    "OBJECTID": 118177,
-   "Route Pattern": 55544,
-   "Agency Name": "ATMB",
+   "RoutePattern": 55544,
+   "AgencyName": "ATMB",
    "RouteName": "Meadowbank Loop (Outbound)",
    "RouteNumber": "RBM",
    "Mode": "Bus",
-   "Shape__Length": "2998.95024690109"
+   "ShapeLength": "2998.95024690109"
  },
  {
    "OBJECTID": 118178,
-   "Route Pattern": 55545,
-   "Agency Name": "ATMB",
+   "RoutePattern": 55545,
+   "AgencyName": "ATMB",
    "RouteName": "Meadowbank Loop (Inbound)",
    "RouteNumber": "RBM",
    "Mode": "Bus",
-   "Shape__Length": "2986.79677206652"
+   "ShapeLength": "2986.79677206652"
  },
  {
    "OBJECTID": 118179,
-   "Route Pattern": 66603,
-   "Agency Name": "ATMB",
+   "RoutePattern": 66603,
+   "AgencyName": "ATMB",
    "RouteName": "Westfield Newmarket To Britomart Rail Bus",
    "RouteNumber": "RBN",
    "Mode": "Bus",
-   "Shape__Length": "3664.42192805582"
+   "ShapeLength": "3664.42192805582"
  },
  {
    "OBJECTID": 118180,
-   "Route Pattern": 66606,
-   "Agency Name": "ATMB",
+   "RoutePattern": 66606,
+   "AgencyName": "ATMB",
    "RouteName": "Britomart To Westfield Newmarket Rail Bus",
    "RouteNumber": "RBN",
    "Mode": "Bus",
-   "Shape__Length": "3845.92806728901"
+   "ShapeLength": "3845.92806728901"
  },
  {
    "OBJECTID": 118181,
-   "Route Pattern": 71101,
-   "Agency Name": "GBT",
+   "RoutePattern": 71101,
+   "AgencyName": "GBT",
    "RouteName": "Howick To Panmure Via Cascades Road",
    "RouteNumber": "711",
    "Mode": "Bus",
-   "Shape__Length": "13498.3635325553"
+   "ShapeLength": "13498.3635325553"
  },
  {
    "OBJECTID": 118182,
-   "Route Pattern": 71102,
-   "Agency Name": "GBT",
+   "RoutePattern": 71102,
+   "AgencyName": "GBT",
    "RouteName": "Panmure To Howick Via Cascades Road",
    "RouteNumber": "711",
    "Mode": "Bus",
-   "Shape__Length": "13381.5258535189"
+   "ShapeLength": "13381.5258535189"
  },
  {
    "OBJECTID": 118183,
-   "Route Pattern": 71201,
-   "Agency Name": "GBT",
+   "RoutePattern": 71201,
+   "AgencyName": "GBT",
    "RouteName": "Bucklands Beach To Panmure",
    "RouteNumber": "712",
    "Mode": "Bus",
-   "Shape__Length": "13852.4634611905"
+   "ShapeLength": "13852.4634611905"
  },
  {
    "OBJECTID": 118184,
-   "Route Pattern": 71202,
-   "Agency Name": "GBT",
+   "RoutePattern": 71202,
+   "AgencyName": "GBT",
    "RouteName": "Panmure To Bucklands Beach",
    "RouteNumber": "712",
    "Mode": "Bus",
-   "Shape__Length": "13864.7050811422"
+   "ShapeLength": "13864.7050811422"
  },
  {
    "OBJECTID": 118185,
-   "Route Pattern": 71203,
-   "Agency Name": "GBT",
+   "RoutePattern": 71203,
+   "AgencyName": "GBT",
    "RouteName": "Panmure To Bucklands Beach Loop",
    "RouteNumber": "712",
    "Mode": "Bus",
-   "Shape__Length": "21889.7191453709"
+   "ShapeLength": "21889.7191453709"
  },
  {
    "OBJECTID": 118186,
-   "Route Pattern": 73301,
-   "Agency Name": "GBT",
+   "RoutePattern": 73301,
+   "AgencyName": "GBT",
    "RouteName": "Botany To The Parade Via Highland Park",
    "RouteNumber": "733",
    "Mode": "Bus",
-   "Shape__Length": "12103.6973238163"
+   "ShapeLength": "12103.6973238163"
  },
  {
    "OBJECTID": 118187,
-   "Route Pattern": 73302,
-   "Agency Name": "GBT",
+   "RoutePattern": 73302,
+   "AgencyName": "GBT",
    "RouteName": "Bucklands Beach To Botany Via Highland Park",
    "RouteNumber": "733",
    "Mode": "Bus",
-   "Shape__Length": "11785.5411952408"
+   "ShapeLength": "11785.5411952408"
  },
  {
    "OBJECTID": 118188,
-   "Route Pattern": 73303,
-   "Agency Name": "GBT",
+   "RoutePattern": 73303,
+   "AgencyName": "GBT",
    "RouteName": "Botany To Bucklands Beach Via Highland Park",
    "RouteNumber": "733",
    "Mode": "Bus",
-   "Shape__Length": "9569.20521745988"
+   "ShapeLength": "9569.20521745988"
  },
  {
    "OBJECTID": 118189,
-   "Route Pattern": 73401,
-   "Agency Name": "GBT",
+   "RoutePattern": 73401,
+   "AgencyName": "GBT",
    "RouteName": "Botany To Half Moon Bay Via Highland Park",
    "RouteNumber": "734",
    "Mode": "Bus",
-   "Shape__Length": "8944.8648345703"
+   "ShapeLength": "8944.8648345703"
  },
  {
    "OBJECTID": 118190,
-   "Route Pattern": 73402,
-   "Agency Name": "GBT",
+   "RoutePattern": 73402,
+   "AgencyName": "GBT",
    "RouteName": "Half Moon Bay To Botany Via Highland Park",
    "RouteNumber": "734",
    "Mode": "Bus",
-   "Shape__Length": "8847.1948633386"
+   "ShapeLength": "8847.1948633386"
  },
  {
    "OBJECTID": 118191,
-   "Route Pattern": 73501,
-   "Agency Name": "GBT",
+   "RoutePattern": 73501,
+   "AgencyName": "GBT",
    "RouteName": "Botany To Half Moon Bay Via Cockle Bay And Howick",
    "RouteNumber": "735",
    "Mode": "Bus",
-   "Shape__Length": "13887.2883453998"
+   "ShapeLength": "13887.2883453998"
  },
  {
    "OBJECTID": 118192,
-   "Route Pattern": 73502,
-   "Agency Name": "GBT",
+   "RoutePattern": 73502,
+   "AgencyName": "GBT",
    "RouteName": "Half Moon Bay To Botany Via Howick And Cockle Bay",
    "RouteNumber": "735",
    "Mode": "Bus",
-   "Shape__Length": "13798.6539054731"
+   "ShapeLength": "13798.6539054731"
  },
  {
    "OBJECTID": 118193,
-   "Route Pattern": 73801,
-   "Agency Name": "GBT",
+   "RoutePattern": 73801,
+   "AgencyName": "GBT",
    "RouteName": "Maraetai to Pine Harbour via Beachlands",
    "RouteNumber": "738",
    "Mode": "Bus",
-   "Shape__Length": "7987.41041608513"
+   "ShapeLength": "7987.41041608513"
  },
  {
    "OBJECTID": 118194,
-   "Route Pattern": 73802,
-   "Agency Name": "GBT",
+   "RoutePattern": 73802,
+   "AgencyName": "GBT",
    "RouteName": "Pine Harbour to Maraetai via Beachlands",
    "RouteNumber": "738",
    "Mode": "Bus",
-   "Shape__Length": "7817.47906832161"
+   "ShapeLength": "7817.47906832161"
  },
  {
    "OBJECTID": 118195,
-   "Route Pattern": 73901,
-   "Agency Name": "GBT",
+   "RoutePattern": 73901,
+   "AgencyName": "GBT",
    "RouteName": "Maraetai And Beachlands To Botany Via Whitford And Ormiston",
    "RouteNumber": "739",
    "Mode": "Bus",
-   "Shape__Length": "30015.3368873332"
+   "ShapeLength": "30015.3368873332"
  },
  {
    "OBJECTID": 118196,
-   "Route Pattern": 73902,
-   "Agency Name": "GBT",
+   "RoutePattern": 73902,
+   "AgencyName": "GBT",
    "RouteName": "Botany To Beachlands And Maraetai Via Ormiston And Whitford",
    "RouteNumber": "739",
    "Mode": "Bus",
-   "Shape__Length": "30168.7059588542"
+   "ShapeLength": "30168.7059588542"
  },
  {
    "OBJECTID": 118197,
-   "Route Pattern": 74401,
-   "Agency Name": "GBT",
+   "RoutePattern": 74401,
+   "AgencyName": "GBT",
    "RouteName": "Panmure To St Heliers Via Glen Innes",
    "RouteNumber": "744",
    "Mode": "Bus",
-   "Shape__Length": "8713.240229047"
+   "ShapeLength": "8713.240229047"
  },
  {
    "OBJECTID": 118198,
-   "Route Pattern": 74402,
-   "Agency Name": "GBT",
+   "RoutePattern": 74402,
+   "AgencyName": "GBT",
    "RouteName": "St Heliers To Panmure Via Glen Innes",
    "RouteNumber": "744",
    "Mode": "Bus",
-   "Shape__Length": "8852.60589964732"
+   "ShapeLength": "8852.60589964732"
  },
  {
    "OBJECTID": 118199,
-   "Route Pattern": 74701,
-   "Agency Name": "GBT",
+   "RoutePattern": 74701,
+   "AgencyName": "GBT",
    "RouteName": "Panmure To Glen Innes Via Stonefields",
    "RouteNumber": "747",
    "Mode": "Bus",
-   "Shape__Length": "6600.60926016867"
+   "ShapeLength": "6600.60926016867"
  },
  {
    "OBJECTID": 118200,
-   "Route Pattern": 74702,
-   "Agency Name": "GBT",
+   "RoutePattern": 74702,
+   "AgencyName": "GBT",
    "RouteName": "Glen Innes To Panmure via Stonefields",
    "RouteNumber": "747",
    "Mode": "Bus",
-   "Shape__Length": "6737.27984847115"
+   "ShapeLength": "6737.27984847115"
  },
  {
    "OBJECTID": 118201,
-   "Route Pattern": 74703,
-   "Agency Name": "GBT",
+   "RoutePattern": 74703,
+   "AgencyName": "GBT",
    "RouteName": "Panmure To Selwyn College via Glen Innes",
    "RouteNumber": "747",
    "Mode": "Bus",
-   "Shape__Length": "9189.65152590939"
+   "ShapeLength": "9189.65152590939"
  },
  {
    "OBJECTID": 118202,
-   "Route Pattern": 75101,
-   "Agency Name": "NZB",
+   "RoutePattern": 75101,
+   "AgencyName": "NZB",
    "RouteName": "Panmure To Newmarket Via Marua Rd And Remuera Rd",
    "RouteNumber": "751",
    "Mode": "Bus",
-   "Shape__Length": "8599.23606942542"
+   "ShapeLength": "8599.23606942542"
  },
  {
    "OBJECTID": 118203,
-   "Route Pattern": 75102,
-   "Agency Name": "NZB",
+   "RoutePattern": 75102,
+   "AgencyName": "NZB",
    "RouteName": "Newmarket To Panmure Via Marua Rd And Remuera Rd",
    "RouteNumber": "751",
    "Mode": "Bus",
-   "Shape__Length": "8715.10886519559"
+   "ShapeLength": "8715.10886519559"
  },
  {
    "OBJECTID": 118204,
-   "Route Pattern": 75503,
-   "Agency Name": "NZB",
+   "RoutePattern": 75503,
+   "AgencyName": "NZB",
    "RouteName": "Benson Rd To Britomart Via Portland Rd",
    "RouteNumber": "755",
    "Mode": "Bus",
-   "Shape__Length": "10706.8551313933"
+   "ShapeLength": "10706.8551313933"
  },
  {
    "OBJECTID": 118205,
-   "Route Pattern": 75504,
-   "Agency Name": "NZB",
+   "RoutePattern": 75504,
+   "AgencyName": "NZB",
    "RouteName": "Britomart To Benson Rd Via Portland Rd",
    "RouteNumber": "755",
    "Mode": "Bus",
-   "Shape__Length": "10132.2811179224"
+   "ShapeLength": "10132.2811179224"
  },
  {
    "OBJECTID": 118206,
-   "Route Pattern": 77401,
-   "Agency Name": "NZB",
+   "RoutePattern": 77401,
+   "AgencyName": "NZB",
    "RouteName": "West Tamaki Rd To Britomart Via Long Dr And Tamaki Dr",
    "RouteNumber": "774",
    "Mode": "Bus",
-   "Shape__Length": "11836.558967225"
+   "ShapeLength": "11836.558967225"
  },
  {
    "OBJECTID": 118207,
-   "Route Pattern": 77402,
-   "Agency Name": "NZB",
+   "RoutePattern": 77402,
+   "AgencyName": "NZB",
    "RouteName": "Britomart To West Tamaki Rd Via Tamaki Dr And Long Dr",
    "RouteNumber": "774",
    "Mode": "Bus",
-   "Shape__Length": "12145.5112931781"
+   "ShapeLength": "12145.5112931781"
  },
  {
    "OBJECTID": 118208,
-   "Route Pattern": 77501,
-   "Agency Name": "NZB",
+   "RoutePattern": 77501,
+   "AgencyName": "NZB",
    "RouteName": "Glendowie To Britomart Via Tamaki Dr",
    "RouteNumber": "775",
    "Mode": "Bus",
-   "Shape__Length": "17355.0052639948"
+   "ShapeLength": "17355.0052639948"
  },
  {
    "OBJECTID": 118209,
-   "Route Pattern": 77502,
-   "Agency Name": "NZB",
+   "RoutePattern": 77502,
+   "AgencyName": "NZB",
    "RouteName": "Britomart To Glendowie Via Tamaki Dr",
    "RouteNumber": "775",
    "Mode": "Bus",
-   "Shape__Length": "15901.8960932505"
+   "ShapeLength": "15901.8960932505"
  },
  {
    "OBJECTID": 118210,
-   "Route Pattern": 78101,
-   "Agency Name": "NZB",
+   "RoutePattern": 78101,
+   "AgencyName": "NZB",
    "RouteName": "Mission Bay To Museum Via Orakei",
    "RouteNumber": "781",
    "Mode": "Bus",
-   "Shape__Length": "12682.5677175505"
+   "ShapeLength": "12682.5677175505"
  },
  {
    "OBJECTID": 118211,
-   "Route Pattern": 78102,
-   "Agency Name": "NZB",
+   "RoutePattern": 78102,
+   "AgencyName": "NZB",
    "RouteName": "Museum To Mission Bay Via Orakei",
    "RouteNumber": "781",
    "Mode": "Bus",
-   "Shape__Length": "12758.753960478"
+   "ShapeLength": "12758.753960478"
  },
  {
    "OBJECTID": 118212,
-   "Route Pattern": 78103,
-   "Agency Name": "NZB",
+   "RoutePattern": 78103,
+   "AgencyName": "NZB",
    "RouteName": "Mission Bay To Newmarket Via Orakei",
    "RouteNumber": "781",
    "Mode": "Bus",
-   "Shape__Length": "10849.1536245891"
+   "ShapeLength": "10849.1536245891"
  },
  {
    "OBJECTID": 118213,
-   "Route Pattern": 78104,
-   "Agency Name": "NZB",
+   "RoutePattern": 78104,
+   "AgencyName": "NZB",
    "RouteName": "Newmarket To Mission Bay Via Orakei",
    "RouteNumber": "781",
    "Mode": "Bus",
-   "Shape__Length": "11315.705437647"
+   "ShapeLength": "11315.705437647"
  },
  {
    "OBJECTID": 118214,
-   "Route Pattern": 78201,
-   "Agency Name": "GBT",
+   "RoutePattern": 78201,
+   "AgencyName": "GBT",
    "RouteName": "Sylvia Park To Mission Bay Via Ellerslie And Meadowbank",
    "RouteNumber": "782",
    "Mode": "Bus",
-   "Shape__Length": "17612.7710219459"
+   "ShapeLength": "17612.7710219459"
  },
  {
    "OBJECTID": 118215,
-   "Route Pattern": 78202,
-   "Agency Name": "GBT",
+   "RoutePattern": 78202,
+   "AgencyName": "GBT",
    "RouteName": "Mission Bay To Sylvia Park Via Meadowbank And Ellerslie",
    "RouteNumber": "782",
    "Mode": "Bus",
-   "Shape__Length": "17896.7975517816"
+   "ShapeLength": "17896.7975517816"
  },
  {
    "OBJECTID": 118216,
-   "Route Pattern": 78301,
-   "Agency Name": "GBT",
+   "RoutePattern": 78301,
+   "AgencyName": "GBT",
    "RouteName": "Eastern Bays Circuit Clockwise",
    "RouteNumber": "783",
    "Mode": "Bus",
-   "Shape__Length": "15733.0297319873"
+   "ShapeLength": "15733.0297319873"
  },
  {
    "OBJECTID": 118217,
-   "Route Pattern": 78302,
-   "Agency Name": "GBT",
+   "RoutePattern": 78302,
+   "AgencyName": "GBT",
    "RouteName": "Eastern Bays Circuit Anticlockwise",
    "RouteNumber": "783",
    "Mode": "Bus",
-   "Shape__Length": "15855.8081673331"
+   "ShapeLength": "15855.8081673331"
  },
  {
    "OBJECTID": 118218,
-   "Route Pattern": 79702,
-   "Agency Name": "NZB",
+   "RoutePattern": 79702,
+   "AgencyName": "NZB",
    "RouteName": "Wynyard Quarter to Karangahape Rd via Queen St",
    "RouteNumber": "CTY",
    "Mode": "Bus",
-   "Shape__Length": "6757.8950586981"
+   "ShapeLength": "6757.8950586981"
  },
  {
    "OBJECTID": 118219,
-   "Route Pattern": 79821,
-   "Agency Name": "NZB",
+   "RoutePattern": 79821,
+   "AgencyName": "NZB",
    "RouteName": "Inner Link Anticlockwise",
    "RouteNumber": "INN",
    "Mode": "Bus",
-   "Shape__Length": "11796.5053024534"
+   "ShapeLength": "11796.5053024534"
  },
  {
    "OBJECTID": 118220,
-   "Route Pattern": 79823,
-   "Agency Name": "NZB",
+   "RoutePattern": 79823,
+   "AgencyName": "NZB",
    "RouteName": "Inner Link Anticlockwise Newmarket To Victoria Park",
    "RouteNumber": "INN",
    "Mode": "Bus",
-   "Shape__Length": "5730.73266751252"
+   "ShapeLength": "5730.73266751252"
  },
  {
    "OBJECTID": 118221,
-   "Route Pattern": 79825,
-   "Agency Name": "NZB",
+   "RoutePattern": 79825,
+   "AgencyName": "NZB",
    "RouteName": "Inner Link Anticlockwise K Rd To Victoria Park",
    "RouteNumber": "INN",
    "Mode": "Bus",
-   "Shape__Length": "8355.1737189774"
+   "ShapeLength": "8355.1737189774"
  },
  {
    "OBJECTID": 118222,
-   "Route Pattern": 79831,
-   "Agency Name": "NZB",
+   "RoutePattern": 79831,
+   "AgencyName": "NZB",
    "RouteName": "Inner Link Anticlockwise (VP)",
    "RouteNumber": "INN",
    "Mode": "Bus",
-   "Shape__Length": "11796.5053024534"
+   "ShapeLength": "11796.5053024534"
  },
  {
    "OBJECTID": 118223,
-   "Route Pattern": 79922,
-   "Agency Name": "NZB",
+   "RoutePattern": 79922,
+   "AgencyName": "NZB",
    "RouteName": "Inner Link Clockwise",
    "RouteNumber": "INN",
    "Mode": "Bus",
-   "Shape__Length": "12171.0046891604"
+   "ShapeLength": "12171.0046891604"
  },
  {
    "OBJECTID": 118224,
-   "Route Pattern": 79924,
-   "Agency Name": "NZB",
+   "RoutePattern": 79924,
+   "AgencyName": "NZB",
    "RouteName": "Inner Link Clockwise Customs St To Victoria Park",
    "RouteNumber": "INN",
    "Mode": "Bus",
-   "Shape__Length": "10646.8113305623"
+   "ShapeLength": "10646.8113305623"
  },
  {
    "OBJECTID": 118225,
-   "Route Pattern": 79926,
-   "Agency Name": "NZB",
+   "RoutePattern": 79926,
+   "AgencyName": "NZB",
    "RouteName": "Inner Link Clockwise Newmarkt To Victoria Park",
    "RouteNumber": "INN",
    "Mode": "Bus",
-   "Shape__Length": "6833.08269736869"
+   "ShapeLength": "6833.08269736869"
  },
  {
    "OBJECTID": 118226,
-   "Route Pattern": 79928,
-   "Agency Name": "NZB",
+   "RoutePattern": 79928,
+   "AgencyName": "NZB",
    "RouteName": "Inner Link Clockwise K Rd To Victoria Park",
    "RouteNumber": "INN",
    "Mode": "Bus",
-   "Shape__Length": "3618.94166942323"
+   "ShapeLength": "3618.94166942323"
  },
  {
    "OBJECTID": 118227,
-   "Route Pattern": 79934,
-   "Agency Name": "NZB",
+   "RoutePattern": 79934,
+   "AgencyName": "NZB",
    "RouteName": "Inner Link Clockwise (VP)",
    "RouteNumber": "INN",
    "Mode": "Bus",
-   "Shape__Length": "12171.0046891604"
+   "ShapeLength": "12171.0046891604"
  },
  {
    "OBJECTID": 118228,
-   "Route Pattern": 80098,
-   "Agency Name": "MEX",
+   "RoutePattern": 80098,
+   "AgencyName": "MEX",
    "RouteName": "Parnell To Snells Beach",
    "RouteNumber": "MEX",
    "Mode": "Bus",
-   "Shape__Length": "73823.5411899229"
+   "ShapeLength": "73823.5411899229"
  },
  {
    "OBJECTID": 118229,
-   "Route Pattern": 80099,
-   "Agency Name": "MEX",
+   "RoutePattern": 80099,
+   "AgencyName": "MEX",
    "RouteName": "Snells Beach To Parnell",
    "RouteNumber": "MEX",
    "Mode": "Bus",
-   "Shape__Length": "74540.3597514887"
+   "ShapeLength": "74540.3597514887"
  },
  {
    "OBJECTID": 118230,
-   "Route Pattern": 80101,
-   "Agency Name": "NZB",
+   "RoutePattern": 80101,
+   "AgencyName": "NZB",
    "RouteName": "Bayswater Wharf To Akoranga Station Via Takapuna",
    "RouteNumber": "801",
    "Mode": "Bus",
-   "Shape__Length": "10070.3805595281"
+   "ShapeLength": "10070.3805595281"
  },
  {
    "OBJECTID": 118231,
-   "Route Pattern": 80102,
-   "Agency Name": "NZB",
+   "RoutePattern": 80102,
+   "AgencyName": "NZB",
    "RouteName": "Akoranga Station To Bayswater Wharf Via Takapuna",
    "RouteNumber": "801",
    "Mode": "Bus",
-   "Shape__Length": "9901.29356289228"
+   "ShapeLength": "9901.29356289228"
  },
  {
    "OBJECTID": 118232,
-   "Route Pattern": 80201,
-   "Agency Name": "NZB",
+   "RoutePattern": 80201,
+   "AgencyName": "NZB",
    "RouteName": "Bayswater To City (Mayoral Dr)",
    "RouteNumber": "802",
    "Mode": "Bus",
-   "Shape__Length": "14319.7033436806"
+   "ShapeLength": "14319.7033436806"
  },
  {
    "OBJECTID": 118233,
-   "Route Pattern": 80202,
-   "Agency Name": "NZB",
+   "RoutePattern": 80202,
+   "AgencyName": "NZB",
    "RouteName": "City (Mayoral Dr) To Bayswater",
    "RouteNumber": "802",
    "Mode": "Bus",
-   "Shape__Length": "14242.5110434025"
+   "ShapeLength": "14242.5110434025"
  },
  {
    "OBJECTID": 118234,
-   "Route Pattern": 80501,
-   "Agency Name": "NZB",
+   "RoutePattern": 80501,
+   "AgencyName": "NZB",
    "RouteName": "Devonport Wharf To Belmont Shops Via Ngataringa Rd",
    "RouteNumber": "805",
    "Mode": "Bus",
-   "Shape__Length": "4112.65130972749"
+   "ShapeLength": "4112.65130972749"
  },
  {
    "OBJECTID": 118235,
-   "Route Pattern": 80502,
-   "Agency Name": "NZB",
+   "RoutePattern": 80502,
+   "AgencyName": "NZB",
    "RouteName": "Belmont Shops To Devonport Wharf Via Ngataringa Rd",
    "RouteNumber": "805",
    "Mode": "Bus",
-   "Shape__Length": "4031.70300238463"
+   "ShapeLength": "4031.70300238463"
  },
  {
    "OBJECTID": 118236,
-   "Route Pattern": 80601,
-   "Agency Name": "NZB",
+   "RoutePattern": 80601,
+   "AgencyName": "NZB",
    "RouteName": "Devonport Wharf To Stanley Pt Loop",
    "RouteNumber": "806",
    "Mode": "Bus",
-   "Shape__Length": "4151.97645503879"
+   "ShapeLength": "4151.97645503879"
  },
  {
    "OBJECTID": 118237,
-   "Route Pattern": 80701,
-   "Agency Name": "NZB",
+   "RoutePattern": 80701,
+   "AgencyName": "NZB",
    "RouteName": "Devonport Wharf To Cheltenham Loop",
    "RouteNumber": "807",
    "Mode": "Bus",
-   "Shape__Length": "3900.42230007117"
+   "ShapeLength": "3900.42230007117"
  },
  {
    "OBJECTID": 118238,
-   "Route Pattern": 81401,
-   "Agency Name": "NZB",
+   "RoutePattern": 81401,
+   "AgencyName": "NZB",
    "RouteName": "Devonport Wharf To Akoranga Station Via Takapuna",
    "RouteNumber": "814",
    "Mode": "Bus",
-   "Shape__Length": "9621.92388927259"
+   "ShapeLength": "9621.92388927259"
  },
  {
    "OBJECTID": 118239,
-   "Route Pattern": 81402,
-   "Agency Name": "NZB",
+   "RoutePattern": 81402,
+   "AgencyName": "NZB",
    "RouteName": "Akoranga Station To Devonport Wharf Via Takapuna",
    "RouteNumber": "814",
    "Mode": "Bus",
-   "Shape__Length": "9533.98418265486"
+   "ShapeLength": "9533.98418265486"
  },
  {
    "OBJECTID": 118240,
-   "Route Pattern": 84201,
-   "Agency Name": "NZB",
+   "RoutePattern": 84201,
+   "AgencyName": "NZB",
    "RouteName": "Crown Hill To Smales Farm Station Via East Coast Rd",
    "RouteNumber": "842",
    "Mode": "Bus",
-   "Shape__Length": "4684.3573034129"
+   "ShapeLength": "4684.3573034129"
  },
  {
    "OBJECTID": 118241,
-   "Route Pattern": 84202,
-   "Agency Name": "NZB",
+   "RoutePattern": 84202,
+   "AgencyName": "NZB",
    "RouteName": "Smales Farm Station To Crown Hill Via East Coast Rd",
    "RouteNumber": "842",
    "Mode": "Bus",
-   "Shape__Length": "4357.51717441528"
+   "ShapeLength": "4357.51717441528"
  },
  {
    "OBJECTID": 118242,
-   "Route Pattern": 84303,
-   "Agency Name": "NZB",
+   "RoutePattern": 84303,
+   "AgencyName": "NZB",
    "RouteName": "Akoranga Station To Constellation Station Via Takapuna",
    "RouteNumber": "843",
    "Mode": "Bus",
-   "Shape__Length": "11437.0277409333"
+   "ShapeLength": "11437.0277409333"
  },
  {
    "OBJECTID": 118243,
-   "Route Pattern": 84304,
-   "Agency Name": "NZB",
+   "RoutePattern": 84304,
+   "AgencyName": "NZB",
    "RouteName": "Constellation Station To Akoranga Station Via Takapuna",
    "RouteNumber": "843",
    "Mode": "Bus",
-   "Shape__Length": "12176.7345236214"
+   "ShapeLength": "12176.7345236214"
  },
  {
    "OBJECTID": 118244,
-   "Route Pattern": 84501,
-   "Agency Name": "RTH",
+   "RoutePattern": 84501,
+   "AgencyName": "RTH",
    "RouteName": "Milford To Takapuna Via North Shore Hospital",
    "RouteNumber": "845",
    "Mode": "Bus",
-   "Shape__Length": "7536.22683334838"
+   "ShapeLength": "7536.22683334838"
  },
  {
    "OBJECTID": 118245,
-   "Route Pattern": 84502,
-   "Agency Name": "RTH",
+   "RoutePattern": 84502,
+   "AgencyName": "RTH",
    "RouteName": "Takapuna To Milford Via North Shore Hospital",
    "RouteNumber": "845",
    "Mode": "Bus",
-   "Shape__Length": "7286.04116985462"
+   "ShapeLength": "7286.04116985462"
  },
  {
    "OBJECTID": 118246,
-   "Route Pattern": 85601,
-   "Agency Name": "RTH",
+   "RoutePattern": 85601,
+   "AgencyName": "RTH",
    "RouteName": "Albany Station To Takapuna Via Beach Rd And Milford",
    "RouteNumber": "856",
    "Mode": "Bus",
-   "Shape__Length": "26139.9961105322"
+   "ShapeLength": "26139.9961105322"
  },
  {
    "OBJECTID": 118247,
-   "Route Pattern": 85602,
-   "Agency Name": "RTH",
+   "RoutePattern": 85602,
+   "AgencyName": "RTH",
    "RouteName": "Takapuna to Albany Station Via Milford And Beach Rd",
    "RouteNumber": "856",
    "Mode": "Bus",
-   "Shape__Length": "25997.307540746"
+   "ShapeLength": "25997.307540746"
  },
  {
    "OBJECTID": 118248,
-   "Route Pattern": 85603,
-   "Agency Name": "RTH",
+   "RoutePattern": 85603,
+   "AgencyName": "RTH",
    "RouteName": "Mairangi Bay To Smales Farm Station Via Beach Rd And Milford",
    "RouteNumber": "856",
    "Mode": "Bus",
-   "Shape__Length": "7281.85099987148"
+   "ShapeLength": "7281.85099987148"
  },
  {
    "OBJECTID": 118249,
-   "Route Pattern": 85604,
-   "Agency Name": "RTH",
+   "RoutePattern": 85604,
+   "AgencyName": "RTH",
    "RouteName": "Smales Farm Station To Mairangi Bay Via Milford And Beach Rd",
    "RouteNumber": "856",
    "Mode": "Bus",
-   "Shape__Length": "6938.51970457942"
+   "ShapeLength": "6938.51970457942"
  },
  {
    "OBJECTID": 118250,
-   "Route Pattern": 85605,
-   "Agency Name": "RTH",
+   "RoutePattern": 85605,
+   "AgencyName": "RTH",
    "RouteName": "Albany Station To Browns Bay",
    "RouteNumber": "856",
    "Mode": "Bus",
-   "Shape__Length": "11725.5159782807"
+   "ShapeLength": "11725.5159782807"
  },
  {
    "OBJECTID": 118651,
-   "Route Pattern": 85606,
-   "Agency Name": "RTH",
+   "RoutePattern": 85606,
+   "AgencyName": "RTH",
    "RouteName": "Browns Bay To Albany Station",
    "RouteNumber": "856",
    "Mode": "Bus",
-   "Shape__Length": "11769.7166226117"
+   "ShapeLength": "11769.7166226117"
  },
  {
    "OBJECTID": 118652,
-   "Route Pattern": 86101,
-   "Agency Name": "RTH",
+   "RoutePattern": 86101,
+   "AgencyName": "RTH",
    "RouteName": "Long Bay To Constellation Station Via Bush Rd",
    "RouteNumber": "861",
    "Mode": "Bus",
-   "Shape__Length": "18600.7371637992"
+   "ShapeLength": "18600.7371637992"
  },
  {
    "OBJECTID": 118653,
-   "Route Pattern": 86102,
-   "Agency Name": "RTH",
+   "RoutePattern": 86102,
+   "AgencyName": "RTH",
    "RouteName": "Constellation Station To Long Bay Via Bush Rd",
    "RouteNumber": "861",
    "Mode": "Bus",
-   "Shape__Length": "18563.5988551543"
+   "ShapeLength": "18563.5988551543"
  },
  {
    "OBJECTID": 118654,
-   "Route Pattern": 86501,
-   "Agency Name": "RTH",
+   "RoutePattern": 86501,
+   "AgencyName": "RTH",
    "RouteName": "Browns Bay To Albany Station Via Oaktree Ave",
    "RouteNumber": "865",
    "Mode": "Bus",
-   "Shape__Length": "5626.47559579116"
+   "ShapeLength": "5626.47559579116"
  },
  {
    "OBJECTID": 118655,
-   "Route Pattern": 86502,
-   "Agency Name": "RTH",
+   "RoutePattern": 86502,
+   "AgencyName": "RTH",
    "RouteName": "Albany Station To Browns Bay Via Oaktree Ave",
    "RouteNumber": "865",
    "Mode": "Bus",
-   "Shape__Length": "5563.62028751938"
+   "ShapeLength": "5563.62028751938"
  },
  {
    "OBJECTID": 118656,
-   "Route Pattern": 86601,
-   "Agency Name": "RTH",
+   "RoutePattern": 86601,
+   "AgencyName": "RTH",
    "RouteName": "Albany Stn To Newmarket Via Ponsonby And Auckland Hospital",
    "RouteNumber": "866",
    "Mode": "Bus",
-   "Shape__Length": "21945.8763494462"
+   "ShapeLength": "21945.8763494462"
  },
  {
    "OBJECTID": 118657,
-   "Route Pattern": 86602,
-   "Agency Name": "RTH",
+   "RoutePattern": 86602,
+   "AgencyName": "RTH",
    "RouteName": "Newmarket To Albany Station Via Auckland Hospital & Ponsonby",
    "RouteNumber": "866",
    "Mode": "Bus",
-   "Shape__Length": "22640.5524288231"
+   "ShapeLength": "22640.5524288231"
  },
  {
    "OBJECTID": 118658,
-   "Route Pattern": 87101,
-   "Agency Name": "NZB",
+   "RoutePattern": 87101,
+   "AgencyName": "NZB",
    "RouteName": "Constellation Station To Takapuna Via Forrest Hill Rd",
    "RouteNumber": "871",
    "Mode": "Bus",
-   "Shape__Length": "9484.75018184035"
+   "ShapeLength": "9484.75018184035"
  },
  {
    "OBJECTID": 118659,
-   "Route Pattern": 87102,
-   "Agency Name": "NZB",
+   "RoutePattern": 87102,
+   "AgencyName": "NZB",
    "RouteName": "Takapuna To Constellation Station Via Forrest Hill Rd",
    "RouteNumber": "871",
    "Mode": "Bus",
-   "Shape__Length": "9294.12320881828"
+   "ShapeLength": "9294.12320881828"
  },
  {
    "OBJECTID": 118660,
-   "Route Pattern": 87104,
-   "Agency Name": "NZB",
+   "RoutePattern": 87104,
+   "AgencyName": "NZB",
    "RouteName": "Takapuna to Constellation Station Via Forrest Hill Rd",
    "RouteNumber": "871",
    "Mode": "Bus",
-   "Shape__Length": "9294.12320881828"
+   "ShapeLength": "9294.12320881828"
  },
  {
    "OBJECTID": 118661,
-   "Route Pattern": 87801,
-   "Agency Name": "RTH",
+   "RoutePattern": 87801,
+   "AgencyName": "RTH",
    "RouteName": "Browns Bay To Constellation Station Via and East Coast Rd",
    "RouteNumber": "878",
    "Mode": "Bus",
-   "Shape__Length": "12322.2603751546"
+   "ShapeLength": "12322.2603751546"
  },
  {
    "OBJECTID": 118662,
-   "Route Pattern": 87802,
-   "Agency Name": "RTH",
+   "RoutePattern": 87802,
+   "AgencyName": "RTH",
    "RouteName": "Constellation Station To Browns Bay Via East Coast Rd",
    "RouteNumber": "878",
    "Mode": "Bus",
-   "Shape__Length": "12116.3537131427"
+   "ShapeLength": "12116.3537131427"
  },
  {
    "OBJECTID": 118663,
-   "Route Pattern": 87803,
-   "Agency Name": "RTH",
+   "RoutePattern": 87803,
+   "AgencyName": "RTH",
    "RouteName": "Northcross To Constellation Station Via East Coast Rd",
    "RouteNumber": "878",
    "Mode": "Bus",
-   "Shape__Length": "6621.42627078076"
+   "ShapeLength": "6621.42627078076"
  },
  {
    "OBJECTID": 118664,
-   "Route Pattern": 87804,
-   "Agency Name": "RTH",
+   "RoutePattern": 87804,
+   "AgencyName": "RTH",
    "RouteName": "Constellation Station To Northcross Via East Coast Rd",
    "RouteNumber": "878",
    "Mode": "Bus",
-   "Shape__Length": "6545.88977224701"
+   "ShapeLength": "6545.88977224701"
  },
  {
    "OBJECTID": 118665,
-   "Route Pattern": 88301,
-   "Agency Name": "RTH",
+   "RoutePattern": 88301,
+   "AgencyName": "RTH",
    "RouteName": "Schnapper Rock To Constellation Station",
    "RouteNumber": "883",
    "Mode": "Bus",
-   "Shape__Length": "8335.81133727949"
+   "ShapeLength": "8335.81133727949"
  },
  {
    "OBJECTID": 118666,
-   "Route Pattern": 88302,
-   "Agency Name": "RTH",
+   "RoutePattern": 88302,
+   "AgencyName": "RTH",
    "RouteName": "Constellation Station To Schnapper Rock",
    "RouteNumber": "883",
    "Mode": "Bus",
-   "Shape__Length": "6130.04634413757"
+   "ShapeLength": "6130.04634413757"
  },
  {
    "OBJECTID": 118667,
-   "Route Pattern": 88304,
-   "Agency Name": "RTH",
+   "RoutePattern": 88304,
+   "AgencyName": "RTH",
    "RouteName": "Constellation Station To Schnapper Rock (Full Loop)",
    "RouteNumber": "883",
    "Mode": "Bus",
-   "Shape__Length": "8117.50402979857"
+   "ShapeLength": "8117.50402979857"
  },
  {
    "OBJECTID": 118668,
-   "Route Pattern": 88401,
-   "Agency Name": "RTH",
+   "RoutePattern": 88401,
+   "AgencyName": "RTH",
    "RouteName": "Constellation Station To NHIE Loop Anticlockwise",
    "RouteNumber": "884",
    "Mode": "Bus",
-   "Shape__Length": "9516.82469042245"
+   "ShapeLength": "9516.82469042245"
  },
  {
    "OBJECTID": 118669,
-   "Route Pattern": 88501,
-   "Agency Name": "RTH",
+   "RoutePattern": 88501,
+   "AgencyName": "RTH",
    "RouteName": "Constellation Station To NHIE Loop Clockwise",
    "RouteNumber": "885",
    "Mode": "Bus",
-   "Shape__Length": "9675.26852707438"
+   "ShapeLength": "9675.26852707438"
  },
  {
    "OBJECTID": 118670,
-   "Route Pattern": 88801,
-   "Agency Name": "RTH",
+   "RoutePattern": 88801,
+   "AgencyName": "RTH",
    "RouteName": "Albany Heights Loop",
    "RouteNumber": "888",
    "Mode": "Bus",
-   "Shape__Length": "8480.53093669508"
+   "ShapeLength": "8480.53093669508"
  },
  {
    "OBJECTID": 118671,
-   "Route Pattern": 88901,
-   "Agency Name": "RTH",
+   "RoutePattern": 88901,
+   "AgencyName": "RTH",
    "RouteName": "Albany Station To Constellation Station Via Hugh Green Dr",
    "RouteNumber": "889",
    "Mode": "Bus",
-   "Shape__Length": "5454.53097354025"
+   "ShapeLength": "5454.53097354025"
  },
  {
    "OBJECTID": 118672,
-   "Route Pattern": 88902,
-   "Agency Name": "RTH",
+   "RoutePattern": 88902,
+   "AgencyName": "RTH",
    "RouteName": "Constellation Station To Albany Station Via Hugh Green Dr",
    "RouteNumber": "889",
    "Mode": "Bus",
-   "Shape__Length": "5146.67026841607"
+   "ShapeLength": "5146.67026841607"
  },
  {
    "OBJECTID": 118673,
-   "Route Pattern": 90111,
-   "Agency Name": "RTH",
+   "RoutePattern": 90111,
+   "AgencyName": "RTH",
    "RouteName": "Smales Farm To Constellation Station Via Wairau Rd",
    "RouteNumber": "901",
    "Mode": "Bus",
-   "Shape__Length": "7931.9099924917"
+   "ShapeLength": "7931.9099924917"
  },
  {
    "OBJECTID": 118674,
-   "Route Pattern": 90112,
-   "Agency Name": "RTH",
+   "RoutePattern": 90112,
+   "AgencyName": "RTH",
    "RouteName": "Constellation Station To Smales Farm Via Wairau Rd",
    "RouteNumber": "901",
    "Mode": "Bus",
-   "Shape__Length": "8384.37763491175"
+   "ShapeLength": "8384.37763491175"
  },
  {
    "OBJECTID": 118675,
-   "Route Pattern": 90201,
-   "Agency Name": "RTH",
+   "RoutePattern": 90201,
+   "AgencyName": "RTH",
    "RouteName": "Kyle Road To Constellation Station",
    "RouteNumber": "902",
    "Mode": "Bus",
-   "Shape__Length": "7136.89791480569"
+   "ShapeLength": "7136.89791480569"
  },
  {
    "OBJECTID": 118676,
-   "Route Pattern": 90202,
-   "Agency Name": "RTH",
+   "RoutePattern": 90202,
+   "AgencyName": "RTH",
    "RouteName": "Constellation Station To Kyle Road",
    "RouteNumber": "902",
    "Mode": "Bus",
-   "Shape__Length": "7357.95650266556"
+   "ShapeLength": "7357.95650266556"
  },
  {
    "OBJECTID": 118677,
-   "Route Pattern": 90601,
-   "Agency Name": "RTH",
+   "RoutePattern": 90601,
+   "AgencyName": "RTH",
    "RouteName": "Constellation To Smales Farm Via Windy Ridge And Archers Rd",
    "RouteNumber": "906",
    "Mode": "Bus",
-   "Shape__Length": "16260.3963054208"
+   "ShapeLength": "16260.3963054208"
  },
  {
    "OBJECTID": 118678,
-   "Route Pattern": 90602,
-   "Agency Name": "RTH",
+   "RoutePattern": 90602,
+   "AgencyName": "RTH",
    "RouteName": "Smales Farm To Constellation Via Archers Rd And Windy Ridge",
    "RouteNumber": "906",
    "Mode": "Bus",
-   "Shape__Length": "14520.2853625896"
+   "ShapeLength": "14520.2853625896"
  },
  {
    "OBJECTID": 118679,
-   "Route Pattern": 90701,
-   "Agency Name": "RTH",
+   "RoutePattern": 90701,
+   "AgencyName": "RTH",
    "RouteName": "Campbells Bay To Constellation Station Via Sunnynook Station",
    "RouteNumber": "907",
    "Mode": "Bus",
-   "Shape__Length": "8692.08995288944"
+   "ShapeLength": "8692.08995288944"
  },
  {
    "OBJECTID": 118680,
-   "Route Pattern": 90702,
-   "Agency Name": "RTH",
+   "RoutePattern": 90702,
+   "AgencyName": "RTH",
    "RouteName": "Constellation Station To Campbells Bay Via Sunnynook Station",
    "RouteNumber": "907",
    "Mode": "Bus",
-   "Shape__Length": "9491.49614393896"
+   "ShapeLength": "9491.49614393896"
  },
  {
    "OBJECTID": 118681,
-   "Route Pattern": 91701,
-   "Agency Name": "RTH",
+   "RoutePattern": 91701,
+   "AgencyName": "RTH",
    "RouteName": "Birkenhead Wharf To Albany Station Via Glenfield Rd",
    "RouteNumber": "917",
    "Mode": "Bus",
-   "Shape__Length": "19552.6422010234"
+   "ShapeLength": "19552.6422010234"
  },
  {
    "OBJECTID": 118682,
-   "Route Pattern": 91702,
-   "Agency Name": "RTH",
+   "RoutePattern": 91702,
+   "AgencyName": "RTH",
    "RouteName": "Albany Station To Birkenhead Wharf Via Glenfield Rd",
    "RouteNumber": "917",
    "Mode": "Bus",
-   "Shape__Length": "19382.9334879217"
+   "ShapeLength": "19382.9334879217"
  },
  {
    "OBJECTID": 118683,
-   "Route Pattern": 91703,
-   "Agency Name": "RTH",
+   "RoutePattern": 91703,
+   "AgencyName": "RTH",
    "RouteName": "Birkenhead Wharf To Highbury",
    "RouteNumber": "917",
    "Mode": "Bus",
-   "Shape__Length": "2021.73388187235"
+   "ShapeLength": "2021.73388187235"
  },
  {
    "OBJECTID": 118684,
-   "Route Pattern": 91704,
-   "Agency Name": "RTH",
+   "RoutePattern": 91704,
+   "AgencyName": "RTH",
    "RouteName": "Highbury to Birkenhead Wharf",
    "RouteNumber": "917",
    "Mode": "Bus",
-   "Shape__Length": "2034.18734721967"
+   "ShapeLength": "2034.18734721967"
  },
  {
    "OBJECTID": 118685,
-   "Route Pattern": 92301,
-   "Agency Name": "NZB",
+   "RoutePattern": 92301,
+   "AgencyName": "NZB",
    "RouteName": "Akoranga Station To City (Mayoral Dr) Via Hillcrest",
    "RouteNumber": "923",
    "Mode": "Bus",
-   "Shape__Length": "15303.8571373409"
+   "ShapeLength": "15303.8571373409"
  },
  {
    "OBJECTID": 118686,
-   "Route Pattern": 92302,
-   "Agency Name": "NZB",
+   "RoutePattern": 92302,
+   "AgencyName": "NZB",
    "RouteName": "City (Mayoral Dr) To Akoranga Station Via Hillcrest",
    "RouteNumber": "923",
    "Mode": "Bus",
-   "Shape__Length": "14849.4233074278"
+   "ShapeLength": "14849.4233074278"
  },
  {
    "OBJECTID": 118687,
-   "Route Pattern": 92304,
-   "Agency Name": "NZB",
+   "RoutePattern": 92304,
+   "AgencyName": "NZB",
    "RouteName": "Sylvan Ave To Akoranga Station",
    "RouteNumber": "923",
    "Mode": "Bus",
-   "Shape__Length": "8667.94134959284"
+   "ShapeLength": "8667.94134959284"
  },
  {
    "OBJECTID": 118688,
-   "Route Pattern": 92401,
-   "Agency Name": "NZB",
+   "RoutePattern": 92401,
+   "AgencyName": "NZB",
    "RouteName": "Hillcrest To City (Mayoral Dr)",
    "RouteNumber": "924",
    "Mode": "Bus",
-   "Shape__Length": "13307.9632597856"
+   "ShapeLength": "13307.9632597856"
  },
  {
    "OBJECTID": 118689,
-   "Route Pattern": 92401,
-   "Agency Name": "NZB",
+   "RoutePattern": 92401,
+   "AgencyName": "NZB",
    "RouteName": "Hillcrest To City (Mayoral Dr)",
    "RouteNumber": "924",
    "Mode": "Bus",
-   "Shape__Length": "13272.3309485782"
+   "ShapeLength": "13272.3309485782"
  },
  {
    "OBJECTID": 118690,
-   "Route Pattern": 92601,
-   "Agency Name": "RTH",
+   "RoutePattern": 92601,
+   "AgencyName": "RTH",
    "RouteName": "Glenfield To Akoranga Station Via Hillcrest West",
    "RouteNumber": "926",
    "Mode": "Bus",
-   "Shape__Length": "9418.05378776258"
+   "ShapeLength": "9418.05378776258"
  },
  {
    "OBJECTID": 118691,
-   "Route Pattern": 92602,
-   "Agency Name": "RTH",
+   "RoutePattern": 92602,
+   "AgencyName": "RTH",
    "RouteName": "Akoranga Station To Glenfield Via Hillcrest West",
    "RouteNumber": "926",
    "Mode": "Bus",
-   "Shape__Length": "9239.80934286082"
+   "ShapeLength": "9239.80934286082"
  },
  {
    "OBJECTID": 118692,
-   "Route Pattern": 92801,
-   "Agency Name": "RTH",
+   "RoutePattern": 92801,
+   "AgencyName": "RTH",
    "RouteName": "Northcote Point To Smales Farm Stn Via North Shore Hospital",
    "RouteNumber": "928",
    "Mode": "Bus",
-   "Shape__Length": "6630.11335030514"
+   "ShapeLength": "6630.11335030514"
  },
  {
    "OBJECTID": 118693,
-   "Route Pattern": 92802,
-   "Agency Name": "RTH",
+   "RoutePattern": 92802,
+   "AgencyName": "RTH",
    "RouteName": "Smales Farm Stn To Northcote Point Via North Shore Hospital",
    "RouteNumber": "928",
    "Mode": "Bus",
-   "Shape__Length": "6282.82975899226"
+   "ShapeLength": "6282.82975899226"
  },
  {
    "OBJECTID": 118694,
-   "Route Pattern": 93101,
-   "Agency Name": "RTH",
+   "RoutePattern": 93101,
+   "AgencyName": "RTH",
    "RouteName": "Chatswood To University of Auckland Via Customs St",
    "RouteNumber": "931",
    "Mode": "Bus",
-   "Shape__Length": "15603.8066429925"
+   "ShapeLength": "15603.8066429925"
  },
  {
    "OBJECTID": 118695,
-   "Route Pattern": 93102,
-   "Agency Name": "RTH",
+   "RoutePattern": 93102,
+   "AgencyName": "RTH",
    "RouteName": "University Of Auckland To Chatswood Via Customs St",
    "RouteNumber": "931",
    "Mode": "Bus",
-   "Shape__Length": "14515.6611538433"
+   "ShapeLength": "14515.6611538433"
  },
  {
    "OBJECTID": 118696,
-   "Route Pattern": 93301,
-   "Agency Name": "RTH",
+   "RoutePattern": 93301,
+   "AgencyName": "RTH",
    "RouteName": "Beach Haven Wharf To University of Auckland Via Customs St",
    "RouteNumber": "933",
    "Mode": "Bus",
-   "Shape__Length": "17276.6926774579"
+   "ShapeLength": "17276.6926774579"
  },
  {
    "OBJECTID": 118697,
-   "Route Pattern": 93302,
-   "Agency Name": "RTH",
+   "RoutePattern": 93302,
+   "AgencyName": "RTH",
    "RouteName": "University Of Auckland To Beach Haven Wharf Via Customs St",
    "RouteNumber": "933",
    "Mode": "Bus",
-   "Shape__Length": "16213.8279322809"
+   "ShapeLength": "16213.8279322809"
  },
  {
    "OBJECTID": 118698,
-   "Route Pattern": 93303,
-   "Agency Name": "NZB",
+   "RoutePattern": 93303,
+   "AgencyName": "NZB",
    "RouteName": "Beach Haven Wharf to University of Auckland Via Customs St",
    "RouteNumber": "933",
    "Mode": "Bus",
-   "Shape__Length": "17276.6926774579"
+   "ShapeLength": "17276.6926774579"
  },
  {
    "OBJECTID": 118699,
-   "Route Pattern": 93901,
-   "Agency Name": "RTH",
+   "RoutePattern": 93901,
+   "AgencyName": "RTH",
    "RouteName": "Windy Ridge To University of Auckland Via Customs St",
    "RouteNumber": "939",
    "Mode": "Bus",
-   "Shape__Length": "16809.1281934982"
+   "ShapeLength": "16809.1281934982"
  },
  {
    "OBJECTID": 118700,
-   "Route Pattern": 93902,
-   "Agency Name": "RTH",
+   "RoutePattern": 93902,
+   "AgencyName": "RTH",
    "RouteName": "University of Auckland To Windy Ridge Via Customs St",
    "RouteNumber": "939",
    "Mode": "Bus",
-   "Shape__Length": "14718.7719457024"
+   "ShapeLength": "14718.7719457024"
  },
  {
    "OBJECTID": 118701,
-   "Route Pattern": 94101,
-   "Agency Name": "RTH",
+   "RoutePattern": 94101,
+   "AgencyName": "RTH",
    "RouteName": "Beach Haven To Takapuna Via Glenfield And Smales Farm Stn",
    "RouteNumber": "941",
    "Mode": "Bus",
-   "Shape__Length": "14597.7884550232"
+   "ShapeLength": "14597.7884550232"
  },
  {
    "OBJECTID": 118702,
-   "Route Pattern": 94102,
-   "Agency Name": "RTH",
+   "RoutePattern": 94102,
+   "AgencyName": "RTH",
    "RouteName": "Takapuna To Beach Haven Smales Farm Station And Glenfield",
    "RouteNumber": "941",
    "Mode": "Bus",
-   "Shape__Length": "14473.3534281011"
+   "ShapeLength": "14473.3534281011"
  },
  {
    "OBJECTID": 118703,
-   "Route Pattern": 94104,
-   "Agency Name": "RTH",
+   "RoutePattern": 94104,
+   "AgencyName": "RTH",
    "RouteName": "Smales Farm To Beach Haven And Takapuna Anticlockwise (Late)",
    "RouteNumber": "941",
    "Mode": "Bus",
-   "Shape__Length": "21715.4336891699"
+   "ShapeLength": "21715.4336891699"
  },
  {
    "OBJECTID": 118704,
-   "Route Pattern": 94106,
-   "Agency Name": "RTH",
+   "RoutePattern": 94106,
+   "AgencyName": "RTH",
    "RouteName": "Smales Farm to Beach Haven (Late Night)",
    "RouteNumber": "941",
    "Mode": "Bus",
-   "Shape__Length": "11132.6929303571"
+   "ShapeLength": "11132.6929303571"
  },
  {
    "OBJECTID": 118705,
-   "Route Pattern": 96603,
-   "Agency Name": "RTH",
+   "RoutePattern": 96603,
+   "AgencyName": "RTH",
    "RouteName": "Beach Haven To Newmarket Via Ponsonby And Auckland Hospital",
    "RouteNumber": "966",
    "Mode": "Bus",
-   "Shape__Length": "21464.4212167805"
+   "ShapeLength": "21464.4212167805"
  },
  {
    "OBJECTID": 118706,
-   "Route Pattern": 96606,
-   "Agency Name": "RTH",
+   "RoutePattern": 96606,
+   "AgencyName": "RTH",
    "RouteName": "Newmarket To Beach Haven Via Auckland Hospital And Ponsonby",
    "RouteNumber": "966",
    "Mode": "Bus",
-   "Shape__Length": "21013.6212425976"
+   "ShapeLength": "21013.6212425976"
  },
  {
    "OBJECTID": 118707,
-   "Route Pattern": 96607,
-   "Agency Name": "RTH",
+   "RoutePattern": 96607,
+   "AgencyName": "RTH",
    "RouteName": "Highbury To Newmarket Via Ponsonby And Auckland Hospital",
    "RouteNumber": "966",
    "Mode": "Bus",
-   "Shape__Length": "12621.9801432286"
+   "ShapeLength": "12621.9801432286"
  },
  {
    "OBJECTID": 118708,
-   "Route Pattern": 96608,
-   "Agency Name": "RTH",
+   "RoutePattern": 96608,
+   "AgencyName": "RTH",
    "RouteName": "Newmarket To Highbury Via Auckland Hospital and Ponsonby Rd",
    "RouteNumber": "966",
    "Mode": "Bus",
-   "Shape__Length": "12436.6249288945"
+   "ShapeLength": "12436.6249288945"
  },
  {
    "OBJECTID": 118709,
-   "Route Pattern": 98109,
-   "Agency Name": "GBT",
+   "RoutePattern": 98109,
+   "AgencyName": "GBT",
    "RouteName": "Waiwera To Hibiscus Coast Station",
    "RouteNumber": "981",
    "Mode": "Bus",
-   "Shape__Length": "13812.3006475227"
+   "ShapeLength": "13812.3006475227"
  },
  {
    "OBJECTID": 118710,
-   "Route Pattern": 98110,
-   "Agency Name": "GBT",
+   "RoutePattern": 98110,
+   "AgencyName": "GBT",
    "RouteName": "Hibiscus Coast Station To Waiwera",
    "RouteNumber": "981",
    "Mode": "Bus",
-   "Shape__Length": "14015.0394913437"
+   "ShapeLength": "14015.0394913437"
  },
  {
    "OBJECTID": 118711,
-   "Route Pattern": 98111,
-   "Agency Name": "GBT",
+   "RoutePattern": 98111,
+   "AgencyName": "GBT",
    "RouteName": "Orewa To Hibiscus Coast Station",
    "RouteNumber": "981",
    "Mode": "Bus",
-   "Shape__Length": "6606.03145633271"
+   "ShapeLength": "6606.03145633271"
  },
  {
    "OBJECTID": 118712,
-   "Route Pattern": 98112,
-   "Agency Name": "GBT",
+   "RoutePattern": 98112,
+   "AgencyName": "GBT",
    "RouteName": "Hibiscus Coast Station To Orewa",
    "RouteNumber": "981",
    "Mode": "Bus",
-   "Shape__Length": "6339.50440544097"
+   "ShapeLength": "6339.50440544097"
  },
  {
    "OBJECTID": 118713,
-   "Route Pattern": 98113,
-   "Agency Name": "GBT",
+   "RoutePattern": 98113,
+   "AgencyName": "GBT",
    "RouteName": "Orewa North To Hibiscus Coast Station",
    "RouteNumber": "981",
    "Mode": "Bus",
-   "Shape__Length": "7865.83193914644"
+   "ShapeLength": "7865.83193914644"
  },
  {
    "OBJECTID": 118714,
-   "Route Pattern": 98114,
-   "Agency Name": "GBT",
+   "RoutePattern": 98114,
+   "AgencyName": "GBT",
    "RouteName": "Hibiscus Coast Station To Orewa North",
    "RouteNumber": "981",
    "Mode": "Bus",
-   "Shape__Length": "8105.6337368715"
+   "ShapeLength": "8105.6337368715"
  },
  {
    "OBJECTID": 118715,
-   "Route Pattern": 98207,
-   "Agency Name": "GBT",
+   "RoutePattern": 98207,
+   "AgencyName": "GBT",
    "RouteName": "Gulf Harbour To Hibiscus Coast Station",
    "RouteNumber": "982",
    "Mode": "Bus",
-   "Shape__Length": "20147.9231162746"
+   "ShapeLength": "20147.9231162746"
  },
  {
    "OBJECTID": 118716,
-   "Route Pattern": 98208,
-   "Agency Name": "GBT",
+   "RoutePattern": 98208,
+   "AgencyName": "GBT",
    "RouteName": "Hibiscus Coast Station To Gulf Harbour",
    "RouteNumber": "982",
    "Mode": "Bus",
-   "Shape__Length": "20654.5221296431"
+   "ShapeLength": "20654.5221296431"
  },
  {
    "OBJECTID": 118717,
-   "Route Pattern": 98303,
-   "Agency Name": "GBT",
+   "RoutePattern": 98303,
+   "AgencyName": "GBT",
    "RouteName": "Gulf Harbour To Hibiscus Coast Station Via Vipond Rd",
    "RouteNumber": "983",
    "Mode": "Bus",
-   "Shape__Length": "22009.2035550065"
+   "ShapeLength": "22009.2035550065"
  },
  {
    "OBJECTID": 118718,
-   "Route Pattern": 98304,
-   "Agency Name": "GBT",
+   "RoutePattern": 98304,
+   "AgencyName": "GBT",
    "RouteName": "Hibiscus Coast Station To Gulf Harbour Via Vipond Rd",
    "RouteNumber": "983",
    "Mode": "Bus",
-   "Shape__Length": "20484.8041161485"
+   "ShapeLength": "20484.8041161485"
  },
  {
    "OBJECTID": 118719,
-   "Route Pattern": 98403,
-   "Agency Name": "GBT",
+   "RoutePattern": 98403,
+   "AgencyName": "GBT",
    "RouteName": "Orewa To Hibiscus Coast Station Via Maygrove",
    "RouteNumber": "984",
    "Mode": "Bus",
-   "Shape__Length": "15721.4733068675"
+   "ShapeLength": "15721.4733068675"
  },
  {
    "OBJECTID": 118720,
-   "Route Pattern": 98404,
-   "Agency Name": "GBT",
+   "RoutePattern": 98404,
+   "AgencyName": "GBT",
    "RouteName": "Hibiscus Coast Station To Orewa Via Maygrove",
    "RouteNumber": "984",
    "Mode": "Bus",
-   "Shape__Length": "7617.44175222248"
+   "ShapeLength": "7617.44175222248"
  },
  {
    "OBJECTID": 118721,
-   "Route Pattern": 98503,
-   "Agency Name": "GBT",
+   "RoutePattern": 98503,
+   "AgencyName": "GBT",
    "RouteName": "Orewa To Hibiscus Coast Station Via Millwater",
    "RouteNumber": "985",
    "Mode": "Bus",
-   "Shape__Length": "11260.0763368568"
+   "ShapeLength": "11260.0763368568"
  },
  {
    "OBJECTID": 118722,
-   "Route Pattern": 98504,
-   "Agency Name": "GBT",
+   "RoutePattern": 98504,
+   "AgencyName": "GBT",
    "RouteName": "Hibiscus Coast Station To Orewa Via Millwater",
    "RouteNumber": "985",
    "Mode": "Bus",
-   "Shape__Length": "9271.61609589298"
+   "ShapeLength": "9271.61609589298"
  },
  {
    "OBJECTID": 118723,
-   "Route Pattern": 98603,
-   "Agency Name": "GBT",
+   "RoutePattern": 98603,
+   "AgencyName": "GBT",
    "RouteName": "Hibiscus Coast Station To Albany Station Via Dairy Flat",
    "RouteNumber": "986",
    "Mode": "Bus",
-   "Shape__Length": "21503.5410004437"
+   "ShapeLength": "21503.5410004437"
  },
  {
    "OBJECTID": 118724,
-   "Route Pattern": 98604,
-   "Agency Name": "GBT",
+   "RoutePattern": 98604,
+   "AgencyName": "GBT",
    "RouteName": "Albany Station To Hibiscus Coast Station Via Dairy Flat",
    "RouteNumber": "986",
    "Mode": "Bus",
-   "Shape__Length": "21465.2488158081"
+   "ShapeLength": "21465.2488158081"
  },
  {
    "OBJECTID": 118725,
-   "Route Pattern": 98803,
-   "Agency Name": "GBT",
+   "RoutePattern": 98803,
+   "AgencyName": "GBT",
    "RouteName": "Gulf Harbour Ferry To The Plaza Via Army Bay",
    "RouteNumber": "988",
    "Mode": "Bus",
-   "Shape__Length": "13067.6200954115"
+   "ShapeLength": "13067.6200954115"
  },
  {
    "OBJECTID": 118726,
-   "Route Pattern": 98804,
-   "Agency Name": "GBT",
+   "RoutePattern": 98804,
+   "AgencyName": "GBT",
    "RouteName": "The Plaza To Gulf Harbour Ferry Via Army Bay",
    "RouteNumber": "988",
    "Mode": "Bus",
-   "Shape__Length": "13045.6963440352"
+   "ShapeLength": "13045.6963440352"
  },
  {
    "OBJECTID": 118727,
-   "Route Pattern": 98901,
-   "Agency Name": "BAYES",
+   "RoutePattern": 98901,
+   "AgencyName": "BAYES",
    "RouteName": "Hibiscus Coast Station To Milldale Loop",
    "RouteNumber": "989",
    "Mode": "Bus",
-   "Shape__Length": "7511.29098242674"
+   "ShapeLength": "7511.29098242674"
  },
  {
    "OBJECTID": 118728,
-   "Route Pattern": 98902,
-   "Agency Name": "BAYES",
+   "RoutePattern": 98902,
+   "AgencyName": "BAYES",
    "RouteName": "Hibiscus Coast Station To Ahutoetoe Road",
    "RouteNumber": "989",
    "Mode": "Bus",
-   "Shape__Length": "4981.94444772067"
+   "ShapeLength": "4981.94444772067"
  },
  {
    "OBJECTID": 118729,
-   "Route Pattern": 98903,
-   "Agency Name": "BAYES",
+   "RoutePattern": 98903,
+   "AgencyName": "BAYES",
    "RouteName": "Ahutoetoe School To Hibiscus Coast Station",
    "RouteNumber": "989",
    "Mode": "Bus",
-   "Shape__Length": "4949.80514905065"
+   "ShapeLength": "4949.80514905065"
  },
  {
    "OBJECTID": 118730,
-   "Route Pattern": 99501,
-   "Agency Name": "RTH",
+   "RoutePattern": 99501,
+   "AgencyName": "RTH",
    "RouteName": "Warkworth To Hibiscus Coast Station",
    "RouteNumber": "995",
    "Mode": "Bus",
-   "Shape__Length": "32757.7559139444"
+   "ShapeLength": "32757.7559139444"
  },
  {
    "OBJECTID": 118731,
-   "Route Pattern": 99502,
-   "Agency Name": "RTH",
+   "RoutePattern": 99502,
+   "AgencyName": "RTH",
    "RouteName": "Hibiscus Coast Station To Warkworth",
    "RouteNumber": "995",
    "Mode": "Bus",
-   "Shape__Length": "32945.9619175358"
+   "ShapeLength": "32945.9619175358"
  },
  {
    "OBJECTID": 118732,
-   "Route Pattern": 99605,
-   "Agency Name": "RTH",
+   "RoutePattern": 99605,
+   "AgencyName": "RTH",
    "RouteName": "Algies Bay To Warkworth Via Snells Beach",
    "RouteNumber": "996",
    "Mode": "Bus",
-   "Shape__Length": "13944.5740035371"
+   "ShapeLength": "13944.5740035371"
  },
  {
    "OBJECTID": 118733,
-   "Route Pattern": 99701,
-   "Agency Name": "RTH",
+   "RoutePattern": 99701,
+   "AgencyName": "RTH",
    "RouteName": "Warkworth To Omaha Via Matakana And Pt Wells",
    "RouteNumber": "997",
    "Mode": "Bus",
-   "Shape__Length": "21408.6646889306"
+   "ShapeLength": "21408.6646889306"
  },
  {
    "OBJECTID": 118734,
-   "Route Pattern": 99703,
-   "Agency Name": "RTH",
+   "RoutePattern": 99703,
+   "AgencyName": "RTH",
    "RouteName": "Warkworth To Omaha Via Matakana And Pt Wells (AM School)",
    "RouteNumber": "997",
    "Mode": "Bus",
-   "Shape__Length": "22461.2315633421"
+   "ShapeLength": "22461.2315633421"
  },
  {
    "OBJECTID": 118735,
-   "Route Pattern": 99705,
-   "Agency Name": "RTH",
+   "RoutePattern": 99705,
+   "AgencyName": "RTH",
    "RouteName": "Warkworth To Omaha Via Matakana And Pt Wells (PM School)",
    "RouteNumber": "997",
    "Mode": "Bus",
-   "Shape__Length": "21585.8167709271"
+   "ShapeLength": "21585.8167709271"
  },
  {
    "OBJECTID": 118736,
-   "Route Pattern": 99801,
-   "Agency Name": "RTH",
+   "RoutePattern": 99801,
+   "AgencyName": "RTH",
    "RouteName": "Wellsford To Warkworth",
    "RouteNumber": "998",
    "Mode": "Bus",
-   "Shape__Length": "20553.9596767802"
+   "ShapeLength": "20553.9596767802"
  },
  {
    "OBJECTID": 118737,
-   "Route Pattern": 99802,
-   "Agency Name": "RTH",
+   "RoutePattern": 99802,
+   "AgencyName": "RTH",
    "RouteName": "Warkworth To Wellsford",
    "RouteNumber": "998",
    "Mode": "Bus",
-   "Shape__Length": "21177.9387771798"
+   "ShapeLength": "21177.9387771798"
  },
  {
    "OBJECTID": 118738,
-   "Route Pattern": 99901,
-   "Agency Name": "RTH",
+   "RoutePattern": 99901,
+   "AgencyName": "RTH",
    "RouteName": "Warkworth Loop",
    "RouteNumber": "999",
    "Mode": "Bus",
-   "Shape__Length": "7846.98877994778"
+   "ShapeLength": "7846.98877994778"
  }
 ]
