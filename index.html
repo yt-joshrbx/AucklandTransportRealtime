@@ -126,9 +126,9 @@
                 if (!markers.hasOwnProperty(i)) continue;
                 var marker = markers[i];
                 if (!searchVal || (marker.options.desc && marker.options.desc.toLowerCase().includes(searchVal))) {
-                    marker.setStyle({ opacity: 1 });
+                    marker.setOpacity(1);
                 } else {
-                    marker.setStyle({ opacity: 0 });
+                    marker.setOpacity(0);
                 }
             }
         });
@@ -155,7 +155,7 @@
             location.hash = this.value;
             for (var i in markers) {
                 if (!markers.hasOwnProperty(i)) continue;
-                updateMarkerColour(markers[i]);
+                updateMarkerOpacity(markers[i]);
             }
         });
 
@@ -165,36 +165,18 @@
             $("#colourscheme").val(window.colourscheme);
         }
 
-        function stringToColour(str) {
-            var hash = 0;
-            for (var i = 0; i < str.length; i++) {
-                hash = str.charCodeAt(i) + ((hash << 5) - hash);
-            }
-            var colour = '#';
-            for (var i = 0; i < 3; i++) {
-                var value = (hash >> (i * 8)) & 0xFF;
-                colour += ('00' + value.toString(16)).substr(-2);
-            }
-            return colour;
-        }
-
-        function updateMarkerColour(marker) {
-            var color = "black";
+        function updateMarkerOpacity(marker) {
+            var opacity = 1;
             if (window.colourscheme == "Route") {
-                if (marker.route_type == 4) {
-                    color = "blue";
-                } else if (marker.route_long_name) {
-                    color = stringToColour(marker.route_long_name);
-                }
+                opacity = 1;
             } else if (window.colourscheme == "Occupancy" && marker.occupancy_status !== undefined) {
-                color = occupancyColors[marker.occupancy_status];
+                // Map occupancy status to opacity (0-6 maps to 0.2-1)
+                opacity = Math.max(0.2, marker.occupancy_status / 6);
             } else if (window.colourscheme == "Speed") {
-                color = speedColors(marker.speed);
+                // Map speed to opacity (0-100 km/h maps to 0.2-1)
+                opacity = Math.max(0.2, Math.min(1, marker.speed / 100));
             }
-            // Apply color filter to SVG icons
-            if (marker._icon && color !== "black") {
-                marker._icon.style.filter = "hue-rotate(" + Math.random() * 360 + "deg)";
-            }
+            marker.setOpacity(opacity);
         }
 
         function getIconForRouteType(routeType) {
@@ -240,7 +222,7 @@
 
         // Load bus services data from JSON
         function loadBusServices() {
-            fetch('bus_service.json')
+            fetch('bus_services.json')
                 .then(response => response.json())
                 .then(data => {
                     for (var service of data) {
@@ -430,7 +412,7 @@
                     marker.bindTooltip(tooltipHtml);
 
                     marker.occupancy_status = v.occupancy_status;
-                    updateMarkerColour(marker);
+                    updateMarkerOpacity(marker);
                 }
             })
             .catch(err => {
