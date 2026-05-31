@@ -390,25 +390,12 @@
                     marker.bikes_allowed = bikeAllowed;
                     marker.accessibility = accessibility;
 
-                    // Get bus service data from route number
-                    var busServiceData = "";
-                    if (r && r.route_short_name && busServices[r.route_short_name]) {
-                        var service = busServices[r.route_short_name];
-                        busServiceData = "<br><b>Bus Service Details:</b><br>" +
-                            "Route Pattern: " + service.RoutePattern + "<br>" +
-                            "Service Name: " + service.RouteName + "<br>" +
-                            "Agency: " + service.AgencyName + "<br>" +
-                            "Mode: " + service.Mode + "<br>" +
-                            "Route Length: " + Math.round(service.ShapeLength) + " m";
-                    }
-
                     var tooltipHtml = desc +
                         "Speed: " + marker.speed + " km/h<br>" +
                         "Occupancy: " + (occupancy[v.occupancy_status] || "") + "<br>" +
                         "License plate: " + (vehicleInfo.license_plate || "") + "<br>" +
                         "Bike Enabled: <span id='bike_allowed-" + sid + "'>" + bikeText(marker.bikes_allowed) + "</span><br>" +
-                        "Accessibility: <span id='accessibility-" + sid + "'>" + accessibilityText(marker.accessibility) + "</span>" +
-                        busServiceData;
+                        "Accessibility: <span id='accessibility-" + sid + "'>" + accessibilityText(marker.accessibility) + "</span>";
                     marker.bindTooltip(tooltipHtml);
 
                     marker.occupancy_status = v.occupancy_status;
