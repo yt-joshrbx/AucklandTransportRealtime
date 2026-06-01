@@ -193,15 +193,25 @@
             className: 'transit-marker other-marker'
         });
 
+        // Bus stop icon
+        var stopIcon = L.icon({
+            iconUrl: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="%23FF6B6B" stroke="%23fff" stroke-width="2"/></svg>',
+            iconSize: [20, 20],
+            iconAnchor: [10, 10],
+            popupAnchor: [0, -10],
+            className: 'stop-marker'
+        });
+
         var layers = {
             2: L.layerGroup().addTo(map),
             3: L.layerGroup().addTo(map),
             4: L.layerGroup().addTo(map),
-            null: L.layerGroup().addTo(map)
+            null: L.layerGroup().addTo(map),
+            stops: L.layerGroup()
         };
 
         var search = L.control.search({
-            layer: L.layerGroup([layers[2], layers[3], layers[4], layers[null]]),
+            layer: L.layerGroup([layers[2], layers[3], layers[4], layers[null], layers.stops]),
             initial: false,
             propertyName: 'desc'
         });
@@ -218,13 +228,23 @@
                     marker.setOpacity(0);
                 }
             }
+            for (var j in stops) {
+                if (!stops.hasOwnProperty(j)) continue;
+                var stop = stops[j];
+                if (!searchVal || (stop.options.desc && stop.options.desc.toLowerCase().includes(searchVal))) {
+                    stop.setOpacity(1);
+                } else {
+                    stop.setOpacity(0);
+                }
+            }
         });
 
         var overlayMaps = {
             "🚌 Buses": layers[3],
             "🚂 Trains": layers[2],
             "⛴️ Ferries": layers[4],
-            "❌ Out of Service": layers[null]
+            "❌ Out of Service": layers[null],
+            "🛑 Stops": layers.stops
         };
 
         L.control.layers(baseMaps, overlayMaps).addTo(map);
@@ -274,10 +294,9 @@
         }
 
         var markers = {};
+        var stops = {};
         var busServices = {};
         var occupancy = ["empty", "many seats", "few seats", "standing", "limited standing", "full", "not accepting"];
-        var occupancyColors = ["#4575b4", "#91bfdb", "#e0f3f8", "#fee090", "#fc8d59", "#d73027", "black"];
-        var speedColors = chroma.scale([chroma.hsv(270, 1, 1), chroma.hsv(180, 1, 1), chroma.hsv(90, 1, 1), chroma.hsv(0, 1, 1)]).mode("hsv").domain([0, 100]);
 
         var hasLoaded = false;
         var routes = {};
@@ -317,6 +336,41 @@
                 .catch(err => console.error("Error loading bus services:", err));
         }
 
+        function loadBusStops() {
+            fetch('https://api.at.govt.nz/gtfs/v3/stops?limit=5000', {
+                method: 'GET',
+                headers: {
+                    'Cache-Control': 'no-cache',
+                    'Ocp-Apim-Subscription-Key': '6cb37daf7f5c4feda39bbf640e892074',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.data && Array.isArray(data.data)) {
+                    for (var stop of data.data) {
+                        var stopId = stop.id;
+                        var stopName = stop.attributes.stop_name;
+                        var lat = stop.attributes.stop_lat;
+                        var lng = stop.attributes.stop_lon;
+                        var desc = "<b>" + stopName + "</b>";
+
+                        if (lat && lng) {
+                            var stopMarker = L.marker([lat, lng], { 
+                                icon: stopIcon,
+                                desc: desc,
+                                opacity: 0.6
+                            });
+                            stopMarker.bindTooltip(desc);
+                            stopMarker.addTo(layers.stops);
+                            stops[stopId] = stopMarker;
+                        }
+                    }
+                    console.log("Loaded " + Object.keys(stops).length + " bus stops");
+                }
+            })
+            .catch(err => console.error("Error loading bus stops:", err));
+        }
+
         map.spin(true);
         fetch('https://api.at.govt.nz/gtfs/v3/routes', {
             method: 'GET',
@@ -338,6 +392,7 @@
                 }
             }
             loadBusServices();
+            loadBusStops();
             loop();
         })
         .catch(err => {
