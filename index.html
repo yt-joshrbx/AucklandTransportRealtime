@@ -90,6 +90,14 @@
             className: 'transit-marker airportlink-marker'
         });
 
+        var atshoreIcon = L.icon({
+            iconUrl: 'at-shore-icon.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker atshore-marker'
+        });
+
         var trainIcon = L.icon({
             iconUrl: 'train-icon.png',
             iconSize: [32, 32],
@@ -206,9 +214,14 @@
         }
 
         function getIconForRouteType(routeType, routeId) {
-            // Check if this is an airport link route
+            // Check for an airportlink bus
             if (routeId && routeId.includes('AIR')) {
                 return airportlinkIcon;
+            }
+
+            // Check for at ferry
+            if (vehicleInfo.license_plate && vehicleInfo.license_plate.includes('ZMU9934', 'ZMU9935', 'ZMZ8661')) {
+                return atshoreIcon;
             }
             
             switch(routeType) {
