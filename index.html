@@ -218,11 +218,6 @@
             if (routeId && routeId.includes('AIR')) {
                 return airportlinkIcon;
             }
-
-            // Check for at ferry
-            else if (license_plate && license_plate.includes('ZMU9934', 'ZMU9935', 'ZMZ8661')) {
-                return atshoreIcon;
-            }
             
             switch(routeType) {
                 case 2: return trainIcon;
