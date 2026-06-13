@@ -169,6 +169,14 @@
             className: 'transit-marker bus-marker'
         });
 
+        var airportlinkIcon = L.icon({
+            iconUrl: 'airportlink-icon.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker airportlink-marker'
+        });
+
         var trainIcon = L.icon({
             iconUrl: 'train-icon.png',
             iconSize: [32, 32],
@@ -284,7 +292,12 @@
             marker.setOpacity(opacity);
         }
 
-        function getIconForRouteType(routeType) {
+        function getIconForRouteType(routeType, routeId) {
+            // Check if this is an airport link route
+            if (routeId && routeId.includes('AIR')) {
+                return airportlinkIcon;
+            }
+            
             switch(routeType) {
                 case 2: return trainIcon;
                 case 3: return busIcon;
@@ -451,7 +464,7 @@
                             var r = routes[v.trip.route_id];
                             if (r) {
                                 routeType = r.route_type;
-                                icon = getIconForRouteType(routeType);
+                                icon = getIconForRouteType(routeType, v.trip.route_id);
                             }
                         }
 
