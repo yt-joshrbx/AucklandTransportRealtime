@@ -98,6 +98,14 @@
             className: 'transit-marker atshore-marker'
         });
 
+        var alexanderdennisIcon = L.icon({
+            iconUrl: 'alexnaderdennis.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker alexanderdennis-marker'
+        });
+
         var trainIcon = L.icon({
             iconUrl: 'train-icon.png',
             iconSize: [32, 32],
@@ -217,6 +225,10 @@
             // Check for an airportlink bus
             if (routeId && routeId.includes('AIR')) {
                 return airportlinkIcon;
+            }
+            // Check for an airportlink bus
+            if (vehicleInfo.license_plate && vehicleInfo.license_plate.includes('RES618')) {
+                return alexanderdennisIcon;
             }
             
             switch(routeType) {
@@ -389,7 +401,7 @@
                             var r = routes[v.trip.route_id];
                             if (r) {
                                 routeType = r.route_type;
-                                icon = getIconForRouteType(routeType, v.trip.route_id);
+                                icon = getIconForRouteType(routeType, v.trip.route_id, vehicleInfo.license_plate);
                             }
                         }
 
