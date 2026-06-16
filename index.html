@@ -90,6 +90,14 @@
             className: 'transit-marker airportlink-marker'
         });
 
+        var twentyfourR = L.icon({
+            iconUrl: '24R-icon.png',
+            iconSize: [48, 32],
+            iconAnchor: [16, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker 24R-marker'
+        });
+
         var atshoreIcon = L.icon({
             iconUrl: 'at-shore-icon.png',
             iconSize: [32, 32],
@@ -225,6 +233,12 @@
             // Check for an airportlink bus
             if (routeId && routeId.includes('AIR')) {
                 return airportlinkIcon;
+            }
+
+            function getIconForRouteType(routeType, routeId) {
+            // Check for an 24R bus test
+            if (routeId && routeId.includes('24R')) {
+                return twentyfourR;
             }
             
             switch(routeType) {
