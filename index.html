@@ -154,12 +154,28 @@
             className: 'transit-marker 70-marker'
         });
 
+        var seventyH = L.icon({
+            iconUrl: '70H-icon.png',
+            iconSize: [48, 24],
+            iconAnchor: [24, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker 70H-marker'
+        });
+
         var seventyfive = L.icon({
             iconUrl: '75-icon.png',
             iconSize: [48, 24],
             iconAnchor: [24, 12],
             popupAnchor: [0, -16],
             className: 'transit-marker 75-marker'
+        });
+
+        var sevenfiveone = L.icon({
+            iconUrl: '751-icon.png',
+            iconSize: [48, 24],
+            iconAnchor: [24, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker 751-marker'
         });
 
         var sevenfivefive = L.icon({
@@ -372,6 +388,14 @@
 
             if (routeId && routeId.includes('70')) {
                 return seventy;
+            }
+
+            if (routeId && routeId.includes('70H')) {
+                return seventyH;
+            }
+
+            if (routeId && routeId.includes('751')) {
+                return sevenfiveone;
             }
 
             if (routeId && routeId.includes('755')) {
