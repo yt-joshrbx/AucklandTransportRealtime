@@ -186,6 +186,38 @@
             className: 'transit-marker train-marker'
         });
 
+        var easternLine = L.icon({
+            iconUrl: 'easternL.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker easternLine-marker'
+        });
+
+        var onehungaLine = L.icon({
+            iconUrl: 'onehungaL.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker onehungaLine-marker'
+        });
+
+        var southernLine = L.icon({
+            iconUrl: 'southernL.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker southernLine-marker'
+        });
+
+        var westernLine = L.icon({
+            iconUrl: 'westernL.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker westernLine-marker'
+        });
+
         var ferryIcon = L.icon({
             iconUrl: 'ferry-icon.png',
             iconSize: [32, 32],
@@ -336,6 +368,22 @@
 
             if (routeId && routeId.includes('75')) {
                 return seventyfive;
+            }
+
+            if (routeId && routeId.includes('EAST')) {
+                return easternLine;
+            }
+
+            if (routeId && routeId.includes('ONE')) {
+                return onehungaLine;
+            }
+
+            if (routeId && routeId.includes('STH')) {
+                return southernLine;
+            }
+
+            if (routeId && routeId.includes('WEST')) {
+                return westernLine;
             }
             
             switch(routeType) {
