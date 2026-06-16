@@ -154,6 +154,14 @@
             className: 'transit-marker 75-marker'
         });
 
+        var sevenfivefive = L.icon({
+            iconUrl: '755-icon.png',
+            iconSize: [48, 24],
+            iconAnchor: [24, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker 755-marker'
+        });
+
         var atshoreIcon = L.icon({
             iconUrl: 'at-shore-icon.png',
             iconSize: [32, 32],
@@ -320,6 +328,10 @@
 
             if (routeId && routeId.includes('70')) {
                 return seventy;
+            }
+
+            if (routeId && routeId.includes('755')) {
+                return sevenfivefive;
             }
 
             if (routeId && routeId.includes('75')) {
