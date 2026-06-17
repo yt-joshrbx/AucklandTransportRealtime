@@ -421,6 +421,10 @@
             if (routeId && routeId.includes('WEST')) {
                 return westernLine;
             }
+
+            if (routeId && routeId.includes('WSTH')) {
+                return ferryIcon;
+            }
             
             switch(routeType) {
                 case 2: return trainIcon;
