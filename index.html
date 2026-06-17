@@ -405,7 +405,11 @@
             if (routeId && routeId.includes('75')) {
                 return seventyfive;
             }
-
+            
+            if (routeId && routeId.includes('WSTH')) {
+                return ferryIcon;
+            }
+            
             if (routeId && routeId.includes('EAST')) {
                 return easternLine;
             }
@@ -422,10 +426,6 @@
                 return westernLine;
             }
 
-            if (routeId && routeId.includes('WSTH')) {
-                return ferryIcon;
-            }
-            
             switch(routeType) {
                 case 2: return trainIcon;
                 case 3: return busIcon;
