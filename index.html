@@ -258,6 +258,14 @@
             className: 'transit-marker other-marker'
         });
 
+        var NBScania = L.icon({
+            iconUrl: 'ScaniaK270UB6.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker nbscania-marker'
+        });
+
         // Bus stop icon
         var stopIcon = L.icon({
             iconUrl: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="%23FF6B6B" stroke="%23fff" stroke-width="2"/></svg>',
@@ -356,19 +364,19 @@
             if (!label) return null;
 
             // Common fleet patterns (substring matches are used to be permissive)
-            if (label.includes('24R')) return twentyfourR;
-            if (label.includes('24B')) return twentyfourB;
-            if (label.includes('22R')) return twentytwoR;
-            if (label.includes('22N')) return twentytwoN;
-            if (label.includes('67')) return sixtyseven;
-            if (label.includes('68')) return sixtyeight;
-            if (label.includes('170')) return oneseventy;
-            if (label.includes('70H')) return seventyH;
-            if (label.includes('70')) return seventy;
-            if (label.includes('751')) return sevenfiveone;
-            if (label.includes('755')) return sevenfivefive;
-            if (label.includes('75')) return seventyfive;
-            if (label.includes('ALEX')) return alexanderdennisIcon;
+            if (label.includes('NB21')) return NBScania;
+            if (label.includes('NB40')) return Enviro200;
+            if (label.includes('NB41')) return Enviro200;
+            if (label.includes('NB42')) return Enviro200;
+            if (label.includes('NB43')) return Enviro200;
+            if (label.includes('NB50')) return Enviro500;
+            if (label.includes('NB53')) return BCICitiriderDD;
+            if (label.includes('GB41')) return Enviro200;
+            if (label.includes('GB51')) return VolovB7RLE;
+            if (label.includes('GB52')) return MAN16;
+            if (label.includes('GB54')) return MAN18;
+            if (label.includes('GB56')) return GEMVolvoB7RLE;
+            if (label.includes('GB58')) return MANND323F;
 
             return null;
         }
