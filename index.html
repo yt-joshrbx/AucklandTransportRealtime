@@ -370,23 +370,6 @@
             if (!vehicleInfo) return null;
             var label = (vehicleInfo.label || vehicleInfo.license_plate || vehicleInfo.vehicle_id || "").toString().toUpperCase();
             if (!label) return null;
-
-            // Common fleet patterns (substring matches are used to be permissive)
-            if (label.includes('NB21')) return NBScania;
-            if (label.includes('NB40')) return Enviro200;
-            if (label.includes('NB41')) return Enviro200;
-            if (label.includes('NB42')) return Enviro200;
-            if (label.includes('NB43')) return Enviro200;
-            if (label.includes('NB50')) return Enviro500;
-            if (label.includes('NB53')) return BCICitiriderDD;
-            if (label.includes('GB41')) return Enviro200;
-            if (label.includes('GB51')) return VolovB7RLE;
-            if (label.includes('GB52')) return MAN16;
-            if (label.includes('GB54')) return MAN18;
-            if (label.includes('GB56')) return GEMVolvoB7RLE;
-            if (label.includes('GB58')) return MANND323F;
-
-            return null;
         }
 
         function getIconForRouteType(routeType, routeId) {
