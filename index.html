@@ -90,23 +90,6 @@
             className: 'transit-marker airportlink-marker'
         });
 
-        // model-specific icons (images stored in repo root)
-        var enviro200Icon = L.icon({
-            iconUrl: 'Enviro200.png',
-            iconSize: [80, 24],
-            iconAnchor: [24, 12],
-            popupAnchor: [0, -16],
-            className: 'transit-marker enviro200-marker'
-        });
-
-        var scaniaKIcon = L.icon({
-            iconUrl: 'ScaniaK270UB6.png',
-            iconSize: [80, 24],
-            iconAnchor: [24, 12],
-            popupAnchor: [0, -16],
-            className: 'transit-marker scania-marker'
-        });
-
         var twentyfourR = L.icon({
             iconUrl: '24R-icon.png',
             iconSize: [48, 24],
@@ -201,6 +184,39 @@
             iconAnchor: [24, 12],
             popupAnchor: [0, -16],
             className: 'transit-marker 755-marker'
+        });
+
+        // model-specific icons (images stored in repo root)
+        var enviro200Icon = L.icon({
+            iconUrl: 'Enviro200.png',
+            iconSize: [80, 24],
+            iconAnchor: [24, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker enviro200-marker'
+        });
+
+        var OUTE200Icon = L.icon({
+            iconUrl: 'OuterLinkE200.png',
+            iconSize: [80, 24],
+            iconAnchor: [24, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker enviro200-marker'
+        });
+
+        var INNE200Icon = L.icon({
+            iconUrl: 'InnerLinkE200.png',
+            iconSize: [80, 24],
+            iconAnchor: [24, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker enviro200-marker'
+        });
+
+        var scaniaKIcon = L.icon({
+            iconUrl: 'ScaniaK270UB6.png',
+            iconSize: [80, 24],
+            iconAnchor: [24, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker scania-marker'
         });
 
         var atshoreIcon = L.icon({
@@ -370,6 +386,8 @@
         var plateMap = {};
         var modelIconMap = {
             "Enviro200.png": enviro200Icon,
+            "OuterE200.png": OUTE200Icon,
+            "InnerE200.png": INNE200Icon,
             "ScaniaK270UB6.png": scaniaKIcon
         };
 
