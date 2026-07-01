@@ -41,13 +41,13 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77710107-12"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag(){dataLayer.push(arguments);} 
         gtag('js', new Date());
         gtag('config', 'UA-77710107-12');
     </script>
 </head>
 <body>
-    <h1 id="title">Welcome to the Auckland Transport Transit Realtime Map!<br>There are currently updates happening to this tracker... Please use /mobile.html/ for a more stable connection.</h1>
+    <h1 id="title">Welcome to the Auckland Transport Transit Realtime Map!</h1>
     <div id="map"></div>
     <script>
         var map = L.map('map', {
@@ -88,6 +88,23 @@
             iconAnchor: [16, 16],
             popupAnchor: [0, -16],
             className: 'transit-marker airportlink-marker'
+        });
+
+        // model-specific icons (images stored in repo root)
+        var enviro200Icon = L.icon({
+            iconUrl: 'Enviro200.png',
+            iconSize: [48, 24],
+            iconAnchor: [24, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker enviro200-marker'
+        });
+
+        var scaniaKIcon = L.icon({
+            iconUrl: 'ScaniaK270UB6.png',
+            iconSize: [48, 24],
+            iconAnchor: [24, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker scania-marker'
         });
 
         var twentyfourR = L.icon({
@@ -258,22 +275,6 @@
             className: 'transit-marker other-marker'
         });
 
-        var NBScania = L.icon({
-            iconUrl: 'ScaniaK270UB6.png',
-            iconSize: [32, 32],
-            iconAnchor: [16, 16],
-            popupAnchor: [0, -16],
-            className: 'transit-marker nbscania-marker'
-        });
-
-        var Enviro200 = L.icon({
-            iconUrl: 'Enviro200.png',
-            iconSize: [32, 32],
-            iconAnchor: [16, 16],
-            popupAnchor: [0, -16],
-            className: 'transit-marker enviro200-marker'
-        });
-
         // Bus stop icon
         var stopIcon = L.icon({
             iconUrl: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="%23FF6B6B" stroke="%23fff" stroke-width="2"/></svg>',
@@ -365,11 +366,52 @@
             marker.setOpacity(opacity);
         }
 
-        // Recognise fleet numbers from vehicle label/plate and return specific icons
-        function getFleetIcon(vehicleInfo) {
+        // plates.json map (loaded at startup)
+        var plateMap = {};
+        var modelIconMap = {
+            "Enviro200.png": enviro200Icon,
+            "ScaniaK270UB6.png": scaniaKIcon
+        };
+
+        function loadPlateMap() {
+            return fetch('plates.json')
+                .then(r => r.ok ? r.json() : {})
+                .then(json => { plateMap = json || {}; })
+                .catch(err => { console.warn('plates.json load failed', err); plateMap = {}; });
+        }
+        // start loading plates.json now
+        loadPlateMap();
+
+        function normalisePlateToken(s) {
+            if (!s) return '';
+            return s.toString().toUpperCase().replace(/[^A-Z0-9]/g,'');
+        }
+        function tokensFromString(s) {
+            if (!s) return [];
+            return s.toString().split(/[,\/%|;]+|\s+/).map(normalisePlateToken).filter(Boolean);
+        }
+
+        // Check vehicleInfo fields (license_plate, label, vehicle_id) for known plates
+        function getPlateIcon(vehicleInfo) {
             if (!vehicleInfo) return null;
-            var label = (vehicleInfo.label || vehicleInfo.license_plate || vehicleInfo.vehicle_id || "").toString().toUpperCase();
-            if (!label) return null;
+            var candidates = [vehicleInfo.license_plate, vehicleInfo.label, vehicleInfo.vehicle_id];
+            for (var idx=0; idx<candidates.length; idx++) {
+                var src = candidates[idx];
+                if (!src) continue;
+                var tokens = tokensFromString(src);
+                for (var t of tokens) {
+                    if (plateMap && plateMap[t]) {
+                        var file = plateMap[t];
+                        if (file && modelIconMap[file]) return modelIconMap[file];
+                    }
+                    // inline fallback for a couple of plates
+                    if (t === 'HGL555') return enviro200Icon;
+                    if (t === 'EJC617') return scaniaKIcon;
+                    // example prefix rule (uncomment if desired)
+                    // if (t.startsWith('NB')) return enviro200Icon;
+                }
+            }
+            return null;
         }
 
         function getIconForRouteType(routeType, routeId) {
@@ -409,12 +451,12 @@
                 return oneseventy;
             }
 
-            if (routeId && routeId.includes('70H')) {
-                return seventyH;
-            }
-
             if (routeId && routeId.includes('70')) {
                 return seventy;
+            }
+
+            if (routeId && routeId.includes('70H')) {
+                return seventyH;
             }
 
             if (routeId && routeId.includes('751')) {
@@ -616,15 +658,14 @@
                     } else {
                         var icon = otherIcon;
 
-                        // Try fleet-based icon first (uses vehicle label/plate)
-                        var fleetIcon = getFleetIcon(vehicleInfo);
-                        if (fleetIcon) {
-                            icon = fleetIcon;
+                        // Try plate-based icon first
+                        var plateIcon = getPlateIcon(vehicleInfo);
+                        if (plateIcon) {
+                            icon = plateIcon;
                         } else if (v.trip) {
                             var r = routes[v.trip.route_id];
                             if (r) {
                                 routeType = r.route_type;
-                                // fall back to route-based icons
                                 icon = getIconForRouteType(routeType, v.trip.route_id);
                             }
                         }
@@ -700,10 +741,17 @@
                     marker.bikes_allowed = bikeAllowed;
                     marker.accessibility = accessibility;
 
+                    // Attempt to show detected model name if plate matched
+                    var plateIconUsed = getPlateIcon(vehicleInfo);
+                    var modelName = '';
+                    if (plateIconUsed === enviro200Icon) modelName = 'Enviro 200';
+                    if (plateIconUsed === scaniaKIcon) modelName = 'Scania K270UB6';
+
                     var tooltipHtml = desc +
                         "Speed: " + marker.speed + " km/h<br>" +
                         "Occupancy: " + (occupancy[v.occupancy_status] || "") + "<br>" +
                         "License plate: " + (vehicleInfo.license_plate || "") + "<br>" +
+                        (modelName ? ("Model: " + modelName + "<br>") : "") +
                         "Bike Enabled: <span id='bike_allowed-" + sid + "'>" + bikeText(marker.bikes_allowed) + "</span><br>" +
                         "Accessibility: <span id='accessibility-" + sid + "'>" + accessibilityText(marker.accessibility) + "</span>";
                     marker.bindTooltip(tooltipHtml);
