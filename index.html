@@ -349,6 +349,30 @@
             marker.setOpacity(opacity);
         }
 
+        // Recognise fleet numbers from vehicle label/plate and return specific icons
+        function getFleetIcon(vehicleInfo) {
+            if (!vehicleInfo) return null;
+            var label = (vehicleInfo.label || vehicleInfo.license_plate || vehicleInfo.vehicle_id || "").toString().toUpperCase();
+            if (!label) return null;
+
+            // Common fleet patterns (substring matches are used to be permissive)
+            if (label.includes('24R')) return twentyfourR;
+            if (label.includes('24B')) return twentyfourB;
+            if (label.includes('22R')) return twentytwoR;
+            if (label.includes('22N')) return twentytwoN;
+            if (label.includes('67')) return sixtyseven;
+            if (label.includes('68')) return sixtyeight;
+            if (label.includes('170')) return oneseventy;
+            if (label.includes('70H')) return seventyH;
+            if (label.includes('70')) return seventy;
+            if (label.includes('751')) return sevenfiveone;
+            if (label.includes('755')) return sevenfivefive;
+            if (label.includes('75')) return seventyfive;
+            if (label.includes('ALEX')) return alexanderdennisIcon;
+
+            return null;
+        }
+
         function getIconForRouteType(routeType, routeId) {
             if (routeId && routeId.includes('AIR')) {
                 return airportlinkIcon;
@@ -386,12 +410,12 @@
                 return oneseventy;
             }
 
-            if (routeId && routeId.includes('70')) {
-                return seventy;
-            }
-
             if (routeId && routeId.includes('70H')) {
                 return seventyH;
+            }
+
+            if (routeId && routeId.includes('70')) {
+                return seventy;
             }
 
             if (routeId && routeId.includes('751')) {
@@ -592,10 +616,16 @@
                         marker.options.desc = desc;
                     } else {
                         var icon = otherIcon;
-                        if (v.trip) {
+
+                        // Try fleet-based icon first (uses vehicle label/plate)
+                        var fleetIcon = getFleetIcon(vehicleInfo);
+                        if (fleetIcon) {
+                            icon = fleetIcon;
+                        } else if (v.trip) {
                             var r = routes[v.trip.route_id];
                             if (r) {
                                 routeType = r.route_type;
+                                // fall back to route-based icons
                                 icon = getIconForRouteType(routeType, v.trip.route_id);
                             }
                         }
