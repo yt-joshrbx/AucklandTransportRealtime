@@ -347,6 +347,54 @@
             className: 'transit-marker alexanderdennis-marker'
         });
 
+        var c10einnIcon = L.icon({
+            iconUrl: 'c10einnerlink.png',
+            iconSize: [80, 24],
+            iconAnchor: [24, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker c10einn-marker'
+        });
+
+        var c10eoutIcon = L.icon({
+            iconUrl: 'c10eouterlink.png',
+            iconSize: [80, 24],
+            iconAnchor: [24, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker c10eout-marker'
+        });
+
+        var citylinkIcon = L.icon({
+            iconUrl: 'citylink.png',
+            iconSize: [80, 24],
+            iconAnchor: [24, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker cty-marker'
+        });
+
+        var es12innIcon = L.icon({
+            iconUrl: 'es12innerlink.png',
+            iconSize: [80, 24],
+            iconAnchor: [24, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker es12inn-marker'
+        });
+
+        var tamakilinkIcon = L.icon({
+            iconUrl: 'tamakilink.png',
+            iconSize: [88, 24],
+            iconAnchor: [24, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker tmk-marker'
+        });
+
+        var et12airIcon = L.icon({
+            iconUrl: 'et12airportlink.png',
+            iconSize: [88, 24],
+            iconAnchor: [24, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker air-marker'
+        });
+
         var trainIcon = L.icon({
             iconUrl: 'train-icon.png',
             iconSize: [32, 32],
@@ -516,7 +564,13 @@
             "BCICitiriderDD.png": bciCitiriderDDIcon,
             "BCICitiriderNX.png": bciCitiriderNXIcon,
             "alexanderdennis.png": alexanderdennisIcon,
-            "at-shore-icon.png": atshoreIcon
+            "at-shore-icon.png": atshoreIcon,
+            "tamakilink.png": tamakilinkIcon,
+            "citylink.png": citylinkIcon,
+            "es12innerlink.png": es12innIcon,
+            "c10eouterlink.png": c10eoutIcon,
+            "c10einnerlink.png": c10einnIcon,
+            "et12airportlink.png": et12airIcon
         };
 
         function loadPlateMap() {
