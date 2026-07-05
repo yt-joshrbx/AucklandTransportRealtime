@@ -307,6 +307,14 @@
             className: 'transit-marker ND323F-marker'
         });
 
+        var man14250Icon = L.icon({
+            iconUrl: 'MAN14250GBV.png',
+            iconSize: [80, 24],
+            iconAnchor: [40, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker MAN14250-marker'
+        });
+
         var man12223Icon = L.icon({
             iconUrl: 'MAN12223CW.png',
             iconSize: [80, 24],
@@ -556,6 +564,7 @@
             "Enviro500NX.png": nxEnviro500Icon,
             "ScaniaK270UB6.png": scaniaKIcon,
             "ScaniaBonluck.png": scaniaBIcon,
+            "MAN14250GBV.png": man14250Icon,
             "MAN12223CW.png": man12223Icon,
             "MAN162X0GBV.png": man162X0Icon,
             "MAN18290GBV.png": man18290Icon,
@@ -942,8 +951,17 @@
                     // Attempt to show detected model name if plate matched
                     var plateIconUsed = getPlateIcon(vehicleInfo);
                     var modelName = '';
-                    if (plateIconUsed === enviro200Icon) modelName = 'Enviro 200';
+                    if (plateIconUsed === enviro200Icon) modelName = 'Enviro200';
+                    if (plateIconUsed === innE200Icon) modelName = 'Enviro200';
+                    if (plateIconUsed === outE200Icon) modelName = 'Enviro200';
+                    if (plateIconUsed === waihekeE200Icon) modelName = 'Enviro200';
+                    if (plateIconUsed === enviro200midiIcon) modelName = 'Enviro200MMC Midi';
+                    if (plateIconUsed === enviro200mmcIcon) modelName = 'Enviro200MMC';
+                    if (plateIconUsed === enviro200xlbIcon) modelName = 'Enviro200XLB';
+                    if (plateIconUsed === enviro500Icon) modelName = 'Enviro500';
+                    if (plateIconUsed === nxEnviro500Icon) modelName = 'Enviro500';
                     if (plateIconUsed === scaniaKIcon) modelName = 'Scania K270UB6';
+                    if (plateIconUsed === scaniaBIcon) modelName = 'Scania K320UB6';
 
                     var tooltipHtml = desc +
                         "Speed: " + marker.speed + " km/h<br>" +
