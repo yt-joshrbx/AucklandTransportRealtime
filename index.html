@@ -259,6 +259,30 @@
             className: 'transit-marker WHKenviro200-marker'
         });
 
+        var enviro200evIcon = L.icon({
+            iconUrl: 'Enviro200EV.png',
+            iconSize: [80, 24],
+            iconAnchor: [40, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker enviro200ev-marker'
+        });
+
+        var enviro200mmcevIcon = L.icon({
+            iconUrl: 'Enviro200MMCEV.png',
+            iconSize: [80, 24],
+            iconAnchor: [40, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker enviro200mmcev-marker'
+        });
+
+        var enviro200xlbevIcon = L.icon({
+            iconUrl: 'Enviro200XLBEV.png',
+            iconSize: [88, 24],
+            iconAnchor: [40, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker enviro200xlbev-marker'
+        });
+
         var scaniaKIcon = L.icon({
             iconUrl: 'ScaniaK270UB6.png',
             iconSize: [88, 24],
@@ -266,7 +290,23 @@
             popupAnchor: [0, -16],
             className: 'transit-marker scania-marker'
         });
+        
+        var scaniaLIcon = L.icon({
+            iconUrl: 'KBBTXL.png',
+            iconSize: [88, 24],
+            iconAnchor: [40, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker ScaniaK280UB6KBB-marker'
+        });
 
+        var scaniaAIcon = L.icon({
+            iconUrl: 'KBBTXL.png',
+            iconSize: [88, 24],
+            iconAnchor: [40, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker ScaniaK320UB6KBB-marker'
+        });
+        
         var scaniaBIcon = L.icon({
             iconUrl: 'ScaniaBonluck.png',
             iconSize: [96, 24],
@@ -274,13 +314,21 @@
             popupAnchor: [0, -16],
             className: 'transit-marker ScaniaBonluck-marker'
         });
-        
-        var kbbTriAxleIcon = L.icon({
-            iconUrl: 'KBBTXL.png',
+
+        var scaniaCIcon = L.icon({
+            iconUrl: 'ScaniaCitirider.png',
             iconSize: [96, 24],
             iconAnchor: [40, 12],
             popupAnchor: [0, -16],
-            className: 'transit-marker KBB-marker'
+            className: 'transit-marker ScaniaBCI-marker'
+        });
+
+        var bciCitiriderSDIcon = L.icon({
+            iconUrl: 'BCICitiriderSD.png',
+            iconSize: [80, 24],
+            iconAnchor: [40, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker BCICitiriderSD-marker'
         });
 
         var bciCitiriderDDIcon = L.icon({
@@ -315,7 +363,7 @@
             className: 'transit-marker MAN14250-marker'
         });
 
-        var man12223Icon = L.icon({
+        var man12223CWIcon = L.icon({
             iconUrl: 'MAN12223CW.png',
             iconSize: [80, 24],
             iconAnchor: [40, 12],
@@ -323,12 +371,36 @@
             className: 'transit-marker MAN12223-marker'
         });
         
-        var man162X0Icon = L.icon({
+        var man16250Icon = L.icon({
             iconUrl: 'MAN162X0GBV.png',
             iconSize: [80, 24],
             iconAnchor: [40, 12],
             popupAnchor: [0, -16],
-            className: 'transit-marker MAN162X0-marker'
+            className: 'transit-marker MAN16250-marker'
+        });
+
+        var man16290Icon = L.icon({
+            iconUrl: 'MAN162X0GBV.png',
+            iconSize: [80, 24],
+            iconAnchor: [40, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker MAN16290-marker'
+        });
+
+        var man17223Icon = L.icon({
+            iconUrl: 'MAN17223.png',
+            iconSize: [88, 24],
+            iconAnchor: [40, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker MAN17223-marker'
+        });
+
+        var man18223Icon = L.icon({
+            iconUrl: 'MAN18223.png',
+            iconSize: [88, 24],
+            iconAnchor: [40, 12],
+            popupAnchor: [0, -16],
+            className: 'transit-marker MAN18223-marker'
         });
 
         var man18290Icon = L.icon({
@@ -560,16 +632,26 @@
             "Enviro200Midi.png": enviro200midiIcon,
             "Enviro200MMC.png": enviro200mmcIcon,
             "Enviro200XLB.png": enviro200xlbIcon,
+            "alexanderdennis.png": enviro100evIcon,
+            "Enviro200EV.png": enviro200evIcon,
+            "Enviro200MMCEV.png": enviro200mmcevIcon,
+            "Enviro200XLBEV.png": enviro200xlbevIcon,
             "Enviro500.png": enviro500Icon,
             "Enviro500NX.png": nxEnviro500Icon,
             "ScaniaK270UB6.png": scaniaKIcon,
+            "KBBTXL.png": scaniaLIcon,
+            "KBBTXL.png": scaniaAIcon,
             "ScaniaBonluck.png": scaniaBIcon,
+            "ScaniaCitirider.png": scaniaCIcon,
+            "MAN12223CW.png": man12223CWIcon,
             "MAN14250GBV.png": man14250Icon,
-            "MAN12223CW.png": man12223Icon,
-            "MAN162X0GBV.png": man162X0Icon,
+            "MAN162X0GBV.png": man16250Icon,
+            "MAN162X0GBV.png": man16290Icon,
+            "MAN17223.png": man17223Icon,
+            "MAN18223.png": man18223Icon,
             "MAN18290GBV.png": man18290Icon,
             "MANND323F.png": manND323FIcon,
-            "KBBTXL.png": kbbTriAxleIcon,
+            "BCICitiriderSD.png": bciCitiriderSDIcon,
             "BCICitiriderDD.png": bciCitiriderDDIcon,
             "BCICitiriderNX.png": bciCitiriderNXIcon,
             "alexanderdennis.png": alexanderdennisIcon,
@@ -958,12 +1040,33 @@
                     if (plateIconUsed === enviro200midiIcon) modelName = 'Enviro200MMC Midi';
                     if (plateIconUsed === enviro200mmcIcon) modelName = 'Enviro200MMC';
                     if (plateIconUsed === enviro200xlbIcon) modelName = 'Enviro200XLB';
+                    if (plateIconUsed === alexanderdennisIcon) modelName = 'Enviro100 EV Demonstrator';
+                    if (plateIconUsed === enviro200evIcon) modelName = 'Enviro200 EV'
+                    if (plateIconUsed === enviro200mmcevIcon) modelName = 'Enviro200MMC EV'
+                    if (plateIconUsed === enviro200xlbevIcon) modelName = 'Enviro200XLB EV'
                     if (plateIconUsed === enviro500Icon) modelName = 'Enviro500';
                     if (plateIconUsed === nxEnviro500Icon) modelName = 'Enviro500';
                     if (plateIconUsed === scaniaKIcon) modelName = 'Scania K270UB6';
+                    if (plateIconUsed === scaniaLIcon) modelName = 'Scania K280UB6';
+                    if (plateIconUsed === scaniaAIcon) modelName = 'Scania K320UB6';
                     if (plateIconUsed === scaniaBIcon) modelName = 'Scania K320UB6';
+                    if (plateIconUsed === scaniaCIcon) modelName = 'Scania K320UB6';
+                    if (plateIconUsed === bciCitiriderSDIcon) modelName = 'BCI Citirider FBC6110';
                     if (plateIconUsed === bciCitiriderDDIcon) modelName = 'BCI Citirider FBC6123 DD';
                     if (plateIconUsed === bciCitiriderNXIcon) modelName = 'BCI Citirider FBC6123 DD';
+                    if (plateIconUsed === man12223CWIcon) modelName = 'MAN 12.223';
+                    if (plateIconUsed === man16250Icon) modelName = 'MAN 16.250';
+                    if (plateIconUsed === man16290Icon) modelName = 'MAN 16.290';
+                    if (plateIconUsed === man17223Icon) modelName = 'MAN 17.223';
+                    if (plateIconUsed === man18223Icon) modelName = 'MAN 18.223';
+                    if (plateIconUsed === man18290Icon) modelName = 'MAN 18.290';
+                    if (plateIconUsed === manND323FIcon) modelName = 'MAN ND323F';
+                    if (plateIconUsed === tamakilinkIcon) modelName = 'CRRC eT12 MAX';
+                    if (plateIconUsed === citylinkIcon) modelName = 'CRRC eS12 MAX';
+                    if (plateIconUsed === es12innIcon) modelName = 'CRRC eS12 MAX';
+                    if (plateIconUsed === c10eoutIcon) modelName = 'Geely C10ENZ';
+                    if (plateIconUsed === c10einnIcon) modelName = 'Geely C10ENZ';
+                    if (plateIconUsed === et12airIcon) modelName = 'CRRC eT12 MAX';
 
                     var tooltipHtml = desc +
                         "Speed: " + marker.speed + " km/h<br>" +
