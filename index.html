@@ -90,6 +90,15 @@
             className: 'transit-marker airportlink-marker'
         });
 
+        // Flight icon (airplane.png, 32x32, rotated by heading)
+        var flightIcon = L.icon({
+            iconUrl: 'airplane.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 16],
+            popupAnchor: [0, -16],
+            className: 'transit-marker flight-marker'
+        });
+
         var twentyfourR = L.icon({
             iconUrl: '24R-icon.png',
             iconSize: [48, 24],
@@ -545,7 +554,8 @@
             3: L.layerGroup().addTo(map),
             4: L.layerGroup().addTo(map),
             null: L.layerGroup().addTo(map),
-            stops: L.layerGroup().addTo(map)
+            stops: L.layerGroup().addTo(map),
+            flights: L.layerGroup().addTo(map)
         };
 
         var search = L.control.search({
@@ -582,7 +592,8 @@
             "AT Trains": layers[2],
             "AT Ferries": layers[4],
             "Out of Service": layers[null],
-            "Bus Stops": layers.stops
+            "Bus Stops": layers.stops,
+            "Flights": layers.flights
         };
 
         L.control.layers(baseMaps, overlayMaps).addTo(map);
@@ -700,6 +711,107 @@
                 }
             }
             return null;
+        }
+
+        // FlightRadar24 API configuration
+        var FR24_API_KEY = '019f3af8-4d24-73e1-9cbf-58121e1b0fe9|E77iiBNG4c26zwV3u8tloLz5pRsuKoIqY4rxAmcj65cc8c98';
+        var FR24_API_BASE = 'https://data-live.flightradar24.com/zones/full/all.json';
+        var AUCKLAND_LAT = -36.8862;
+        var AUCKLAND_LNG = 174.7651;
+        var SEARCH_RADIUS_KM = 100;
+
+        // Convert kilometers to degrees (approximate)
+        function kmToDegrees(km) {
+            return km / 111.0;
+        }
+
+        var searchRadiusDeg = kmToDegrees(SEARCH_RADIUS_KM);
+
+        var flightMarkers = {};
+
+        // Fetch flights from FlightRadar24
+        function loadFlights() {
+            var bounds = {
+                south: AUCKLAND_LAT - searchRadiusDeg,
+                west: AUCKLAND_LNG - searchRadiusDeg,
+                north: AUCKLAND_LAT + searchRadiusDeg,
+                east: AUCKLAND_LNG + searchRadiusDeg
+            };
+
+            fetch(FR24_API_BASE + '?auth=' + FR24_API_KEY)
+                .then(response => response.json())
+                .then(data => {
+                    // Process flight data
+                    if (!data) return;
+
+                    // Clear current flight markers
+                    for (var id in flightMarkers) {
+                        if (flightMarkers.hasOwnProperty(id)) {
+                            layers.flights.removeLayer(flightMarkers[id]);
+                        }
+                    }
+                    flightMarkers = {};
+
+                    // FlightRadar24 returns flights as: [callsign, lat, lng, heading, altitude, groundspeed, aircraft_code, registration, ...]
+                    for (var key in data) {
+                        if (!data.hasOwnProperty(key) || key === 'version') continue;
+                        var flight = data[key];
+                        if (!Array.isArray(flight) || flight.length < 3) continue;
+
+                        var callsign = flight[0] || 'Unknown';
+                        var lat = flight[1];
+                        var lng = flight[2];
+                        var heading = flight[3] || 0;
+                        var altitude = flight[4] || 0;
+                        var groundspeed = flight[5] || 0;
+                        var aircraftCode = flight[6] || 'Unknown';
+                        var registration = flight[7] || 'N/A';
+
+                        // Check if within bounds
+                        if (lat < bounds.south || lat > bounds.north || lng < bounds.west || lng > bounds.east) {
+                            continue;
+                        }
+
+                        // Determine route (origin/destination)
+                        var route = 'Unknown';
+                        if (flight.length > 8 && flight[8]) {
+                            route = flight[8];
+                        }
+
+                        // Create rotated icon based on heading
+                        var rotatedIcon = L.icon({
+                            iconUrl: 'airplane.png',
+                            iconSize: [32, 32],
+                            iconAnchor: [16, 16],
+                            popupAnchor: [0, -16],
+                            className: 'transit-marker flight-marker',
+                            html: '<img src="airplane.png" style="transform: rotate(' + heading + 'deg);" />'
+                        });
+
+                        var tooltipHtml = '<b>' + callsign + '</b><br>' +
+                            'Registration: ' + registration + '<br>' +
+                            'Aircraft Type: ' + aircraftCode + '<br>' +
+                            'Speed: ' + Math.round(groundspeed) + ' km/h<br>' +
+                            'Altitude: ' + Math.round(altitude) + ' ft<br>' +
+                            'Route: ' + route + '<br>' +
+                            'Heading: ' + heading + '°';
+
+                        var flightMarker = L.marker([lat, lng], {
+                            icon: flightIcon,
+                            rotationAngle: heading
+                        });
+
+                        flightMarker.bindTooltip(tooltipHtml);
+                        flightMarker.addTo(layers.flights);
+                        flightMarkers[key] = flightMarker;
+                    }
+
+                    console.log('Loaded ' + Object.keys(flightMarkers).length + ' flights');
+                })
+                .catch(err => {
+                    console.error('Error loading flights:', err);
+                    $("#status").text("Error loading flights: " + err.message);
+                });
         }
 
         function getIconForRouteType(routeType, routeId) {
@@ -889,6 +1001,7 @@
             }
             loadBusServices();
             loadBusStops();
+            loadFlights();
             loop();
         })
         .catch(err => {
@@ -905,6 +1018,8 @@
             hasLoaded = true;
 
             map.spin(true);
+            
+            // Fetch vehicles
             fetch('https://api.at.govt.nz/realtime/legacy/vehiclelocations', {
                 method: 'GET',
                 headers: {
@@ -1032,41 +1147,8 @@
                     // Attempt to show detected model name if plate matched
                     var plateIconUsed = getPlateIcon(vehicleInfo);
                     var modelName = '';
-                    if (plateIconUsed === enviro200Icon) modelName = 'Enviro200';
-                    if (plateIconUsed === innE200Icon) modelName = 'Enviro200';
-                    if (plateIconUsed === outE200Icon) modelName = 'Enviro200';
-                    if (plateIconUsed === waihekeE200Icon) modelName = 'Enviro200';
-                    if (plateIconUsed === enviro200midiIcon) modelName = 'Enviro200MMC Midi';
-                    if (plateIconUsed === enviro200mmcIcon) modelName = 'Enviro200MMC';
-                    if (plateIconUsed === enviro200xlbIcon) modelName = 'Enviro200XLB';
-                    if (plateIconUsed === enviro100evIcon) modelName = 'Enviro100 EV Demonstrator';
-                    if (plateIconUsed === enviro200evIcon) modelName = 'Enviro200 EV'
-                    if (plateIconUsed === enviro200mmcevIcon) modelName = 'Enviro200MMC EV'
-                    if (plateIconUsed === enviro200xlbevIcon) modelName = 'Enviro200XLB EV'
-                    if (plateIconUsed === enviro500Icon) modelName = 'Enviro500';
-                    if (plateIconUsed === nxEnviro500Icon) modelName = 'Enviro500';
+                    if (plateIconUsed === enviro200Icon) modelName = 'Enviro 200';
                     if (plateIconUsed === scaniaKIcon) modelName = 'Scania K270UB6';
-                    if (plateIconUsed === scaniaLIcon) modelName = 'Scania K280UB6';
-                    if (plateIconUsed === scaniaAIcon) modelName = 'Scania K320UB6';
-                    if (plateIconUsed === scaniaBIcon) modelName = 'Scania K320UB6';
-                    if (plateIconUsed === scaniaCIcon) modelName = 'Scania K320UB6';
-                    if (plateIconUsed === bciCitiriderSDIcon) modelName = 'BCI Citirider FBC6110';
-                    if (plateIconUsed === bciCitiriderDDIcon) modelName = 'BCI Citirider FBC6123 DD';
-                    if (plateIconUsed === bciCitiriderNXIcon) modelName = 'BCI Citirider FBC6123 DD';
-                    if (plateIconUsed === man12223CWIcon) modelName = 'MAN 12.223';
-                    if (plateIconUsed === man14250Icon) modelName = 'MAN 14.250';
-                    if (plateIconUsed === man16250Icon) modelName = 'MAN 16.250';
-                    if (plateIconUsed === man16290Icon) modelName = 'MAN 16.290';
-                    if (plateIconUsed === man17223Icon) modelName = 'MAN 17.223';
-                    if (plateIconUsed === man18223Icon) modelName = 'MAN 18.223';
-                    if (plateIconUsed === man18290Icon) modelName = 'MAN 18.290';
-                    if (plateIconUsed === manND323FIcon) modelName = 'MAN ND323F';
-                    if (plateIconUsed === tamakilinkIcon) modelName = 'CRRC eT12 MAX';
-                    if (plateIconUsed === citylinkIcon) modelName = 'CRRC eS12 MAX';
-                    if (plateIconUsed === es12innIcon) modelName = 'CRRC eS12 MAX';
-                    if (plateIconUsed === c10eoutIcon) modelName = 'Geely C10ENZ';
-                    if (plateIconUsed === c10einnIcon) modelName = 'Geely C10ENZ';
-                    if (plateIconUsed === et12airIcon) modelName = 'CRRC eT12 MAX';
 
                     var tooltipHtml = desc +
                         "Speed: " + marker.speed + " km/h<br>" +
@@ -1086,6 +1168,9 @@
                 console.error(err);
                 $("#status").text("Error loading vehicle locations.");
             });
+
+            // Also fetch flights on each loop
+            loadFlights();
         }
         setInterval(loop, 10000);
     </script>
