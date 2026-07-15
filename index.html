@@ -713,9 +713,8 @@
             return null;
         }
 
-        // FlightRadar24 API configuration
-        var FR24_API_KEY = '019f3af8-4d24-73e1-9cbf-58121e1b0fe9|E77iiBNG4c26zwV3u8tloLz5pRsuKoIqY4rxAmcj65cc8c98';
-        var FR24_API_BASE = 'https://data-live.flightradar24.com/zones/full/all.json';
+        // OpenSky Network API configuration
+        var OPENSKY_API_BASE = 'https://opensky-api.org/api/states/all';
         var AUCKLAND_LAT = -36.8862;
         var AUCKLAND_LNG = 174.7651;
         var SEARCH_RADIUS_KM = 100;
@@ -727,22 +726,29 @@
 
         var searchRadiusDeg = kmToDegrees(SEARCH_RADIUS_KM);
 
+        // Calculate bounds for OpenSky API (lamin, lomin, lamax, lomax)
+        var bounds = {
+            laMin: AUCKLAND_LAT - searchRadiusDeg,
+            loMin: AUCKLAND_LNG - searchRadiusDeg,
+            laMax: AUCKLAND_LAT + searchRadiusDeg,
+            loMax: AUCKLAND_LNG + searchRadiusDeg
+        };
+
         var flightMarkers = {};
 
-        // Fetch flights from FlightRadar24
+        // Fetch flights from OpenSky Network
         function loadFlights() {
-            var bounds = {
-                south: AUCKLAND_LAT - searchRadiusDeg,
-                west: AUCKLAND_LNG - searchRadiusDeg,
-                north: AUCKLAND_LAT + searchRadiusDeg,
-                east: AUCKLAND_LNG + searchRadiusDeg
-            };
+            var url = OPENSKY_API_BASE + '?lamin=' + bounds.laMin + '&lomin=' + bounds.loMin + 
+                      '&lamax=' + bounds.laMax + '&lomax=' + bounds.loMax;
 
-            fetch(FR24_API_BASE + '?auth=' + FR24_API_KEY)
+            fetch(url)
                 .then(response => response.json())
                 .then(data => {
                     // Process flight data
-                    if (!data) return;
+                    if (!data || !data.states) {
+                        console.warn('Invalid OpenSky response');
+                        return;
+                    }
 
                     // Clear current flight markers
                     for (var id in flightMarkers) {
@@ -752,64 +758,72 @@
                     }
                     flightMarkers = {};
 
-                    // FlightRadar24 returns flights as: [callsign, lat, lng, heading, altitude, groundspeed, aircraft_code, registration, ...]
-                    for (var key in data) {
-                        if (!data.hasOwnProperty(key) || key === 'version') continue;
-                        var flight = data[key];
-                        if (!Array.isArray(flight) || flight.length < 3) continue;
+                    // OpenSky returns flights as arrays with the following fields:
+                    // [0] = ICAO24 (unique transponder code)
+                    // [1] = callsign
+                    // [2] = origin_country
+                    // [3] = time_position
+                    // [4] = last_contact
+                    // [5] = longitude
+                    // [6] = latitude
+                    // [7] = baro_altitude (barometric altitude in m)
+                    // [8] = on_ground (bool)
+                    // [9] = velocity (speed over ground in m/s)
+                    // [10] = true_track (heading in degrees)
+                    // [11] = vertical_rate
+                    // [12] = sensors
+                    // [13] = geo_altitude (geometric altitude)
+                    // [14] = squawk
+                    // [15] = spi (special purpose indicator)
+                    // [16] = position_source
 
-                        var callsign = flight[0] || 'Unknown';
-                        var lat = flight[1];
-                        var lng = flight[2];
-                        var heading = flight[3] || 0;
-                        var altitude = flight[4] || 0;
-                        var groundspeed = flight[5] || 0;
-                        var aircraftCode = flight[6] || 'Unknown';
-                        var registration = flight[7] || 'N/A';
+                    for (var i = 0; i < data.states.length; i++) {
+                        var state = data.states[i];
 
-                        // Check if within bounds
-                        if (lat < bounds.south || lat > bounds.north || lng < bounds.west || lng > bounds.east) {
-                            continue;
-                        }
+                        var icao24 = state[0] || 'Unknown';
+                        var callsign = (state[1] || '').trim() || icao24;
+                        var origin = state[2] || 'Unknown';
+                        var lon = state[5];
+                        var lat = state[6];
+                        var baroAltitude = state[7];
+                        var geoAltitude = state[13];
+                        var altitude = geoAltitude !== null ? geoAltitude : baroAltitude;
+                        var velocity = state[9];
+                        var heading = state[10];
 
-                        // Determine route (origin/destination)
-                        var route = 'Unknown';
-                        if (flight.length > 8 && flight[8]) {
-                            route = flight[8];
-                        }
+                        // Skip if coordinates are null
+                        if (lat === null || lon === null) continue;
 
-                        // Create rotated icon based on heading
-                        var rotatedIcon = L.icon({
-                            iconUrl: 'airplane.png',
-                            iconSize: [32, 32],
-                            iconAnchor: [16, 16],
-                            popupAnchor: [0, -16],
-                            className: 'transit-marker flight-marker',
-                            html: '<img src="airplane.png" style="transform: rotate(' + heading + 'deg);" />'
-                        });
+                        // Convert velocity from m/s to km/h
+                        var speedKmh = velocity !== null ? (velocity * 3.6).toFixed(1) : 'N/A';
+
+                        // Convert altitude from meters to feet
+                        var altitudeFt = altitude !== null ? (altitude * 3.28084).toFixed(0) : 'N/A';
+
+                        // Heading degrees (0-360)
+                        var headingDeg = heading !== null ? heading.toFixed(1) : 'N/A';
 
                         var tooltipHtml = '<b>' + callsign + '</b><br>' +
-                            'Registration: ' + registration + '<br>' +
-                            'Aircraft Type: ' + aircraftCode + '<br>' +
-                            'Speed: ' + Math.round(groundspeed) + ' km/h<br>' +
-                            'Altitude: ' + Math.round(altitude) + ' ft<br>' +
-                            'Route: ' + route + '<br>' +
-                            'Heading: ' + heading + '°';
+                            'ICAO24: ' + icao24 + '<br>' +
+                            'Origin: ' + origin + '<br>' +
+                            'Speed: ' + speedKmh + ' km/h<br>' +
+                            'Altitude: ' + altitudeFt + ' ft<br>' +
+                            'Heading: ' + headingDeg + '°';
 
-                        var flightMarker = L.marker([lat, lng], {
+                        var flightMarker = L.marker([lat, lon], {
                             icon: flightIcon,
-                            rotationAngle: heading
+                            rotationAngle: heading || 0
                         });
 
                         flightMarker.bindTooltip(tooltipHtml);
                         flightMarker.addTo(layers.flights);
-                        flightMarkers[key] = flightMarker;
+                        flightMarkers[icao24] = flightMarker;
                     }
 
-                    console.log('Loaded ' + Object.keys(flightMarkers).length + ' flights');
+                    console.log('Loaded ' + Object.keys(flightMarkers).length + ' flights from OpenSky Network');
                 })
                 .catch(err => {
-                    console.error('Error loading flights:', err);
+                    console.error('Error loading flights from OpenSky Network:', err);
                     $("#status").text("Error loading flights: " + err.message);
                 });
         }
