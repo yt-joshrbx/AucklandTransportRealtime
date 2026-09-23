@@ -492,36 +492,28 @@
             className: 'transit-marker train-marker'
         });
 
-        var easternLine = L.icon({
-            iconUrl: 'easternL.png',
+        var eastwestLine = L.icon({
+            iconUrl: 'eastwestL.png',
             iconSize: [32, 32],
             iconAnchor: [16, 16],
             popupAnchor: [0, -16],
-            className: 'transit-marker easternLine-marker'
+            className: 'transit-marker eastwestLine-marker'
         });
 
-        var onehungaLine = L.icon({
-            iconUrl: 'onehungaL.png',
+        var onehungawestLine = L.icon({
+            iconUrl: 'onehungawestL.png',
             iconSize: [32, 32],
             iconAnchor: [16, 16],
             popupAnchor: [0, -16],
-            className: 'transit-marker onehungaLine-marker'
+            className: 'transit-marker onehungawestLine-marker'
         });
 
-        var southernLine = L.icon({
-            iconUrl: 'southernL.png',
+        var southcityLine = L.icon({
+            iconUrl: 'southcityL.png',
             iconSize: [32, 32],
             iconAnchor: [16, 16],
             popupAnchor: [0, -16],
-            className: 'transit-marker southernLine-marker'
-        });
-
-        var westernLine = L.icon({
-            iconUrl: 'westernL.png',
-            iconSize: [32, 32],
-            iconAnchor: [16, 16],
-            popupAnchor: [0, -16],
-            className: 'transit-marker westernLine-marker'
+            className: 'transit-marker southcityLine-marker'
         });
 
         var ferryIcon = L.icon({
@@ -889,20 +881,16 @@
                 return ferryIcon;
             }
             
-            if (routeId && routeId.includes('EAST')) {
-                return easternLine;
+            if (routeId && routeId.includes('E-W')) {
+                return eastwestLine;
             }
 
-            if (routeId && routeId.includes('ONE')) {
-                return onehungaLine;
+            if (routeId && routeId.includes('O-W')) {
+                return onehungawestLine;
             }
 
-            if (routeId && routeId.includes('STH')) {
-                return southernLine;
-            }
-
-            if (routeId && routeId.includes('WEST')) {
-                return westernLine;
+            if (routeId && routeId.includes('S-C')) {
+                return southcityLine;
             }
 
             switch(routeType) {
